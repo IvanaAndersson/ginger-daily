@@ -1,0 +1,704 @@
+// 1. LOADING FONTS
+@import './general/fonts.scss';
+@import './modules/abstracts.scss';
+// 2. GENERAL CLASSES
+@import './general/general-classes.scss';
+@import './overriding/general-styles.scss';
+@import './overriding/cart.scss';
+@import './overriding/header.scss';
+@import './overriding/footer.scss';
+@import './overriding/sliders.scss';
+@import './overriding/product.scss';
+// 3. PAGES STYLES
+@import './pages/home.scss';
+@import './pages/about.scss';
+@import './pages/contact.scss';
+@import './pages/404-page.scss';
+@import './pages/welcome-and-under-constr.scss';
+// 4. MEDIA QUERIES (at the bottom)
+
+#back-top a {
+  border: 2px solid #FABCA1;
+
+  & .clever-icon-up::before {
+    color:  #FABCA1;
+  }
+
+  &:hover {
+    background:#FABCA1;
+
+    & .clever-icon-up::before {
+      color: white;
+    }
+  }
+}
+
+.noancho.ltr.template-index,
+.noancho.ltr.template-page,
+#shopify-section-aboutus-grid-builder  {
+  .container {
+    @include container;
+  }
+}
+
+.fancybox-lock .fancybox-overlay {
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+.text-st {
+  color: white !important;
+  font-size: 18px !important;
+}
+.template-product #add-to-cart-form #quantity,
+.template-product #add-to-cart-form span.up-qty,
+.template-product #add-to-cart-form span.down-qty,
+.template-product #add-to-cart-form #product-add-to-cart,
+.template-product .shopify-payment-button__button {
+  height: 40px;
+  line-height: 40px;
+}
+[type="reset"],
+[type="submit"],
+button,
+html [type="button"] {
+  -webkit-appearance: button;
+}
+._2ogcW-Q9I-rgsSkNbRiJzA {
+  -webkit-animation: _1UiPBn7_kvwWk2eMbG90wa 300ms cubic-bezier(0.1, 0.79, 1, 1);
+  animation: _1UiPBn7_kvwWk2eMbG90wa 300ms cubic-bezier(0.1, 0.79, 1, 1);
+}
+.cs-font.clever-icon-down.fa-caret-right,
+.cs-font.clever-icon-down.fa-caret-down {
+  font-size: 18px;
+  color: #7b7b7b !important;
+}
+.custom-block-html.style_2 .content-text-menu {
+  position: initial !important;
+}
+
+.promobox-wt-content {
+  .text-line3.text3 {
+    padding-top: 0 !important;
+  }
+}
+.promo-price {
+  margin-right: 10px;
+  color: rgba($color: #d4361f, $alpha: 0.7);
+}
+
+.new-location {
+  top: initial;
+  left: initial;
+  margin-left: 85%;
+  margin-top: 70%;
+}
+.header-cart-container.menu.col-md-3.col-sm-12.col-12 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.collection_item {
+  position: relative;
+}
+.angle {
+  position: absolute;
+  top: -8%;
+  left: 90%;
+}
+.horizontal {
+  width: 50px;
+  height: 50px;
+  border-bottom: 1px solid #fabca1;
+  margin-left: 15px;
+}
+.vertical {
+  width: 50px;
+  height: 50px;
+  margin-top: -15px;
+  border-right: 1px solid #fabca1;
+}
+#shopify-section-collection-template1-webrika {
+  .lazyOwl.feature-images {
+    min-height: 500px;
+    max-height: 500px;
+  }
+}
+
+.fb-25.fb-m-100 {
+  margin-bottom: 50px;
+}
+.order-details {
+  // border: 1px solid #7c7979;
+  width: 37vw;
+  margin-top: 20px;
+  // display: none;
+}
+
+.pr-old {
+  margin-right: 5px;
+  text-decoration: line-through;
+}
+
+.collection-leaf-webrika {
+  background-color: #ebbca0 !important;
+}
+.main_collection_content .data_container {
+  background-color: #f5e8dc;
+  color: rgba($color: #d4361f, $alpha: 0.7);
+}
+.main_collection_content .collection_item {
+  margin-bottom: 50px;
+}
+.cs-font.clever-icon-zoom-in.fw-6 {
+  margin-bottom: 30px;
+}
+.fancybox-wrap.fancybox-desktop.fancybox-type-image.fancybox-opened {
+  width: 1270px !important;
+  height: 970px !important;
+  // top: 100px !important;
+}
+.fancybox-inner {
+  width: initial !important;
+  height: initial !important;
+}
+.fancybox-skin {
+  background-color: #eed6c1;
+}
+.fancybox-item.fancybox-close {
+  background-color: #e17161;
+}
+.fancybox-iframe,
+.fancybox-image {
+  width: 70% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.noancho.ltr.template-customers-login {
+  
+  .login-container-tsv {
+    // width: 59vw;
+    // height: 85vh;
+    width: 1166px;
+    height: 925px;
+    display: flex;
+  }
+  .login-page {
+    flex-basis: 63%;
+    height: 100%;
+    margin: none !important;
+  }
+  .div-on-the-right {
+    background-color: #eed6c1;
+    height: 100%;
+    flex-basis: 37%;
+  }
+  
+  .login-container-tsv {
+    margin-left: 180px;
+  }
+  .logo-img-login {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .heading-login {
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+  .content-login {
+    background-color: #fabca1;
+  }
+  .login-page .content-login {
+    min-height: initial !important;
+  }
+  .forma-rows,
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    width: 80% !important;
+    margin-left: auto;
+    margin-right: auto;
+    height: 54px !important;
+    -webkit-text-fill-color: #8d8d8d !important;
+    border: none;
+    background-color: white;
+  }
+  input:-webkit-autofill::first-line {
+    font-size: 22px !important;
+  }
+  .btn-login.harman_btn5 {
+    width: 37% !important;
+    background-color: white !important;
+    color: rgba($color: #d4361f, $alpha: 0.7) !important;
+    border: none !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    height: 54px !important;
+    font-size: 20px !important;
+    letter-spacing: 2px !important;
+  }
+  .create-account {
+    text-align: center;
+    p {
+      color: white;
+      font-size: 18px;
+
+      a {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+  }
+  .login-wr {
+    height: 50%;
+    .content-login {
+      height: 100%;
+      form {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.text-decor {
+  color: white !important;
+  text-transform: uppercase !important;
+}
+.radiobutton {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.radio-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.thecircle {
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  border: 2px solid white;
+  position: relative;
+  cursor: pointer;
+  margin-left: 32%;
+}
+.thedot {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  border-radius: 100%;
+  // background-color: white;
+  top: 2px;
+  left: 2px;
+}
+.text-checkbox {
+  width: 170px;
+  margin-top: -7px;
+  margin-left: 20px;
+}
+.thecircle input:checked ~ .thedot {
+  background-color: white;
+}
+.thedot:after {
+  // content: " ";
+  position: absolute;
+  display: none;
+}
+.thecircle input:checked ~ .thedot:after {
+  display: block;
+}
+
+.noancho.ltr.template-customers-register {
+  
+  .container.main_container {
+    // max-width: 78vw;
+    // height: 85vh;
+    width: 1511px;
+    height: 925px;
+    // background-image: url("https://cdn.shopify.com/s/files/1/0409/0196/8033/files/Rectangle_327.png?v=1606211527");
+    background-color: #f9f1ea;
+  }
+  .flex-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .login-page,
+  .create-an-account {
+    margin: initial !important;
+  }
+  .column-content1 {
+    height: 100%;
+    // background-color: red;
+    flex-basis: 25%;
+    text-align: center;
+  }
+  .column-content2 {
+    height: 100%;
+    // background-color: red;
+    flex-basis: 21%;
+    text-align: center;
+  }
+  .login-page,
+  .create-an-account {
+    width: 54vw !important;
+  }
+  .logo-registration {
+    width: 270px;
+    margin-top: 40px;
+    margin-left: 30px;
+  }
+  .reg-title {
+    color: rgba($color: #d4361f, $alpha: 0.7);
+    font-size: 20px;
+    font-family: "Futura";
+    text-transform: uppercase;
+    margin-top: 50px;
+  }
+  .reg-form {
+    display: flex;
+  }
+  form {
+    width: 100%;
+  }
+  .reg-left,
+  .reg-right {
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .forma-rows {
+    width: 80% !important;
+    margin-left: auto;
+    margin-right: auto;
+    height: 65px !important;
+    font-size: 18px !important;
+    color: #8d8d8d !important;
+    border: none;
+  }
+  .buttons-set {
+    text-align: center;
+    margin-top: 70px;
+  }
+  .btn-login.harman_btn5 {
+    width: 13vw;
+    border: none;
+    height: 70px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgba($color: #d4361f, $alpha: 0.7);
+    background-color: white;
+  }
+  select:focus {
+    border: none;
+    outline: none;
+  }
+  .reg-text {
+    font-size: 18px;
+    width: 100%;
+    font-family: "Futura";
+    color: #a7a7a7;
+    p {
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .no-border {
+    border: none;
+    outline: none;
+  }
+  .w-18 {
+    width: 23%;
+    height: 65px;
+  }
+  .w-25 {
+    width: 35% !important;
+    height: 65px;
+  }
+  .mr-6 {
+    margin-right: -6px;
+  }
+  .datapicker-dec {
+    font-size: 18px !important;
+    font-family: "Futura";
+    text-transform: uppercase;
+    color: #8d8d8d !important;
+  }
+}
+.label-dec {
+  font-size: 20px !important;
+  font-family: "Futura";
+  letter-spacing: 3px;
+  line-height: 27px;
+  color: #fabca1 !important;
+  border-bottom: 3px solid #fabca1;
+  text-transform: uppercase !important;
+  width: fit-content;
+  margin-left: 10%;
+  margin-bottom: 15px;
+}
+.lebel-dec1 {
+  margin-left: 0 !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 50px white inset !important;
+  -webkit-text-fill-color: #8d8d8d !important;
+}
+#create_customer input,
+.select-dateBirth {
+  margin-bottom: 45px !important;
+}
+.create-an-account {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#shopify-section-home-heading {
+  .section-heading {
+    background: #f5e8dc !important;
+    padding: 20px !important;
+    .heading-title-main {
+      letter-spacing: 3px !important;
+      font-weight: 100 !important;
+      color: rgba($color: #d4361f, $alpha: 0.3) !important;
+    }
+  }
+}
+
+.section-heading {
+  padding: 20px;
+}
+.size-25.heading-title {
+  letter-spacing: 3px !important;
+  font-weight: 100 !important;
+  color: rgba($color: #d4361f, $alpha: 0.3) !important;
+}
+
+#shopify-section-home-heading {
+  .full-width {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+.contact-container {
+  display: flex;
+}
+.half-width-col {
+  width: 50%;
+  // height: 90vh;
+  height: 900px;
+}
+.half-width-col:first-of-type {
+  @include flex-centered;
+  background-image: url("https://cdn.shopify.com/s/files/1/0409/0196/8033/files/Artboard_1_53d9fdaf-0476-4f5f-b82b-03a1ecdd2cca.png?v=1606307135");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+.contact-cart {
+  background: white;
+  // height: 60vh;
+  // width: 60vh;
+  height: 630px;
+  width: 630px;
+  display: flex;
+}
+.icons-social {
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-around;
+  i {
+    font-size: 40px;
+    color: #e17262;
+  }
+}
+.contact-heading {
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba($color: #d4361f, $alpha: 0.7);
+  margin-bottom: 40px;
+}
+.center-vertical {
+  @include flex-centered;
+  flex-direction: column;
+  text-align: center;
+}
+.contact-address {
+  span {
+    font-size: 20px !important;
+    line-height: 27px;
+    margin-bottom: 3px;
+  }
+  span:first-of-type {
+    margin-bottom: 30px;
+  }
+}
+.fallow-us {
+  font-size: 32px !important;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.contact-heading2 {
+  font-size: 35px !important;
+  text-align: center;
+  margin-bottom: 50px !important;
+  margin-top: 30px !important;
+  color: #d4361f !important;
+}
+.half-input {
+  width: 47%;
+}
+.name-row,
+.email-row,
+.message-text {
+  border: 1px solid #8d8d8d !important;
+  font-size: 18px !important;
+  color: #a7a7a7 !important;
+}
+.name-row,
+.email-row {
+  height: 50px !important;
+}
+.message-text {
+  // height: 27vh !important;
+  height: 270px !important;
+}
+.button-contact {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+.flex.space-b {
+  margin-bottom: 30px;
+}
+
+.discount-percentage {
+  background-color: rgba($color: #d4361f, $alpha: 0.7);
+  height: 40px;
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 2%;
+  p {
+    margin-bottom: 0 !important;
+    font-size: 24px;
+    color: white;
+    line-height: 32px;
+  }
+}
+.sold-out-popup {
+  background-color: rgba($color: #e8c3b3, $alpha: 0.7);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  p {
+    color: white;
+    margin-bottom: 0 !important;
+    font-size: 28px;
+    text-transform: uppercase;
+  }
+}
+
+.text-gray.fs-18.mt-10p.flex.content-between {
+  align-items: flex-end;
+  span:nth-of-type(1) {
+    flex-basis: 60%;
+  }
+  span:nth-of-type(2) {
+    flex-basis: 40%;
+    text-align: right;
+    @media (max-width: 768px) {
+      font-size: 16px !important;
+    }
+  }
+  
+
+}
+
+.shopify-payment-button__button.shopify-payment-button__button--unbranded._2ogcW-Q9I-rgsSkNbRiJzA._2EiMjnumZ6FVtlC7RViKtj._2-dUletcCZ2ZL1aaH0GXxT {
+  font-size: 20px !important;
+}
+.template-product #add-to-cart-form #quantity,
+.template-product #add-to-cart-form span.up-qty,
+.template-product #add-to-cart-form span.down-qty,
+.template-product #add-to-cart-form #product-add-to-cart,
+.template-product .shopify-payment-button__button {
+  height: 50px !important;
+  line-height: 50px !important;
+}
+.template-product .product-share-links .share-links .share-title {
+  font-size: 16px !important;
+}
+.product-label {
+  display: none;
+}
+.product-title-mobile {
+  display: none;
+}
+
+#shopify-section-16045813691743142a {
+  .row.align-horizontal-.align-vertical-top {
+    height: initial !important;
+  }
+}
+.block-heading.col-12.col-md-12 {
+  margin-top: 20px !important;
+  margin-bottom: 10px !important;
+}
+
+
+.template-product .swatch label {
+  font-size: 14px !important;
+}
+.swatch label {
+  height: 50px !important;
+  width: 50px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+// 4. MEDIA QUERIES
+@media screen and (max-width: 1600px) {
+  .text3 {
+    width: 80% !important;
+  }
+}
+@import "./media-queries/1200px.scss";
+@import "./media-queries/1024px.scss";
+@import "./media-queries/768px.scss";
+@import "./media-queries/550px.scss";
+@import "./media-queries/480px-and-under.scss";

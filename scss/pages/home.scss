@@ -1,0 +1,160 @@
+.noancho.ltr.template-index {
+  .row.align-horizontal-.align-vertical-top {
+    font-family: "Futura";
+    max-height: 90vh;
+    overflow: hidden;
+
+    .promobox {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      .flex {
+        justify-content: center;
+      }
+      .promobox-content {
+        .promobox-wt-content {
+          .button-type3 {
+            a {
+              height: auto;
+              line-height: 30px;
+              padding: 1rem 3.5rem;
+
+              @include screen-width("laptop") {
+                padding: 0.5rem 3.5rem;
+              }
+            }
+          }
+        }
+
+        &.promobox-2 {
+          .about-helper {
+            display: none;
+          }
+          
+          .promobox-wt-content {
+            width: 100%;
+            top: 47%;
+          
+            @include screen-width('tablet') {
+              top: 50%;
+            }
+          }
+          .text1 {
+            font-size: 70px;
+            margin-bottom: 50px;
+            font-weight: normal;
+          }
+          .button-type3 a {
+            font-size: 18px;
+
+            @include screen-width("laptop") {
+              font-size: 16px;
+            }
+            @include screen-width("smallest") {
+              font-size: 14px;
+            }
+          }
+
+          @include screen-width("desktop") {
+            &,
+            .promobox-image-video,
+            .image,
+            .lazyautosizes.lazyloaded {
+              height: 100%;
+            }
+
+            .text1 {
+              font-size: 48px;
+              margin-bottom: 30px;
+            }
+          }
+
+          @include screen-width("tablet") {
+            .text1 {
+              font-size: 33px;
+            }
+          }
+
+          @include screen-width("smallest") {
+            .text1 {
+              font-size: 34px;
+              font-weight: bold;
+              margin-bottom: 20px;
+            }
+          }
+        }
+        &.promobox-3 {
+          height: 100%;
+          .image {
+            height: 100%;
+            a {
+              display: block;
+              position: relative;
+              &:before {
+                display: block;
+                content: "";
+                padding-top: 50%;
+              }
+
+              img {
+                height: 100%;
+                width: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+          }
+          .text-line1.text1 {
+            font-weight: normal;
+            margin-top: 1rem;
+          }
+          .button-type3 a {
+            font-size: 20px;
+
+            @include screen-width("laptop") {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+
+    @include screen-width("tablet") {
+      max-height: none;
+    }
+  }
+
+  @include screen-width("desktop") {
+    .text-line1.text1 {
+      margin-bottom: 0;
+    }
+    .text-line2.text2 {
+      margin-bottom: 0;
+    }
+  }
+  @include screen-width("phone") {
+    .text-line2.text2 {
+      margin-bottom: 20px;
+    }
+    .text1 {
+      font-size: 20px;
+    }
+    .text2 {
+      font-size: 12px;
+    }
+    .text-line2.text2 {
+      margin-bottom: 0;
+      padding-top: 0;
+    }
+    .text3 {
+      font-size: 12px;
+    }
+  }
+  @include screen-width("smallest") {
+    .text-line3 {
+      margin-bottom: 15px;
+    }
+  }
+}

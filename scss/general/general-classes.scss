@@ -1,0 +1,174 @@
+.center-text {
+    text-align: center;
+}
+.white-text {
+    color: white !important;
+}
+.header-topbar.full-width {
+    display: none;
+}
+.footer-center {
+    background-color: #222222;
+}
+.over-hidden {
+    overflow: hidden;
+}
+
+.white-letter {
+    color: white !important;
+}
+.red-letter {
+    color: #d4361f !important;
+}
+.button-checks {
+    display: none;
+}
+.fs-18 {
+    font-size: 18px !important;
+}
+.fs-30 {
+    font-size: 30px !important;
+}
+.fs-20 {
+    font-size: 20px !important;
+}
+.mr-20 {
+    margin-right: 20px;
+}
+.fs-16 {
+    font-size: 16px !important;
+}
+.black-letter {
+    color: black !important;
+}
+.fw-600 {
+    font-weight: 600 !important;
+}
+.view-cart button {
+    background-color: black !important;
+}
+
+.center-menu {
+  display: flex;
+  align-items: center;
+}
+
+.block {
+  display: block !important;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.fw-6 {
+  font-weight: 600;
+}
+.main-blog.blog-slide p.button,
+.footer-container
+  .footer-center
+  .footer-newsletter
+  .newsletter
+  .input-group-btn
+  > .btn,
+#add-to-cart-form #product-add-to-cart,
+.shopify-payment-button__button,
+.grid-item .product-inner .product-image .add-to-cartS button span,
+.show-cart-wr .col-right .button-continue .close-box,
+.show-cart-wr .col-right .button-viewcart a,
+.show-cart-wr .col-right span,
+#cart .cart-buttons input#checkout,
+#shipping-calculator .btn,
+#customer_login input.btn-login,
+#create_customer input.btn-login,
+#customer_login .btn-creatacc,
+#create_customer .btn-creatacc,
+#dropdown-cart .view-cart a span,
+#dropdown-cart .mini_cart_header .actions .btn span,
+.infinite-scrolling a,
+.spr-summary-actions a {
+  text-transform: uppercase;
+}
+
+.flex-colomnss {
+  display: flex;
+  flex-direction: column;
+}
+.flex1 {
+  display: flex;
+  align-items: flex-start;
+}
+.flex2 {
+  display: flex;
+  align-items: center;
+}
+.space-b {
+  justify-content: space-between;
+}
+.mr-15 {
+  margin-right: 15px;
+}
+.mr-30 {
+  margin-right: 30px;
+}
+.mb-15 {
+  margin-bottom: 15px;
+}
+.mt-15 {
+  margin-top: 15px;
+}
+.full-scr {
+  max-width: 100%;
+  width: 100%;
+}
+
+.fs-28 {
+  font-size: 28px !important;
+}
+
+.white-back {
+  background-color: white;
+}
+
+.fs-20 {
+  font-size: 20px !important;
+}
+
+.mobile {
+  display: none !important;
+}
+.hide-on-desktop {
+  display: none !important;
+}
+
+.text-gray.fs-18.fw-700.mt-10p {
+  color: #7b7b7b !important;
+}
+.black {
+  color: black !important;
+}
+@include screen-width("phone") {
+.desktop {
+  display: none !important;
+}
+.mobile {
+  display: block !important;
+}
+
+.mobile-fs14 {
+  font-size: 14px !important;
+}
+
+.fs-mobile {
+  font-size: 16px !important;
+}
+
+.mb-20m {
+  margin-bottom: 20px !important;
+}
+
+.hide-on-mobile {
+  display: none !important;
+}
+.hide-on-desktop {
+  display: block !important;
+}
+}
