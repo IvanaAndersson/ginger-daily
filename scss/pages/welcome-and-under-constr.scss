@@ -49,7 +49,7 @@
   .second-construction-heading {
     font-size: 20px;
     line-height: 27px;
-
+    text-align: center;
     @include screen-width("tablet") {width: 90%;}
   }
   .label-email {
