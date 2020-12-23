@@ -1,0 +1,125 @@
+#about {
+  //the background of the whole page
+  background-color: rgba($color: #eed6c1, $alpha: 0.3);
+  .align-vertical-top,
+  .ct_block-vertical-top {
+    align-items: stretch;
+  }
+
+  @include screen-width("phone") {
+    .heading-title-main {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  @include screen-width("smallest") {
+    .heading-title-main {
+      font-size: 14px;
+      line-height: 35px;
+    }
+    .section-heading.type-default {
+      padding: 10px;
+    }
+  }
+}
+
+#shopify-section-aboutus-grid-builder //the content until the instagram section
+{
+  .promobox {
+    max-height: 90vh;
+    overflow: hidden;
+
+    .promobox-content {
+      .promobox-image-video .image {
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &.promobox-5 {
+        height: 100%;
+        .promobox-wt-content {
+          width: 70%;
+          background: none;
+          position: relative;
+          margin: 0 auto;
+          height: 100%;
+          top: 0;
+          -webkit-transform: none !important;
+          padding: 50px 0px;
+
+          @include screen-width("desktop") {
+            width: 80%;
+            padding: 1rem 0;
+          }
+          @include screen-width("tablet") {
+            width: 85%;
+          }
+
+          .text-line1 {
+            text-align: left;
+            font-weight: normal;
+            a {
+              opacity: 0.7;
+              text-transform: none;
+              font-size: 45px;
+              @include screen-width("desktop") { font-size: 35px; }
+              @include screen-width("laptop") { font-size: 22px; }
+              @include screen-width("tablet") {
+                text-transform: uppercase;
+                font-size: 30px;
+              }
+              @include screen-width("smallest") {font-size: 20px;}
+            }
+          }
+          .text-line2 {
+            margin-bottom: 30px;
+            width: 90%;
+            a {
+              font-size: 35px;
+              font-weight: 300;
+              font-family: "Futura";
+              line-height: 47px;
+              @include screen-width("desktop") { font-size: 25px; }
+              @include screen-width("laptop") {
+                font-size: 22px;
+                margin-bottom: 0;
+              }
+              @include screen-width("smallest") { font-size: 20px; }
+            }
+          }
+        }
+      }
+    }
+
+    @include screen-width("tablet") { 
+      max-height: none;
+      padding: 2rem; 
+    }
+  }
+
+  .placeholder-svg {
+    display: none;
+  }
+  .promo-price {
+    display: none;
+  }
+  .text-line3.text3 {
+    width: 100%;
+
+    @include screen-width("desktop") {
+      p { font-size: 16px; }
+    }
+    @include screen-width("laptop") {
+      p { font-size: 14px; }
+    }
+    
+  }
+  .about-helper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
