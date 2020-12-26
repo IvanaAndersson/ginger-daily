@@ -63,7 +63,7 @@
   margin: 0 auto;
   i {
     font-size: 40px;
-    color: #e17262;
+    color: $icons-color;
 
     @include screen-width("tablet") {
       font-size: 30px;

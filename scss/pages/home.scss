@@ -19,6 +19,11 @@
               line-height: 30px;
               padding: 1rem 3.5rem;
 
+              &:hover, 
+              &:focus {
+                background: $darker-bg-opacity7 !important;
+              }
+
               @include screen-width("laptop") {
                 padding: 0.5rem 3.5rem;
               }
