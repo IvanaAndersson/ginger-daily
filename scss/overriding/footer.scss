@@ -1,0 +1,82 @@
+//STYLES FOR THE INSTAGRAM PART BEFORE THE ACTUAL FOOTER
+
+// #shopify-section-16045813691743142a {
+//   .row.align-horizontal-.align-vertical-top {
+//     height: initial !important;
+//   }
+// }
+
+.size-25.heading-title {
+  margin-bottom: 0;
+  letter-spacing: 3px !important;
+  font-weight: 100 !important;
+  color: rgba($color: #d4361f, $alpha: 0.3) !important;
+
+  @include screen-width("phone") {
+    font-size: 18px !important;
+  }
+}
+
+// @include screen-width('phone') {
+//   #shopify-section-collection-grid-builder .size-25.heading-title {
+//     font-size: 18px !important;
+//   }
+// }
+
+// styles for the actual footer
+.footer-container.footer_layout_2 {
+  .footer-center {
+    padding: 2.5em 0;
+    background-color: $footer-color;
+    i,
+    a,
+    address {
+      color: $details-text-opacity3;
+    }
+    .logo-image {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 2em;
+
+      @include screen-width("tablet") {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+
+    .footer-isocal .footer-icon-share {
+      padding: 1em 0;
+      margin-bottom: 2em;
+      @include screen-width("tablet") {
+        margin-bottom: 0;
+      }
+    }
+
+    .footer-link .content {
+      @include screen-width("tablet") {
+        display: flex;
+        flex-direction: column;
+      }
+
+      li a {
+        font-size: 20px;
+        font-weight: 400;
+
+        @include screen-width("tablet") {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .footer-copyright address {
+      margin-top: auto;
+      font-size: 14px;
+
+      .footer_link { margin-left: 30px; }
+    }
+
+    @include screen-width("tablet") {
+      padding-top: 2em 0;
+    }
+  }
+}

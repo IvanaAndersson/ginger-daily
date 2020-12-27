@@ -32,6 +32,7 @@
         }
 
         &.promobox-2 {
+          
           .about-helper {
             display: none;
           }
@@ -126,9 +127,7 @@
       }
     }
 
-    @include screen-width("tablet") {
-      max-height: none;
-    }
+    @include screen-width("tablet") { max-height: none; }
   }
 
   @include screen-width("desktop") {
@@ -137,6 +136,12 @@
     }
     .text-line2.text2 {
       margin-bottom: 0;
+    }
+  }
+  @include screen-width("tablet") {
+    .promobox:nth-of-type(1) { order: 1; }
+    #shopify-section-16045784717ab9e33f .row.align-horizontal-.align-vertical-top {
+      flex-direction: column-reverse;
     }
   }
   @include screen-width("phone") {

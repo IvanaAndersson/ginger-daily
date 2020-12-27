@@ -33,9 +33,7 @@
     padding: 3em;
 
     @include screen-width('desktop') {
-      img {
-        max-width: 75% ;
-      }
+      img {  max-width: 75% ; }
     }
     @include screen-width('tablet') {
       max-width: 95%;
@@ -43,15 +41,11 @@
     
     @include screen-width('phone') {
       max-width: 90%;
-       img {
-        max-width: 60% ;
-      }
+       img { max-width: 60% ; }
     }
 
     @media screen and (max-height: 400px){
-      img {
-        max-width: 25% ;
-      }
+      img { max-width: 25% ; }
     }
   }
   .slide-text.slide-text-1 {
@@ -98,28 +92,21 @@
         max-width: 70% ;
       }
     }
-
-    
   }
 }
 #shopify-section-home-grid-builder //on the catalog page
 {
   .slideshow__text-content.middle {
     background-color: $darker-bg-opacity7;
-    padding-left: 70px;
-    padding-right: 70px;
-
+    padding: 3em 70px;
+    
     @include screen-width('tablet') {
       max-width: 80%;
-      height: 100%;
-      padding-left: 50px;
-      padding-right: 50px;
+      height: 80%;
+      padding: 3em 50px;
     }
-
-    @include screen-width('smallest') {
-      padding-left: 30px;
-      padding-right: 30px;
-    }
+    
+    @include screen-width('smallest') { padding: 0;}
   }
 }
 
