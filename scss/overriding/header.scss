@@ -10,13 +10,10 @@
   .black-img-icon {
     display: none;
   }
-  
-  .cs-font.clever-icon-search-4,
-  .cs-font.clever-icon-law-1,
-  .cs-font.clever-icon-cart-15,
-  .pre-currencies.text-label,
-  .cs-font.clever-icon-down {
-    color: white !important;
+
+  .site-nav .level-top .text-st {
+    color: white;
+    font-size: 18px;
   }
 
   &.is-ticky {
@@ -27,24 +24,12 @@
     .black-img-icon {
       display: block;
     }
-    .text-st, 
-    .cs-font.clever-icon-search-4,
-    .cs-font.clever-icon-law-1,
-    .cs-font.clever-icon-cart-15,
-    .pre-currencies.text-label,
-    .cs-font.clever-icon-down {
-      color: $darker-details-color;
+    .site-nav .level-top .text-st {
+      color: black;
     }
 
   }
 }
-
-.position-counter {
-  top: 5px;
-  left: -2px;
-  background-color: $darker-details-color;
-}
-
 
 @include screen-width("laptop") {
   

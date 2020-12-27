@@ -80,3 +80,20 @@
     }
   }
 }
+
+//STYLES FOR THE BACK TO TOP BUTTON
+#back-top a {
+  border: 2px solid $buttons-bg;
+
+  & .clever-icon-up::before {
+    color:  $buttons-bg;
+  }
+
+  &:hover {
+    background:$buttons-bg;
+
+    & .clever-icon-up::before {
+      color: white;
+    }
+  }
+}
