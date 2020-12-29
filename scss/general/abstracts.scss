@@ -4,8 +4,9 @@ $light-bg-opacity3: rgba($color: #eed6c1, $alpha: 0.3);
 
 $footer-color: #f5e8dc;
 
-$icons-color: #e17262; 
+$icons-color: #e17261; 
 $color: #E17161;
+$sold-out-popup-color: #E8C3B3;
 
 
 $buttons-bg: #FABCA1;
@@ -50,6 +51,10 @@ $widths: (
     display: flex;
     justify-content: center;
     align-items: center;
+}
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
 }
 
 @mixin container{

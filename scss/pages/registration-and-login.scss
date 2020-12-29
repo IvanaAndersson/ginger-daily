@@ -1,0 +1,588 @@
+.noancho.ltr.template-customers-register {
+  .container.main_container {
+    // max-width: 78vw;
+    // height: 85vh;
+    width: 1511px;
+    height: 925px;
+    // background-image: url("https://cdn.shopify.com/s/files/1/0409/0196/8033/files/Rectangle_327.png?v=1606211527");
+    background-color: #f9f1ea;
+  }
+  .flex-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .login-page,
+  .create-an-account {
+    margin: initial !important;
+  }
+  .column-content1 {
+    height: 100%;
+    // background-color: red;
+    flex-basis: 25%;
+    text-align: center;
+  }
+  .column-content2 {
+    height: 100%;
+    // background-color: red;
+    flex-basis: 21%;
+    text-align: center;
+  }
+  .login-page,
+  .create-an-account {
+    width: 54vw !important;
+  }
+  .logo-registration {
+    width: 270px;
+    margin-top: 40px;
+    margin-left: 30px;
+  }
+  .reg-title {
+    color: $darker-bg-opacity7;
+    font-size: 20px;
+    font-family: "Futura";
+    text-transform: uppercase;
+    margin-top: 50px;
+  }
+  .reg-form {
+    display: flex;
+  }
+  form {
+    width: 100%;
+  }
+  .reg-left,
+  .reg-right {
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .forma-rows {
+    width: 80% !important;
+    margin-left: auto;
+    margin-right: auto;
+    height: 65px !important;
+    font-size: 18px !important;
+    color: #8d8d8d !important;
+    border: none;
+  }
+  .buttons-set {
+    text-align: center;
+    margin-top: 70px;
+  }
+  .btn-login.harman_btn5 {
+    width: 13vw;
+    border: none;
+    height: 70px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $darker-bg-opacity7;
+    background-color: white;
+  }
+  select:focus {
+    border: none;
+    outline: none;
+  }
+  .reg-text {
+    font-size: 18px;
+    width: 100%;
+    font-family: "Futura";
+    color: #a7a7a7;
+    p {
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .no-border {
+    border: none;
+    outline: none;
+  }
+  .w-18 {
+    width: 23%;
+    height: 65px;
+  }
+  .w-25 {
+    width: 35% !important;
+    height: 65px;
+  }
+  .mr-6 {
+    margin-right: -6px;
+  }
+  .datapicker-dec {
+    font-size: 18px !important;
+    font-family: "Futura";
+    text-transform: uppercase;
+    color: #8d8d8d !important;
+  }
+}
+.noancho.ltr.template-customers-login {
+  
+  .login-container-tsv {
+    // width: 59vw;
+    // height: 85vh;
+    width: 1166px;
+    height: 925px;
+    display: flex;
+  }
+  .login-page {
+    // flex-basis: 63%;
+    height: 100%;
+    margin: none !important;
+  }
+  .div-on-the-right {
+    background-color: #eed6c1;
+    height: 100%;
+    flex-basis: 37%;
+  }
+  
+  .login-container-tsv {
+    margin-left: 180px;
+  }
+  .logo-img-login {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .heading-login {
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: black;
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+  .content-login {
+    background-color: #fabca1;
+  }
+  .login-page .content-login {
+    min-height: initial !important;
+  }
+  .forma-rows,
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    width: 80% !important;
+    margin-left: auto;
+    margin-right: auto;
+    height: 54px !important;
+    -webkit-text-fill-color: #8d8d8d !important;
+    border: none;
+    background-color: white;
+  }
+  input:-webkit-autofill::first-line {
+    font-size: 22px !important;
+  }
+  .btn-login.harman_btn5 {
+    width: 37% !important;
+    background-color: white !important;
+    color: $darker-bg-opacity7;
+    border: none !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    height: 54px !important;
+    font-size: 20px !important;
+    letter-spacing: 2px !important;
+  }
+  .create-account {
+    text-align: center;
+    p {
+      color: white;
+      font-size: 18px;
+
+      a {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+  }
+  .login-wr {
+    height: 50%;
+    .content-login {
+      height: 100%;
+      form {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@include screen-width("desktop") {
+  .noancho.ltr.template-customers-register {
+    .logo-registration {
+      width: 180px !important;
+    }
+    .column-content1 {
+      flex-basis: 20% !important;
+    }
+    .column-content2 {
+      flex-basis: 15% !important;
+    }
+    .create-an-account {
+      width: 61vw !important;
+    }
+    .reg-title {
+      font-size: 22px !important;
+    }
+    .label-dec {
+      font-size: 18px !important;
+      margin-left: 5% !important;
+    }
+    .forma-rows {
+      width: 90% !important;
+    }
+    .mobile1 {
+      width: 24% !important;
+    }
+    .mobile2 {
+      width: 40% !important;
+    }
+    .mobile3 {
+      width: 26% !important;
+    }
+    .btn-login.harman_btn5 {
+      font-size: 18px !important;
+      width: 35vw !important;
+      height: 60px !important;
+    }
+    .reg-text p {
+      width: 80% !important;
+    }
+  }
+
+  .login-container-tsv {
+    margin-left: 95px !important;
+    width: 90% !important;
+  }
+}
+
+@include screen-width("tablet") {
+  .noancho.ltr.template-customers-register {
+    .column-content1,
+    .column-content2 {
+      display: none !important;
+    }
+    .create-an-account {
+      width: 100vw !important;
+    }
+    .reg-form {
+      display: block !important;
+    }
+    .reg-left,
+    .reg-right {
+      width: 100% !important;
+    }
+    .reg-right {
+      margin-top: 45px !important;
+    }
+    .container.main_container {
+      width: 100% !important;
+      height: initial !important;
+    }
+    .buttons-set {
+      margin-bottom: 30px;
+    }
+  }
+
+  .login-container-tsv {
+    margin-left: 0 !important;
+    width: 95%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    .login-page {
+      flex-basis: 100% !important;
+    }
+    .div-on-the-right {
+      display: none !important;
+    }
+    .heading-login {
+      width: 65% !important;
+    }
+  }
+
+
+  .login-container-tsv {
+    height: 750px !important;
+    .heading-login {
+      font-size: 28px !important;
+    }
+    .text-center.fs-28.text-decor:first-of-type {
+      margin-top: 30px !important;
+    }
+    .text-center.fs-28.text-decor {
+      font-size: 20px !important;
+    }
+    input:-webkit-autofill::first-line {
+      font-size: 16px !important;
+    }
+    .login-wr {
+      height: 53% !important;
+    }
+    .login-left-col {
+      height: 47% !important;
+    }
+    .text-checkbox {
+      margin-top: -5px;
+    }
+  }
+  .noancho.ltr.template-customers-login .btn-login.harman_btn5 {
+    margin-top: 0 !important;
+    font-size: 16px !important;
+    width: 35% !important;
+  }
+  .noancho.ltr.template-customers-login .create-account p {
+    font-size: 14px;
+  }
+}
+@include screen-width("phone") {
+  .noancho.ltr.template-customers-register .container.main_container {
+    width: 90% !important;
+  }
+}
+@include screen-width("smallest") {
+  .noancho.ltr.template-customers-register {
+    .label-dec {
+      font-size: 14px !important;
+      line-height: 20px !important;
+      margin-bottom: 10px !important;
+    }
+    .reg-righ {
+      margin-top: 30px !important;
+    }
+    .forma-rows {
+      height: 50px !important;
+    }
+    .reg-text p {
+      font-size: 14px !important;
+    }
+    .btn-login.harman_btn5 {
+      width: 50vw !important;
+      font-size: 14px !important;
+      height: 45px !important;
+    }
+    .buttons-set {
+      margin-top: 40px !important;
+    }
+  }
+
+  .login-container-tsv {
+    height: 650px !important;
+    width: 95% !important;
+    .heading-login {
+      font-size: 20px !important;
+      width: 75% !important;
+    }
+    .text-center.fs-28.text-decor:first-of-type {
+      margin-top: 15px !important;
+    }
+    .text-center.fs-28.text-decor {
+      font-size: 18px !important;
+    }
+    .login-left-col {
+      height: 45% !important;
+    }
+    .login-wr {
+      height: 55% !important;
+    }
+  }
+  .noancho.ltr.template-customers-login .btn-login.harman_btn5,
+  .noancho.ltr.template-customers-login .forma-rows,
+  .noancho.ltr.template-customers-login input:-webkit-autofill,
+  .noancho.ltr.template-customers-login input:-webkit-autofill:hover,
+  .noancho.ltr.template-customers-login input:-webkit-autofill:focus {
+    height: 50px !important;
+  }
+}
+
+
+//----------------------------------------
+
+.login-page {
+  width: 100vw;
+  position: relative;
+
+  .round-detail {
+    background: $icons-color;
+    width: 190px;
+    height: 190px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    @include flex-centered;
+    p {
+      font-size: 35px;
+      color: white;
+      margin-bottom: 0;
+      text-align: center;
+      padding: 1rem;
+    }
+
+
+    @include screen-width("tablet") {
+      width: 150px;
+      height: 150px;
+      top: 50vw;
+      left: 5%;
+      transform: translate(0%, 30%);
+      p { font-size: 28px; }
+    }
+    @include screen-width("phone") {
+      width: 130px;
+      height: 130px;
+      p {  font-size: 22px; }
+    }
+  }
+}
+
+.login-container {
+  display: flex;
+  background: lighten($light-bg, 5%);
+  .half-width-col{
+    min-height: 100vh;
+    &:first-of-type { 
+      background-image: url("landing-page-picture@2x.png");
+    }
+    .login-page-content {
+      width: 70%;
+      height: 100%;
+      margin: 0 auto;
+      padding: 5rem 0;
+      @include flex-column;
+
+      .logo-image-container {
+        position: relative;
+        overflow: hidden;
+        &::after{
+          display: block;
+          content: '';
+          padding-top: 25%;
+        }
+      }
+      .logo-image {
+        width: 85%; 
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .heading-right {
+        font-size: 32px;
+        text-align: center;
+        color: #8d8d8d;
+        line-height: normal;
+      }
+      .icon-text-container {
+        display: flex;
+        align-items: center;
+        img {
+          width: 15%;
+          margin: 0.75rem 2.5rem ;
+        }
+        p {
+          color: $icons-color;
+          font-size: 24px;
+          margin-bottom: 0;
+        }
+      }
+      .input-group {
+        flex-direction: column;
+        input {
+          padding: 1rem;
+          height: auto;
+          border: none;
+          outline: none;
+        }
+        &-field {
+          margin-top: 1.5rem;
+          color: #8d8d8d;
+        }
+        &-btn {
+          width: 100%;
+        }
+        .btn {
+          width: 100%;
+          line-height: normal;
+          background: $buttons-bg;
+          color: white;
+          font-size: 20px;
+          font-weight: 500;
+
+          &:hover, &:focus {
+            background: $darker-bg-opacity7
+          }
+        }
+      }
+      .already-member {
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+        a{
+          text-decoration: underline;
+          color: inherit;
+        }
+      }
+      .newsletter-agreement {
+        display: flex;
+        align-items: baseline;
+        margin: 0.5rem 0;
+
+        input[type="checkbox"]{
+          margin-right: 0.5rem;
+        }
+      }
+      @include screen-width("tablet") {
+        width: 80%;
+        padding: 2rem 0;
+        .logo-image-container::after{ padding-top: 22%; }
+        .logo-image { width: 75%; }
+        .heading-right { font-size: 18px;}
+        .icon-text-container {
+          img {
+            width: 10%;
+            margin: 0.25rem 2rem ;
+          }
+          p { font-size: 18px; }
+        }
+
+        .input-group {
+          input {
+            margin-top: 1rem;
+          }
+          .btn {
+            font-size: 16px;
+          }
+        }
+      }
+      @include screen-width("phone") {
+        width: 85%;
+        .heading-right { font-size: 16px;}
+        .icon-text-container {
+          p { font-size: 14px; }
+        }
+      }
+    }
+  }
+  
+  
+  @include screen-width("tablet") {
+    flex-direction: column;
+    .half-width-col{
+      min-height: 50vh;
+
+      &:first-of-type { 
+        background-position: top;
+      }
+    }
+  }
+}

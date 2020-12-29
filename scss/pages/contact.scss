@@ -174,8 +174,7 @@
     height: 100%;
     //THE CONTACT FORM WRAPPER IS NESTED SO THAT IT CAN OVERRIDE THE THEME STYLES
     #contactFormWrapper {
-      display: flex;
-      flex-direction: column;
+      @include flex-column;
       justify-content: center;
       width: 75%;
       height: 100%;
