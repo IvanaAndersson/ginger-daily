@@ -155,19 +155,6 @@
   }
 }
 
-.flex.space-b //the div containing both inputs of the form
-{
-  margin-bottom: 30px;
-
-  @include screen-width("desktop") {
-    flex-direction: column;
-    margin-bottom: 0;
-  }
-  .half-input {
-    flex-basis: 47%;
-  }
-}
-
 .contactus-page {
   padding: 0 0;
   .contact-form {
@@ -179,6 +166,18 @@
       width: 75%;
       height: 100%;
       margin: 0 auto;
+      .flex.justify-between //the div containing both inputs of the form
+      {
+        margin-bottom: 30px;
+
+        @include screen-width("desktop") {
+          flex-direction: column;
+          margin-bottom: 0;
+        }
+        .half-input {
+          flex-basis: 47%;
+        }
+      }
 
       ::placeholder {
         font-size: 18px;
@@ -221,6 +220,7 @@
           &:focus {
             background-color: white;
             color: $darker-details-color;
+            border-color: $darker-details-color;
           }
           @include screen-width("phone") {
             font-size: 14px;

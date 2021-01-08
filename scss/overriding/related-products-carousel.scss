@@ -1,0 +1,79 @@
+//GENERAL STYLES FOR THE RELATED PRODUCTS CAROUSEL
+.might_like_title {
+  .related-heading {
+    padding-top: 0;
+    border-bottom: none;
+    h2 {
+      font-size: 18px;
+      color: white;
+      border-bottom: none;
+    }
+
+    @include screen-width('phone') {
+      margin-bottom: 20px !important;
+      font-size: 16px !important;
+    }
+  }
+}
+
+.grid-item  .product-inner  .product-image  .add-to-cartS {
+  button {
+    background: $darker-bg-opacity7;
+
+    &.btn {
+      border: none;
+    }
+  }
+}
+
+// STYLES FOR THE RELATED PRODUCTS ON THE SINGLE PRODUCT PAGES
+.product-image.js-product-images-navigation {
+  // @include flex-centered;
+  height: 300px;
+}
+
+// STYLES FOR THE RELATED PRODUCTS ON THE ADD TO CART POPUP
+.related_products_modal {
+  .related-products .related-heading {
+    display: none;
+  }
+  .products-grid .grid-item .product-image {
+    max-height: 200px;
+
+    @include screen-width('tablet') {max-height: 350px !important;}
+  }
+  .product-content {
+    background-color: #eed6c1;
+    color: #fff;
+  }
+  .product-label {
+    font-size: 11px;
+    left: 5px;
+  }
+  .product-content h3 {
+    margin-bottom: 5px;
+  }
+  .product-content .price-box,
+  .price-box .old-price,
+  .product-content h3 a {
+    color: #fff;
+  }
+  .owl-nav {
+    top: 62%;
+  }
+}
+.ajax-success-cbox .grid-item  .product-inner  .product-image  .add-to-cartS {
+  button {
+    font-size: 12px;
+  }
+}
+@include screen-width('phone') {
+  .show-carts .ajax-success-cbox .might_like_title {
+    display: none;
+  }
+}
+
+
+@include screen-width('tablet') {
+  
+}

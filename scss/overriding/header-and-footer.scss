@@ -1,4 +1,7 @@
 // .header-layout-01 
+.header-topbar.full-width {
+  display: none;
+}
 #header-content {
   position: fixed;
 }
@@ -87,29 +90,19 @@
 
 
 //STYLES FOR THE INSTAGRAM PART BEFORE THE ACTUAL FOOTER
-
-// #shopify-section-16045813691743142a {
-//   .row.align-horizontal-.align-vertical-top {
-//     height: initial !important;
-//   }
-// }
-
+#shopify-section-footer #insta-feed {
+  margin-top: 0;
+}
 .size-25.heading-title {
   margin-bottom: 0;
   letter-spacing: 3px !important;
   font-weight: 100 !important;
-  color: rgba($color: #d4361f, $alpha: 0.3) !important;
+  color: $details-text-opacity3 !important;
 
   @include screen-width("phone") {
     font-size: 18px !important;
   }
 }
-
-// @include screen-width('phone') {
-//   #shopify-section-collection-grid-builder .size-25.heading-title {
-//     font-size: 18px !important;
-//   }
-// }
 
 // styles for the actual footer
 .footer-container.footer_layout_2 {

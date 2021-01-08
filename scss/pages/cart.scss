@@ -1,0 +1,55 @@
+
+// ACTUAL CART PAGE
+.noancho.ltr.template-cart.notifications-cookie {
+  .container.main_container {
+    max-width: 90vw;
+    padding: 0 !important;
+  }
+  .cart-heading {
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 70px;
+    .divider {
+      width: 43%;
+      border: 1px solid rgba($color: #d4361f, $alpha: 0.7);
+    }
+    h1 {
+      margin: 0 10px;
+      color: rgba($color: #d4361f, $alpha: 0.7);
+      font-weight: normal;
+      font-size: 40px;
+      text-transform: uppercase;
+    }
+  }
+}
+#votre-panier {
+  table td,
+  table th {
+    border: none !important;
+  }
+  tbody {
+    tr::before {
+      content: "";
+      border-bottom: 1px solid red;
+      width: 90vw;
+      height: 10px;
+      text-align: center;
+      display: block;
+      position: absolute;
+    }
+    tr::after{
+      z-index: 999; 
+      background-color: white;
+      content: "Zlobilda Zlobilda Zlobilda";
+      position: absolute;
+      text-align: center;
+      left: 50%;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    tr {
+      position: relative;
+    }
+  }
+}

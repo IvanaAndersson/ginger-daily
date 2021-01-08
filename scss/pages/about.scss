@@ -56,7 +56,6 @@
           @include screen-width("tablet") {
             width: 85%;
           }
-
           .text-line1 {
             text-align: left;
             font-weight: normal;
@@ -74,9 +73,9 @@
             }
           }
           .text-line2 {
-            margin-bottom: 30px;
             width: 90%;
             a {
+              margin-bottom: 30px;
               font-size: 35px;
               font-weight: 300;
               font-family: "Futura";
@@ -111,6 +110,8 @@
   }
   .text-line3.text3 {
     width: 100%;
+    font-size: 20px;
+    text-transform: initial;
 
     @include screen-width("desktop") {
       p { font-size: 16px; }

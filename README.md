@@ -42,8 +42,21 @@
     * **collection-template1-webrika** in sections for the products, including the counter element
 * SCSS files used:
     * **sliders.scss** for the carousel on the top of the page
-    * **product.scss** for the rest of the sections
+    * **product.scss** for the rest of the sections (sidebar and product grid)
 
+
+# SINGLE PRODUCT PAGE
+
+* Liquid files used: 
+    * **product.liquid** is the template file for this page
+    * **product-template.liquid** includes the scripts and the variant of the product
+    * **product-v7.liquid** the actual template for the product
+    * **swatch(-1, -2).liquid** for the product variants
+    * **related-products-by-tags.liquid** for the related products section
+    * **product-item-new.liquid** for the single product in the carousel
+* SCSS files used: 
+    * **product.scss**
+    * **related-products-carousel.scss**
 
 # ABOUT PAGE
 

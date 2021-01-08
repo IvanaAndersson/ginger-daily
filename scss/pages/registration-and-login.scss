@@ -402,8 +402,17 @@
   }
 }
 
-
 //----------------------------------------
+.create-an-account {
+  @include flex-column;
+  justify-content: center;
+}
+#create_customer input {
+  height: auto;
+}
+#create_customer input[type='checkbox'] {
+  width: auto;
+}
 
 .login-page {
   width: 100vw;
@@ -420,14 +429,12 @@
     border-radius: 50%;
     @include flex-centered;
     p {
-      font-size: 35px;
+      font-size: 32px;
       color: white;
       margin-bottom: 0;
       text-align: center;
       padding: 1rem;
     }
-
-
     @include screen-width("tablet") {
       width: 150px;
       height: 150px;
@@ -456,7 +463,7 @@
       width: 70%;
       height: 100%;
       margin: 0 auto;
-      padding: 5rem 0;
+      padding: 3rem 0;
       @include flex-column;
 
       .logo-image-container {
@@ -471,10 +478,7 @@
       .logo-image {
         width: 85%; 
         height: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include position-center;
       }
       .heading-right {
         font-size: 32px;
@@ -495,10 +499,14 @@
           margin-bottom: 0;
         }
       }
+      form {
+        margin-bottom: 0;
+      }
       .input-group {
-        flex-direction: column;
+        @include flex-column;
         input {
           padding: 1rem;
+          margin-bottom: 1.5rem;
           height: auto;
           border: none;
           outline: none;
@@ -540,6 +548,9 @@
         input[type="checkbox"]{
           margin-right: 0.5rem;
         }
+        label {
+          font-size: 14px;
+        }
       }
       @include screen-width("tablet") {
         width: 80%;
@@ -569,6 +580,10 @@
         .heading-right { font-size: 16px;}
         .icon-text-container {
           p { font-size: 14px; }
+        }
+        .already-member ,
+        .newsletter-agreement label {
+          font-size: 12px;
         }
       }
     }
