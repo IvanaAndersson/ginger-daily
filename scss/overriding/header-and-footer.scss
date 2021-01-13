@@ -1,4 +1,11 @@
-// .header-layout-01 
+// 1. Header on desktop
+// 2. Header on mobile
+// 3. Instagram section before the footer
+// 4. Footer styles
+// 5. Back to top button
+
+
+// 1. .header-layout-01 on desktop
 .header-topbar.full-width {
   display: none;
 }
@@ -16,13 +23,16 @@
 .header.full-width {
   background-color: $footer-color;
   min-height: 80px;
-  padding: 15px 30px;
 
   .header-cart-container {
     align-items: center;
 
     & > div {
       margin-right: 0.75rem;
+      cursor: pointer;
+    }
+    & > div.header-language {
+      display: none;
     }
 
     .top-currency, .header-cart {
@@ -31,28 +41,30 @@
   }
   
   .white-img-icon svg{
-    width: 90%;
+    width: 100%;
   }
 
   .site-nav .level-top .text-st {
-    color: $darker-bg-opacity7;
+    color: #F9BCA1;
     font-size: 18px;
   }
 }
 
-
+// 2. Header on mobile
 @include screen-width("laptop") {
-  
   #header-mobile {
     @include align-center;
     height: auto;
     line-height: normal;
     padding: 0.5rem 1rem;
-    background-color: $footer-color;
+    &, &.is-ticky {
+      background-color: $footer-color;
+    }
     .container {
       @include align-center;
       justify-content: space-between;
       padding: 0;
+      max-width: initial;
     }
     .logo-avc {
       margin-top: 0;
@@ -60,13 +72,13 @@
         font-size: 3rem;
         line-height: normal;
         a img {
-          width: 90%;
+          width: 60%;
           height: auto;
         }
       }
     } 
     .cs-font.clever-icon-menu-5 {
-      color: $darker-details-color;
+      color: $icons-color;
     }
     .icon-search,
     .wishlist-cart,
@@ -77,10 +89,8 @@
     .wishlist-cart {
       justify-content: center;
     }  
-    
     .white-img-icon {
       width: 30px;
-
       svg {
         width: 90%;
       }
@@ -88,8 +98,13 @@
   }
 }
 
+@include screen-width("phone") { 
+  #header-mobile .logo-avc .logo a img {
+    width: 80%;
+  }
+}
 
-//STYLES FOR THE INSTAGRAM PART BEFORE THE ACTUAL FOOTER
+// 3. STYLES FOR THE INSTAGRAM PART BEFORE THE ACTUAL FOOTER
 #shopify-section-footer #insta-feed {
   margin-top: 0;
 }
@@ -104,7 +119,7 @@
   }
 }
 
-// styles for the actual footer
+// 4. styles for the actual footer
 .footer-container.footer_layout_2 {
   .footer-center {
     padding: 2.5em 0;
@@ -117,38 +132,38 @@
     .logo-image {
       width: 100%;
       text-align: center;
-      margin-bottom: 2em;
-      .logo_img {
-        width: 20%;
-        height: auto;
-      }
+      margin: 2rem 0;
       @include screen-width("tablet") {
         margin-bottom: 0;
-        .logo_img {width: 50%;}
       }
     }
 
     .footer-isocal .footer-icon-share {
-      padding: 1em 0;
-      margin-bottom: 2em;
+      padding: 1rem 0;
+      margin-bottom: 2rem;
+      a i {
+        font-size: 35px;
+      }
       @include screen-width("tablet") {
         margin-bottom: 0;
       }
-    }
-
+    } 
     .footer-link .content {
-      @include screen-width("tablet") {
-        display: flex;
-        flex-direction: column;
-      }
-
       li a {
         font-size: 20px;
         font-weight: 400;
-
+        
         @include screen-width("tablet") {
           font-size: 14px;
         }
+      }
+
+      li:hover a, li:focus a {
+        color: $darker-bg-opacity7;
+      }
+      @include screen-width("tablet") {
+        display: flex;
+        flex-direction: column;
       }
     }
 
@@ -165,7 +180,7 @@
   }
 }
 
-//STYLES FOR THE BACK TO TOP BUTTON
+// 6. STYLES FOR THE BACK TO TOP BUTTON
 #back-top a {
   border: 2px solid $buttons-bg;
 

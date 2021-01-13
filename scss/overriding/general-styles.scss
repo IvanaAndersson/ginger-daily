@@ -2,7 +2,10 @@
   margin-top: 80px;
 
   @include screen-width("laptop") {
-    margin-top: 0;
+    margin-top: 85px;
+  }
+  @include screen-width("phone") {
+    margin-top: 65px;
   }
 }
 
@@ -10,7 +13,7 @@
 #welcome-page,
 #log-in {
   .main-content {
-  margin-top: 0;
+    margin-top: 0;
   }
 }
 
@@ -58,14 +61,15 @@
   }
 }
 .small-red-icon {
-  top: 5%;
+  top: 2%;
 }
-
+.product-image .small-red-icon {
+  left: 82%;
+}
 .cart-left .small-red-icon {
   top: 0%;
   left: 83%;
 }
-
 .medium-red-icon {
   top: 65%;
   a:first-of-type {
@@ -76,11 +80,15 @@
     top: 75%;
   }
 }
+.product {
+  margin-bottom: 3rem;
+}
 .original-price {
   text-decoration: line-through;
+  margin-right: 0;
 }
 .promo-price {
-  margin-left: 10px;
+  margin-left: 0.5rem;
   color: $darker-details-color;
 }
 .button-type3 a {

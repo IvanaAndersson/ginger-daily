@@ -1,47 +1,90 @@
 //GENERAL STYLES FOR THE RELATED PRODUCTS CAROUSEL
-.might_like_title {
-  .related-heading {
-    padding-top: 0;
+.related-heading {
+  padding-top: 0;
+  border-bottom: none;
+  h2 {
+    font-size: 18px;
     border-bottom: none;
-    h2 {
-      font-size: 18px;
-      color: white;
-      border-bottom: none;
-    }
-
-    @include screen-width('phone') {
-      margin-bottom: 20px !important;
-      font-size: 16px !important;
-    }
+    letter-spacing: 3px;
+  }
+  @include screen-width('phone') {
+    margin-bottom: 20px !important;
+    font-size: 16px !important;
   }
 }
-
-.grid-item  .product-inner  .product-image  .add-to-cartS {
-  button {
-    background: $darker-bg-opacity7;
-
-    &.btn {
-      border: none;
-    }
+.might_like_title .related-heading { 
+  h2 {
+    color: white;
   }
 }
+.cart-left .related-heading {
+  width: 80%;
+  padding: 1rem 0;
+  margin: 0 auto;
+  h2 {
+    padding-bottom: 0;
+    font-size: 14px;
+    
+  }
+}
+.related_products_modal .related-products .related-heading {
+  display: none;
+}
 
-// STYLES FOR THE RELATED PRODUCTS ON THE SINGLE PRODUCT PAGES
-.product-image.js-product-images-navigation {
-  // @include flex-centered;
+.grid-item .product-inner .product-image  {
   height: 300px;
+  .grid-image {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .add-to-cartS {
+    width: 100%;
+    button {
+      background: $darker-bg-opacity7;
+  
+      &.btn {
+        border: none;
+
+        span {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+    }
+  }
+}
+.related_products_modal .products-grid .grid-item .product-image {
+  max-height: 200px;
+  @include screen-width('tablet') {max-height: 350px !important;}
+}
+.cart-left .grid-item .product-image {
+  height: initial;
+  overflow: visible;
+
+  .grid-image {
+    width: 75%;
+    margin: 0 auto;
+
+    @include screen-width('laptop') {
+      width: 65%;
+    }
+  }
+}
+
+.owl-prev,
+.owl-next {
+  color: black !important;
+  background-color: initial !important;
+  border: 1px solid black !important;
 }
 
 // STYLES FOR THE RELATED PRODUCTS ON THE ADD TO CART POPUP
 .related_products_modal {
-  .related-products .related-heading {
-    display: none;
-  }
-  .products-grid .grid-item .product-image {
-    max-height: 200px;
-
-    @include screen-width('tablet') {max-height: 350px !important;}
-  }
   .product-content {
     background-color: #eed6c1;
     color: #fff;
@@ -60,6 +103,9 @@
   }
   .owl-nav {
     top: 62%;
+  }
+  .owl-dots {
+    display: none;
   }
 }
 .ajax-success-cbox .grid-item  .product-inner  .product-image  .add-to-cartS {

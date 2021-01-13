@@ -1,3 +1,7 @@
+body {
+  font-family: Futura;
+}
+
 // 1. LOADING FONTS
 @import './general/abstracts.scss';
 // 2. GENERAL CLASSES
@@ -6,8 +10,8 @@
 @import './overriding/header-and-footer.scss';
 @import './overriding/sliders.scss';
 @import './overriding/product.scss';
-@import './overriding/popups.scss';
 @import './overriding/related-products-carousel.scss';
+@import './overriding/popups.scss';
 // 3. PAGES STYLES
 @import './pages/home.scss';
 @import './pages/about.scss';

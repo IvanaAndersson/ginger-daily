@@ -1,6 +1,6 @@
 
 // ACTUAL CART PAGE
-.noancho.ltr.template-cart.notifications-cookie {
+.noancho.ltr.template-cart {
   .container.main_container {
     max-width: 90vw;
     padding: 0 !important;
@@ -9,14 +9,15 @@
     text-align: center;
     align-items: center;
     justify-content: space-between;
-    margin-top: 70px;
+    padding: 3rem 0;
+    // margin-top: 70px;
     .divider {
-      width: 43%;
-      border: 1px solid rgba($color: #d4361f, $alpha: 0.7);
+      width: 40%;
+      border: 2px solid $darker-bg-opacity7;
     }
     h1 {
       margin: 0 10px;
-      color: rgba($color: #d4361f, $alpha: 0.7);
+      color: $darker-bg-opacity7;
       font-weight: normal;
       font-size: 40px;
       text-transform: uppercase;
@@ -29,25 +30,25 @@
     border: none !important;
   }
   tbody {
-    tr::before {
-      content: "";
-      border-bottom: 1px solid red;
-      width: 90vw;
-      height: 10px;
-      text-align: center;
-      display: block;
-      position: absolute;
-    }
-    tr::after{
-      z-index: 999; 
-      background-color: white;
-      content: "Zlobilda Zlobilda Zlobilda";
-      position: absolute;
-      text-align: center;
-      left: 50%;
-      padding-left: 5px;
-      padding-right: 5px;
-    }
+    // tr::before {
+    //   content: "";
+    //   border-bottom: 2px solid $darker-bg-opacity7;
+    //   width: 90vw;
+    //   height: 10px;
+    //   text-align: center;
+    //   display: block;
+    //   position: absolute;
+    // }
+    // tr::after{
+    //   z-index: 999; 
+    //   background-color: white;
+    //   content: "Zlobilda Zlobilda Zlobilda";
+    //   position: absolute;
+    //   text-align: center;
+    //   left: 50%;
+    //   padding-left: 5px;
+    //   padding-right: 5px;
+    // }
     tr {
       position: relative;
     }

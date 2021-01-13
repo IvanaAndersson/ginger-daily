@@ -28,21 +28,29 @@
   }
   .slideshow__text-content.middle {
     @include flex-centered;
-    max-width: 720px;
+    width: 45%;
+    height: 70%;
     background: rgba($color: $light-bg, $alpha: 0.88);
-    padding: 3em;
-    height: 80%;
-
+    padding: 3rem;
+    
+    @media screen and (max-width: 1600px){
+      width: 50%;
+      height: 90%;
+    }
     @include screen-width('desktop') {
-      img {  max-width: 75% ; }
+      width: 55%;
+      height: 85%;
+      img {  max-width: 80% ; }
+    }
+    @include screen-width('laptop') {
+      width: 70%;
     }
     @include screen-width('tablet') {
-      max-width: 95%;
+      width: 90%;
     }
     @include screen-width('phone') {
-      max-width: 90%;
+      height: 70%;
     }
-
     @media screen and (max-height: 400px){
       img { max-width: 25% ; }
     }
@@ -50,15 +58,24 @@
   .slide-text.slide-text-1 {
     font-size: 35px;
     color: white;
+
+    @include screen-width('tablet') { font-size: 22px; }
+    @include screen-width('smallest') {font-size: 14px;}
   }
   .slide-text.slide-text-2.white-letter {
     font-family: "spinwerad", "Futura";
     font-size: 60px;
     font-weight: bold;
+
+    @include screen-width('tablet') { font-size: 50px;}
+    @include screen-width('smallest') { font-size: 31px;}
   }
   .slide-text.slide-text-3.white-letter {
     font-size: 25px;
     white-space: normal;
+
+    @include screen-width('tablet') { font-size: 20px; }
+    @include screen-width('smallest') { font-size: 18px; }
   }
   .sl-button.sl-button-1.color_button_type_2 {
     color: white;
@@ -72,6 +89,7 @@
     
     @include screen-width('phone') {
       margin-top: 1rem;
+      font-size: 14px;
     }
     &:hover,
     &:focus {
@@ -95,29 +113,5 @@
 }
 
 @include screen-width('tablet') {
-  .slide-text.slide-text-1 {
-    font-size: 22px !important;
-  }
-  .slide-text.slide-text-2.white-letter {
-    font-size: 50px !important;
-  }
-  .slide-text.slide-text-3.white-letter {
-    font-size: 20px !important;
-  }
-  .button-slider-wr {
-    margin-top: 20px;
-  }
-}
-
-@include screen-width('smallest') {
-  .slide-text.slide-text-1 {
-    font-size: 14px !important;
-  }
-  .slide-text.slide-text-2.white-letter {
-    font-size: 31px !important;
-  }
-  .slide-text.slide-text-3.white-letter {
-    font-size: 18px !important;
-  }
-
+  .button-slider-wr { margin-top: 20px; }
 }

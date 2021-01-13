@@ -140,12 +140,6 @@
         }
       }
     }
-    .original-price {
-      color: $darker-details-color;
-    }
-    .promo-price {
-      color:#666;
-    }
     @include screen-width("tablet") { max-height: none; }
   }
   @include screen-width("tablet") {
