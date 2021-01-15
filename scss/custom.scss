@@ -1,10 +1,6 @@
-body {
-  font-family: Futura;
-}
-
-// 1. LOADING FONTS
+// 1. LOADING FONTS, VARIABLES, MIXINS
 @import './general/abstracts.scss';
-// 2. GENERAL CLASSES
+// 2. GENERAL CLASSES AND OVERRIDING SECTIONS
 @import './general/general-classes.scss';
 @import './overriding/general-styles.scss';
 @import './overriding/header-and-footer.scss';
@@ -33,44 +29,13 @@ body {
   left: -2px;
   background-color: $darker-details-color;
 }
-
-[type="reset"],
-[type="submit"],
-button,
-html [type="button"] {
-  -webkit-appearance: button;
-}
-._2ogcW-Q9I-rgsSkNbRiJzA {
-  -webkit-animation: _1UiPBn7_kvwWk2eMbG90wa 300ms cubic-bezier(0.1, 0.79, 1, 1);
-  animation: _1UiPBn7_kvwWk2eMbG90wa 300ms cubic-bezier(0.1, 0.79, 1, 1);
-}
-.cs-font.clever-icon-down.fa-caret-right,
-.cs-font.clever-icon-down.fa-caret-down {
-  font-size: 18px;
-  color: #7b7b7b !important;
-}
 .custom-block-html.style_2 .content-text-menu {
   position: initial !important;
 }
-
-.promobox-wt-content {
-  .text-line3.text3 {
-    padding-top: 0 !important;
-  }
-}
-
-.header-cart-container.menu.col-md-3.col-sm-12.col-12 {
-  display: flex;
-  flex-direction: row-reverse;
-}
-
 .order-details {
-  // border: 1px solid #7c7979;
   width: 37vw;
   margin-top: 20px;
-  // display: none;
 }
-
 .pr-old {
   margin-right: 5px;
   text-decoration: line-through;
@@ -123,49 +88,11 @@ html [type="button"] {
     display: block;
   }
 }
-
-.label-dec {
-  font-size: 20px;
-  letter-spacing: 3px;
-  line-height: 27px;
-  color: #fabca1;
-  border-bottom: 1px solid #fabca1;
-  text-transform: uppercase;
-  width: fit-content;
-  margin-left: 10%;
-  margin-bottom: 15px;
-}
-.lebel-dec1 {
-  margin-left: 0;
-}
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 50px white inset !important;
-  -webkit-text-fill-color: #8d8d8d !important;
-}
 // .select-dateBirth {
 //   margin-bottom: 45px !important;
 // }
 
-#shopify-section-home-heading {
-  .full-width {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  .section-heading {
-    background: $footer-color ;
-    .heading-title-main {
-      letter-spacing: 3px;
-      font-weight: 100;
-      color: $details-text-opacity3;
-    }
-  }
-}
-.section-heading {
-  padding: 20px;
-}
+
 div.order-details {
   width: 44vw;
   display: none;
@@ -189,51 +116,8 @@ div.order-details {
 // 4. MEDIA QUERIES
 
 @include screen-width('phone') {
-  .product {
-    margin-bottom: 20px !important;
-  }
-
-  .tab-pane.in.active.show.fs-18 {
-    font-size: 14px !important;
-  }
-  
-  .heading-title-main {
-    font-size: 18px;
-    line-height: 25px;
-  }
-  
-  .mobile-tabs {
-    text-transform: uppercase;
-    border-bottom: 2px solid #666;
-    width: fit-content;
-    font-size: 16px !important;
-    margin-bottom: 20px !important;
-  }
-
   .shopify-section.custom-tabs {
     margin-bottom: 50px;
-  }
-}
-@include screen-width('smallest')  {
-  .sl-button.sl-button-1.color_button_type_2 {
-    padding: 0 50px !important;
-  }
-  .size-25.heading-title {
-    font-size: 24px;
-  }
-  #shopify-section-collection-grid-builder .size-25.heading-title {
-    font-size: 14px !important;
-  }
-  #product-featured-image {
-    height: 350px !important;
-    width: initial !important;
-  }
-  .heading-title-main {
-    font-size: 14px;
-    line-height: 25px;
-  }
-  #shopify-section-home-heading .section-heading .heading-title-main {
-    padding: 10px;
   }
   .select-dateBirth {
     margin-bottom: 30px !important;

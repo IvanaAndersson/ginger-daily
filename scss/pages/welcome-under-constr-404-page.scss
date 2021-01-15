@@ -159,24 +159,22 @@
       }
     }
   }
-  .text-line1.text1 {
+  .text-line1 {
     font-size: 80px;
-    line-height: 90px;
+    line-height: normal;
     font-weight: 100;
-    width: 75%;
+    width: 80%;
     margin-bottom: 50px;
 
     @include screen-width('desktop') { 
       font-size: 50px;
-      line-height: 60px;
     }
     @include screen-width('tablet') { 
       margin-top: 0 ;}
     @include screen-width('phone') { 
-      font-size: 38px;
-      line-height: 45px;}
+      font-size: 38px;}
   }
-  .text-line2.text2 {
+  .text-line2 {
     margin-left: 0;
     width: fit-content;
     background-image: url("https://cdn.shopify.com/s/files/1/0409/0196/8033/files/Rectangle_313.png?v=1606294066");
@@ -200,15 +198,15 @@
       @include screen-width('desktop') { font-size: 40px;}
     }
   }
-  .text-line3.text3 {
-    font-size: 24px !important;
+  .text-line3 {
+    font-size: 1.5rem;
     margin-top: 30px;
     line-height:normal;
     width: 80%;
     margin-left: 0;
 
-    @include screen-width('desktop') { font-size: 20px !important;}
-    @include screen-width('phone') { font-size: 16px !important;}
+    // @include screen-width('desktop') { font-size: 20px;}
+    // @include screen-width('phone') { font-size: 16px;}
   }
   .button-view.button-type3 {
     margin-top: 30px;
@@ -220,10 +218,10 @@
       line-height: normal;
       padding: 1.25rem 0;
       text-align: center;
-      font-size: 20px;
+      font-size: 1.2rem;
 
-      @include screen-width('desktop') { font-size: 18px;}
-      @include screen-width('phone') { font-size: 14px;}
+      // @include screen-width('desktop') { font-size: 18px;}
+      // @include screen-width('phone') { font-size: 14px;}
     }
   }
 }

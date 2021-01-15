@@ -1,14 +1,3 @@
-
-#shopify-section-collection-grid-builder {
-  .size-25.heading-title {
-    margin-top: 7px;
-    font-size: 26px !important;
-  }
-}
-
-.slide-text.slide-text-2.white-letter {
-  letter-spacing: 2px !important;
-}
 #shopify-section-1556008263381, //on the home page
 #shopify-section-home-grid-builder //on the catalog page 
 { .slides //(ul) 
@@ -28,74 +17,88 @@
   }
   .slideshow__text-content.middle {
     @include flex-centered;
-    width: 45%;
-    height: 70%;
     background: rgba($color: $light-bg, $alpha: 0.88);
-    padding: 3rem;
+    padding: 5rem 3rem;
+    max-width: 50%;
+    max-height: 60%;
     
-    @media screen and (max-width: 1600px){
-      width: 50%;
-      height: 90%;
+    @media screen and (min-width: 1200px) and (min-aspect-ratio: 16/9) {
+      background: yellowgreen;
+      max-width: 45%;
+      max-height: 65%;
     }
-    @include screen-width('desktop') {
-      width: 55%;
-      height: 85%;
-      img {  max-width: 80% ; }
+    @media screen and (max-width: 1199px) and (max-aspect-ratio: 3/5) {
+      background: peru;
+      max-width: 85%;
+      max-height: 70%;
     }
-    @include screen-width('laptop') {
-      width: 70%;
+
+    & div.image-container {
+      overflow: hidden;
+      position: relative;
+      &:before {
+        display: block;
+        content: '';
+        padding-top: 35%;
+      }
+
+      .logo_img {
+        width: 100%;
+        height: auto;
+        @include position-center;
+      }
     }
-    @include screen-width('tablet') {
-      width: 90%;
-    }
-    @include screen-width('phone') {
-      height: 70%;
-    }
-    @media screen and (max-height: 400px){
-      img { max-width: 25% ; }
-    }
+    // @include screen-width('desktop') {
+    //   img {  max-width: 80% ; }
+    // }
+    // @include screen-width('tablet') {
+    //   img {  max-width: 100% ; }
+    // }
+    // @media screen and (max-height: 400px){
+    //   img { max-width: 25% ; }
+    // }
+  }
+
+  .slide-text.slide-text-1,
+  .slide-text.slide-text-2,
+  .slide-text.slide-text-3 {
+    color: white;
+    white-space: normal;
+    line-height: normal;
   }
   .slide-text.slide-text-1 {
-    font-size: 35px;
-    color: white;
-
-    @include screen-width('tablet') { font-size: 22px; }
-    @include screen-width('smallest') {font-size: 14px;}
+    font-size: 1.5rem;
   }
-  .slide-text.slide-text-2.white-letter {
+  .slide-text.slide-text-2 {
     font-family: "spinwerad", "Futura";
-    font-size: 60px;
+    font-size: 3rem;
     font-weight: bold;
-
-    @include screen-width('tablet') { font-size: 50px;}
-    @include screen-width('smallest') { font-size: 31px;}
+    letter-spacing: 2px
   }
-  .slide-text.slide-text-3.white-letter {
-    font-size: 25px;
+  .slide-text.slide-text-3 {
+    font-size: 1.2rem;
     white-space: normal;
-
-    @include screen-width('tablet') { font-size: 20px; }
-    @include screen-width('smallest') { font-size: 18px; }
   }
-  .sl-button.sl-button-1.color_button_type_2 {
-    color: white;
-    font-size: 20px;
-    font-weight: 300;
-    border: none;
-    outline: none;
-    background-color: $buttons-bg;
-    padding: 0 70px;
-    margin-top: 45px;
-    
-    @include screen-width('phone') {
-      margin-top: 1rem;
-      font-size: 14px;
+  .button-slider-wr {
+    .sl-button {
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 300;
+      border: none;
+      outline: none;
+      background-color: $buttons-bg;
+      height: auto;
+      line-height: normal;
+      padding: 1rem 5rem;
+      margin-top: 3rem;
+      
+      &:hover, &:focus {
+        background-color: $darker-bg-opacity7 !important;
+      }
+      @include screen-width('phone') { margin-top: 1rem; }
     }
-    &:hover,
-    &:focus {
-      background-color: $darker-bg-opacity7 !important;
-    }
-  }
+    @include screen-width('tablet') { margin-top: 20px;}
+  } 
 }
 #shopify-section-home-grid-builder //only on the catalog page
 {
@@ -108,10 +111,6 @@
 
 @include screen-width('desktop') {
   .slideshow-container {
-    margin-bottom: 0 !important;
+    margin-bottom: 0;
   }
-}
-
-@include screen-width('tablet') {
-  .button-slider-wr { margin-top: 20px; }
 }

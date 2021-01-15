@@ -6,18 +6,7 @@
     align-items: stretch;
   }
 
-  @include screen-width("phone") {
-    .heading-title-main {
-      font-size: 18px;
-      line-height: 30px;
-    }
-  }
-
   @include screen-width("smallest") {
-    .heading-title-main {
-      font-size: 14px;
-      line-height: 35px;
-    }
     .section-heading.type-default {
       padding: 10px;
     }

@@ -25,11 +25,13 @@
   min-height: 80px;
 
   .header-cart-container {
-    align-items: center;
+    @include align-center;
+    justify-content: flex-end;
 
     & > div {
       margin-right: 0.75rem;
       cursor: pointer;
+      flex-basis: 10%;
     }
     & > div.header-language {
       display: none;
@@ -40,13 +42,13 @@
     }
   }
   
-  .white-img-icon svg{
+  .svg-img-icon svg{
     width: 100%;
   }
 
   .site-nav .level-top .text-st {
     color: #F9BCA1;
-    font-size: 18px;
+    font-size: 1rem;
   }
 }
 
@@ -89,8 +91,8 @@
     .wishlist-cart {
       justify-content: center;
     }  
-    .white-img-icon {
-      width: 30px;
+    .svg-img-icon {
+      width: 2rem;
       svg {
         width: 90%;
       }
@@ -108,15 +110,18 @@
 #shopify-section-footer #insta-feed {
   margin-top: 0;
 }
-.size-25.heading-title {
-  margin-bottom: 0;
-  letter-spacing: 3px !important;
-  font-weight: 100 !important;
-  color: $details-text-opacity3 !important;
 
-  @include screen-width("phone") {
-    font-size: 18px !important;
-  }
+.footer-heading {
+  background: $footer-color;
+}
+
+.heading-title {
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: $details-text-opacity3;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 1rem 0;
 }
 
 // 4. styles for the actual footer

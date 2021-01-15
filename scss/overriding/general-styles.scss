@@ -1,11 +1,30 @@
+[type="reset"],
+[type="submit"],
+button,
+html [type="button"] {
+  -webkit-appearance: button;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 50px white inset !important;
+  -webkit-text-fill-color: #8d8d8d !important;
+}
+
+._2ogcW-Q9I-rgsSkNbRiJzA {
+  -webkit-animation: _1UiPBn7_kvwWk2eMbG90wa 300ms cubic-bezier(0.1, 0.79, 1, 1);
+  animation: _1UiPBn7_kvwWk2eMbG90wa 300ms cubic-bezier(0.1, 0.79, 1, 1);
+}
+
 .main-content {
   margin-top: 80px;
 
   @include screen-width("laptop") {
-    margin-top: 85px;
+    margin-top: 4.5rem;
   }
   @include screen-width("phone") {
-    margin-top: 65px;
+    margin-top: 4rem;
   }
 }
 
@@ -23,30 +42,11 @@
   text-align: center;
 }
 
-.text1 {
-  margin-top: 0;
-  // font-family: Spinwerad !important;
-  font-size: 40px;
-}
-.text2 {
-  font-size: 20px !important;
-  display: flex;
-  justify-content: space-between;
-  width: 7%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.text3 {
-  width: 65%;
-  margin-left: auto;
-  margin-right: auto;
-  text-transform: initial;
-  font-size: 20px;
+.section-heading {
+  padding: 20px;
 }
 
-// .collection_content .collection_item 
-
-.small-red-icon, //on catalog page, on related products
+.small-red-icon, //on the catalog page, and on related products
 .medium-red-icon  //on single product pages
 {
   position: absolute;
@@ -105,27 +105,64 @@
   display: flex;
   justify-content: center;
 }
-@include screen-width("desktop") {
-  .text1 {
-    font-size: 31px;
-    margin-bottom: 15px;
+
+// the progress bar is on the cart page and in the cart drawer 
+.progres-cart {
+  .progressbar.progressbar {
+    background: $details-text-opacity3;
   }
-  .text2 {
-    font-size: 18px;
-    margin-bottom: 0;
-  }
-  .text3 {
-    width: 90%;
-    font-size: 16px;
-    padding-top: 0;
+  .progressbar.full-process .less-than-ten {
+    background: $darker-bg-opacity7;
   }
 }
+
+#cart .progres-cart {
+  .progressbar.progressbar,
+  .progressbar.full-process .less-than-ten {
+    height: 3rem;
+    margin-bottom: 0;
+  }
+
+  p.cart-congrats,
+  p.full-free-ship {
+    font-size: 1rem;
+  }
+}
+
+
+.cs-font.clever-icon-down.fa-caret-right,
+.cs-font.clever-icon-down.fa-caret-down {
+  font-size: 18px;
+  color: #7b7b7b !important;
+}
+
+.promobox-wt-content {
+  .text-line3.text3 {
+    padding-top: 0 !important;
+  }
+}
+
+.label-dec {
+  font-size: 20px;
+  letter-spacing: 3px;
+  line-height: 27px;
+  color: #fabca1;
+  border-bottom: 1px solid #fabca1;
+  text-transform: uppercase;
+  width: fit-content;
+  margin-left: 10%;
+  margin-bottom: 15px;
+}
+.lebel-dec1 {
+  margin-left: 0;
+}
+
 @include screen-width("tablet") {
   .col-12.col-md-6.margin-bottom-0.promobox {
     max-width: 100%;
     flex: none;
   }
-  .text-line1.text1 {
+  .text-line1 {
     margin-bottom: 20px;
   }
   .button-view.button-type3 {

@@ -16,10 +16,7 @@
 
 ## Footer and instagram part
 * Liquid files used: 
-    * **collection-grid-builder.liquid** for the instagram header on Home, Catalog
-    * **home-heading.liquid** for the instagram header on About, Contact
-    * **home-instagram.liquid** for where the instagram photos should be 
-    * **footer.liquid** for the actual footer
+    * **footer.liquid** for the actual footer, including the instagram section
 * SCSS files used: header-and-footer.scss
 
 
@@ -27,6 +24,7 @@
 * Liquid files used:
     * **index.liquid** is the template file for this page
     * **home-grid-builder.liquid** for the slider on top of the page
+    * **buider-slideshow.liquid** for the slides (li elements)
     * **builder-promobox.liquid** for the rest of the sections (these might be easiest to change through the customizer)
 * SCSS files used:
     * **sliders.scss** for the carousel on the top of the page
@@ -83,5 +81,6 @@
 
 # CART PAGE
 * Liquid files used:
-    * **cart.liquid** for the layout
+    * **cart.liquid** is the template for this page
+    * **
 * SCSS files used: **cart.scss**
