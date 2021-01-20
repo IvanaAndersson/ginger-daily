@@ -13,10 +13,25 @@
       }
       .promobox-content {
         .promobox-wt-content {
+          width: 70%;
+          margin: 0 auto;
+          .text-line1 {
+            font-weight: normal;
+            font-size: 2rem;
+            margin-top: 0;
+            line-height: normal;
+          }
+          .text-line2, .text-line3 {
+            font-size: 1rem;
+            line-height: normal;
+          }
+          .text-line3 {
+            text-transform: none;
+          }
           .button-type3 {
             a {
               height: auto;
-              line-height: 30px;
+              line-height: normal;
               padding: 1rem 3.5rem;
               border: none;
 
@@ -24,21 +39,17 @@
               &:focus {
                 background: $darker-bg-opacity7 !important;
               }
-
-              @include screen-width("laptop") {
-                padding: 0.5rem 3.5rem;
-              }
             }
           }
-          @include screen-width("desktop") {
-          }
+          
           @include screen-width("phone") {
-            
-            .text2 , .text3{
-              font-size: 12px;
-            }
+            width: 80%;
           }
           @include screen-width("smallest") {
+            width: 90%;
+            .text-line2 {
+              margin-bottom: 0;
+            }
             .text-line3 {
               margin-bottom: 15px;
             }
@@ -50,22 +61,19 @@
             display: none;
           }
           .promobox-wt-content {
-            width: 100%;
             top: 47%;
-          
+            .text-line1 {
+              font-size: 3.5rem;
+            }
             @include screen-width('tablet') {
               top: 50%;
+              .text-line1 {
+                font-size: 2.5rem;
+              }
             }
           }
           .button-type3 a {
-            font-size: 18px;
-
-            @include screen-width("laptop") {
-              font-size: 16px;
-            }
-            @include screen-width("smallest") {
-              font-size: 14px;
-            }
+            font-size: 0.9rem;
           }
 
           @include screen-width("desktop") {
@@ -75,14 +83,6 @@
             .lazyautosizes.lazyloaded {
               height: 100%;
             }
-          }
-
-          @include screen-width("tablet") {
-           
-          }
-
-          @include screen-width("smallest") {
-            
           }
         }
         &.promobox-3 {
@@ -105,16 +105,9 @@
               }
             }
           }
-          .text-line1 {
-            font-weight: normal;
-            margin-top: 1rem;
-          }
           .button-type3 a {
-            font-size: 20px;
+            font-size: 1rem;
 
-            @include screen-width("laptop") {
-              font-size: 16px;
-            }
           }
         }
       }

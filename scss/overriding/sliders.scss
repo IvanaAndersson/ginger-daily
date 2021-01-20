@@ -23,12 +23,12 @@
     max-height: 60%;
     
     @media screen and (min-width: 1200px) and (min-aspect-ratio: 16/9) {
-      background: yellowgreen;
+      // background: yellowgreen;
       max-width: 45%;
       max-height: 65%;
     }
     @media screen and (max-width: 1199px) and (max-aspect-ratio: 3/5) {
-      background: peru;
+      // background: peru;
       max-width: 85%;
       max-height: 70%;
     }
@@ -39,24 +39,14 @@
       &:before {
         display: block;
         content: '';
-        padding-top: 35%;
+        padding-top: 25%;
       }
-
       .logo_img {
-        width: 100%;
+        width: 90%;
         height: auto;
         @include position-center;
       }
     }
-    // @include screen-width('desktop') {
-    //   img {  max-width: 80% ; }
-    // }
-    // @include screen-width('tablet') {
-    //   img {  max-width: 100% ; }
-    // }
-    // @media screen and (max-height: 400px){
-    //   img { max-width: 25% ; }
-    // }
   }
 
   .slide-text.slide-text-1,
@@ -111,6 +101,6 @@
 
 @include screen-width('desktop') {
   .slideshow-container {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
   }
 }

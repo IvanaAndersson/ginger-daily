@@ -138,8 +138,13 @@
       width: 100%;
       text-align: center;
       margin: 2rem 0;
+      a.logo_img svg {
+        width: 100%;
+      }
       @include screen-width("tablet") {
-        margin-bottom: 0;
+        width: 80%;
+        margin: 0 auto;
+        
       }
     }
 
@@ -155,14 +160,9 @@
     } 
     .footer-link .content {
       li a {
-        font-size: 20px;
+        font-size: 1rem;
         font-weight: 400;
-        
-        @include screen-width("tablet") {
-          font-size: 14px;
-        }
-      }
-
+      } 
       li:hover a, li:focus a {
         color: $darker-bg-opacity7;
       }
@@ -174,13 +174,13 @@
 
     .footer-copyright address {
       margin-top: auto;
-      font-size: 14px;
+      font-size: 0.75rem;
 
       .footer_link { margin-left: 30px; }
     }
 
     @include screen-width("tablet") {
-      padding-top: 2em 0;
+      padding-top: 2rem 0;
     }
   }
 }
