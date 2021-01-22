@@ -5,114 +5,139 @@
 
 
 // 1. CATALOG PAGE
-// THE CAROUSEL STYLES ON THIS PAGE ARE IN THE FILE SLIDERS.SCSS
+.collection_grid_builder { 
+  .grid-builder-image .promobox {
+    .promobox-content.promobox-5 {
+      height: 100%;
+      @include align-center;
+
+      .promobox-wt-content {
+        position: relative;
+        @include flex-centered;
+        flex-direction: column;
+        background-color: $darker-bg-opacity7;
+        padding: 5rem;
+        width: 50%;
+        height: 80%;
+        margin: 0 auto;
+        @media screen and (min-width: 1200px) and (min-aspect-ratio: 16/9) {
+          width: 720px;
+          height: 720px;
+        }
+        @media screen and (max-width: 1199px) and (max-aspect-ratio: 3/5) {
+          width: 85%;
+          height: 70%;
+        }
+  
+        & div.image-container {
+          width: 100%;
+          &:before {
+            padding-top: 25%;
+          }
+          .logo_img {
+            width: 90%;
+            height: auto;
+            @include position-center;
+          }
+        }
+      }
+
+      .collection-divider {
+        font-size: 1.5rem;
+      }
+      .collection-title {
+        font-size: 3.5rem;
+        font-family: "spinwerad", "Futura";
+        text-transform: lowercase;
+      }
+    }
+  }
+}
 
 //STYLES FOR THE SECTION WITH THE LEAF
 .collection-leaf-webrika {
   background-color: #F9BCA1;
 }
 .leaf_container {
-  padding: 70px 0;
-
-  h3 {
-    margin-top: 50px;
+  padding: 4rem 0;
+  align-self: center;
+  h5 {
+    margin-top: 3rem;
   }
   img {
-    max-height: 76px;
     width: auto;
+    max-height: 100%;
   }
 
   @include screen-width("tablet") {
-    padding: 30px 0 28px;
-
-    h3 {
-      margin-top: 25px;
+    padding: 2rem 0; 
+  }
+  @include screen-width("phone") {
+    h5 {
+      margin-top: 1rem;
+      font-size: 1rem;
     }
     img {
-      max-height: 34px;
+      max-height: 35px;
     }
   }
 }
 //STYLES FOR THE LEFT SIDE BAR
 .template-collection #filter-sidebar {
-    margin-bottom: 50px;
-    background: $footer-color;
+  margin-bottom: 3rem;
+  background: $footer-color;
 
-    @include screen-width("tablet") {
-      margin-bottom: 30px;
-    }
-}
-@include screen-width("tablet") {
-  .template-collection #filter-sidebar {
-    padding: 40px 0 !important;
+  @include screen-width("tablet") {
+    margin-bottom: 2rem;
+    padding: 2rem 0 !important;
   }
 }
+
 .collection_left_sidebar {
   max-width: 65%;
   margin: 0 auto;
   h2 {
     font-family: Spinwerad;
-    margin-top: 120px;
-    font-size: 70px;
+    margin-top: 5rem;
+    font-size: 3.5rem;
     font-weight: 700;
     text-transform: lowercase;
 
-    @media screen and (max-width: 1600px) {
-      font-size: 60px;
+    @media screen and (max-width: 1550px) {
+      font-size: 3rem;
     }
-    @media screen and (max-width: 1440px) {
-      font-size: 52px;
-    }
-    @include screen-width("desktop") {
-      font-size: 45px;
-    }
-    @include screen-width("laptop") {
-      font-size: 35px;
-    }
-    @include screen-width("tablet") {
-      font-size: 42px;
+    @media screen and (min-width: 770px) and (max-width: 1200px) {
+      font-size: 2.6rem;
     }
     @include screen-width("phone") {
-      font-size: 32px;
+      font-size: 2.5rem;
     }
+  }
+  .left_sidebar_content, .ls_second_heading, .sidebar-tag h4 {
+    font-size: 1rem;
   }
   .left_sidebar_content {
     color: #7b7b7b;
-    margin-top: 80px;
-    margin-bottom: 110px;
+    margin: 4rem 0;
   }
-  h3.ls_second_heading {
-    margin-bottom: 40px;
+  .ls_second_heading {
+    margin-bottom: 2rem;
     font-weight: bold;
   }
   .sidebar-tag {
-    margin-bottom: 25px;
+    margin-bottom: 1.5rem;
   }
 
   @include screen-width("desktop") {
-    max-width: 90% !important;
-    padding-left: 15px;
-    h2 {
-      margin-top: 40px;
-    }
-    h3.ls_second_heading {
-      margin-bottom: 20px;
-    }
-    .left_sidebar_content {
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
+    padding: 0 0.75rem;
   }
   @include screen-width("tablet") {
-    max-width: 80% !important;
     text-align: center;
     h2 {
       margin-top: 0;
     }
     .left_sidebar_content {
-      font-size: 14px !important;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin: 2rem 0;
     }
   }
 }
@@ -120,39 +145,28 @@
 .main_collection_content {
   max-width: 80%;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 2.5rem 0;
 
+  .title span, .data_container span {
+    font-size: 1rem;
+  }
   .data_container {
     @include flex-centered;
     background-color: $footer-color;
     color: $darker-bg-opacity7;
-    padding: 30px;
-    width: 100%;
-    font-size: 24px;
+    flex-grow: 1;
     text-transform: uppercase;
+    font-size: 1.2rem;
     letter-spacing: 3.2px;
-    line-height: 2rem;
-    margin-bottom: 45px;
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
     @include screen-width("desktop") {
       text-align: center;
-      span {
-        font-size: 20px;
-        margin-bottom: 10px;
-      }
     }
     @include screen-width("tablet") {
       padding: 1rem;
       margin-bottom: 0;
       margin-left: 1rem;
-      span {
-        font-size: 16px;
-      }
-    }
-    @include screen-width("smallest") {
-      padding: 5px;
-      span {
-        font-size: 12px;
-      }
     }
   }
 
@@ -167,12 +181,8 @@
 .collection_content {
   .collection_item {
     flex-basis: 45%;
-    margin-bottom: 50px;
+    margin-bottom: 2.5rem;
 
-    a:hover {
-     color: #7f7f7f;
-    }
-    
     .product-pictures {
       text-align: center;
       position: relative;
@@ -200,32 +210,25 @@
     .discount-percentage {
       @include flex-centered;
       background-color: $darker-bg-opacity7;
-      width: 90px;
-      height: 40px;
+      width: 4.5rem;
+      height: 2rem;
       position: absolute;
       top: 2%;
       z-index: 2;
       p {
         margin-bottom: 0;
-        font-size: 24px;
+        font-size: 1.3rem;
         color: white;
       }
-
       @include screen-width("desktop") {
-        width: 70px;
-        height: 35px;
         top: 5%;
-        p {
-          font-size: 20px;
-        }
       }
       @include screen-width("tablet") {
-        width: 90px;
-        height: 40px;
+        width: 8rem;
+        height: 3.5rem;
         top: 2%;
-        p {
-          font-size: 22px;
-        }
+
+        p {font-size: 2rem;}
       }
       @include screen-width("smallest") {
         top: 4%;
@@ -234,7 +237,6 @@
     .new-location {
       top: 90%;
       left: 90%;
-      // @include screen-width("desktop") { top: 60%; }
     }
     .lazyOwl.feature-images {
       min-height: 500px;
@@ -265,17 +267,21 @@
       }
     }
     .product-descriptions {
-      h3 {
-        font-weight: bold;
+      background: #fff;
+      h5, &_sub span {
+        font-size: 1rem;
+        @include screen-width('tablet') {font-size: 1.2rem;}
       }
-
+      h5 {
+        font-weight: bold;
+        padding: 0.75rem 0;
+      }
       &_sub {
         align-items: flex-end;
         span:nth-of-type(1) {
-          flex-basis: 60%;
+          flex-grow:1;
         }
         span:nth-of-type(2) {
-          flex-basis: 40%;
           text-align: right;
         }
       }
@@ -283,17 +289,45 @@
     @include screen-width("tablet") {
       flex-basis: 95%;
       margin: 0 auto 5rem auto;
-
       .product-descriptions_sub {
-        span {
-          font-size: 14px;
-        }
         span:nth-of-type(1) {
-          flex-basis: 70%;
+          align-self: baseline;
         }
-        span:nth-of-type(2) {
-          flex-basis: 30%;
+      }
+    }
+    .add-to-cartS {
+      display: none;
+    }
+    /* 
+    * FOR DEVICES WITH HOVER THERE IS A BUTTON TO ORDER NOW
+    */
+    @media (hover: hover) and (pointer: fine) {
+      .add-to-cartS {
+        display: block;
+        width: 100%;
+        z-index: -1;
+        overflow: hidden;
+        button {
+          transform: translateY(100%);
+          transition: transform 0.4s background 0.4s;
+          z-index: -1;
+          width: 100%;
+          background: $buttons-bg;
+          color: #ffffff;
+          border: none;
+          outline: none;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          font-size: 1rem;
+          line-height: normal;
+          padding: 0.75rem 0;
+          &:hover {
+            background: $darker-bg-opacity7;
+          }
         }
+      }
+      &:hover .add-to-cartS button{
+        transform: translateY(0);
       }
     }
   }
@@ -307,16 +341,9 @@
     border: none;
   }
 }
-
 .shopify-section-collection-template1-webrika {
   .products-grid.product-grid-item.collection-grid.row {
     display: none !important;
-  }
-}
-
-@include screen-width("tablet") {
-  .text-gray.fw-700.mt-10p {
-    font-size: 16px !important;
   }
 }
 
@@ -327,8 +354,11 @@
 .product_bread {
   margin-top: 110px;
   @include screen-width('tablet') {
-    margin-top: 10px;
+    margin-top: 80px;
     margin-bottom: 10px;
+  }
+  @include screen-width('phone') {
+    margin-top: 60px;
   }
 }
 .product {
@@ -349,7 +379,7 @@
 }
 .product-shop {
   .product-title h1 {
-    font-size: 70px;
+    font-size: 3.5rem;
   }
   .product-title h1,
   .price.on-sale {
@@ -360,26 +390,32 @@
     flex-direction: row-reverse;
     align-items: baseline;
     .compare-price {
-      font-size: 20px;
-      line-height: 25px;
+      font-size: 1rem;
+      line-height: normal;
       font-weight: 400;
     }
     .price.on-sale {
+      font-size: 2rem;
       margin-right: 10px;
-      font-size: 40px;
       font-weight: 400;
     }
   }
   .new_product_description {
-    line-height: 1.8rem;
+    font-size: 1rem;
+    line-height: normal;
     margin: 2rem 0;
+    text-align: justify;
   }
   .variant_heading {
-    font-size: 14px;
+    font-size: 0.75rem;
     opacity: 0.5;
     text-transform: uppercase;
     margin-bottom: 10px;
     letter-spacing: 5px;
+
+    @include screen-width('tablet') {
+      font-size: 1.3rem;
+    }
   }
   .swatch {
     .label-heading {
@@ -410,10 +446,9 @@
       }
     }
   } 
-
   #add-to-cart-form {
     input#quantity {
-      font-size: 20px;
+      font-size: 1rem;
       color: #000;
     }
     
@@ -430,9 +465,9 @@
     margin-top: 20px;
     a{
       color: #fcd7c7;
-      font-size: 22px;
+      font-size: 1.2rem;
       &:hover {
-        color: #fcd7c7;
+        color: #fcf7f7;
         text-decoration: underline;
       }
     }
@@ -442,6 +477,23 @@
       color: #fcd7c7;
       text-transform: uppercase;
       text-decoration: underline;
+    }
+  }
+
+  @include screen-width('phone') {
+    .product_socials_wrapper {
+      display: flex;
+      justify-content: center;
+      .share-links {
+        display: block;
+        text-align: center;
+        margin-top: 0;
+        .share-title {
+          padding-right: 0;
+          margin-bottom: 5px;
+          font-size: 14px;
+        }
+      }
     }
   }
 }
@@ -462,15 +514,9 @@
 .product_icon_container {
   justify-content: space-between;
   border: 1px solid $buttons-bg;
-  padding: 22px 0px;
+  padding: 1.2rem 0px;
 }
-.shopify-payment-button__button.shopify-payment-button__button--unbranded {
-  font-size: 20px;
 
-  @include screen-width('phone') {
-    font-size: 14px ;
-  }
-}
 .shopify-payment-button__button {
   border-radius: 4px;
   border: none;
@@ -480,7 +526,7 @@
   display: block;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 1;
+  line-height: normal;
   text-align: center;
   width: 100%;
   transition: background 0.2s ease-in-out;
@@ -499,62 +545,42 @@
     background-color: $darker-bg-opacity7;
   }
 }
-.product_mail {
-  margin-top: -3px;
-  width: 20px;
-}
 
 //styles for the product description tabs
 #shopify-section-product-description-tabs {
-  .nav-tabs a {
-    font-size: 18px;
-    &.active, &:hover, &:focus {
-      border-bottom: 3px solid $labels-color;
-      color: $labels-color;
+  .nav-tabs {
+    border-bottom: none;
+    a {
+    font-size: 0.9rem;
+      &.active, &:hover, &:focus {
+        border-bottom: 3px solid $labels-color;
+        color: $labels-color;
+      }
     }
   }
 }
-
 .product-tabs.product_tabs_webrika {
   margin: 4rem 0;
-  .nav-tabs {
-    border-bottom: none;
-  }
 }
 #myTabContent {
-  margin-top: 30px;
+  margin-top: 2rem;
 }
-
-.dots_container {
-  display: none;
-}
-
-.images_dots {
-  @include flex-centered;
-  width: 11px;
-  height: 11px;
-  border: 1px solid #7f7f7f;
-  border-radius: 50%;
-  &:after {
-    display: inline-block;
-    content: '';
-    width: 5px;
-    height: 5px;
-    background-color: #7f7f7f;
+@include screen-width('phone') {
+  .tab-pane.in.active.show {
+    font-size: 1.2rem;
+  }
+  .mobile-tabs {
+    text-transform: uppercase;
+    border-bottom: 2px solid #666;
+    width: fit-content;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
   }
 }
 
-@include screen-width('tablet') {
-  .dots_container{
-    display: flex;
-    justify-content: space-between;
-    width: 55px;
-    margin: 0 auto;
-  }
-}
 
 @include screen-width('phone') {
-  #zt_list_product {
+  #zt_list_product,header.product-title:nth-of-type(1),.wrap-qty {
     display: none !important;
   }
   .product {
@@ -563,12 +589,10 @@
   .product-title-mobile {
     display: block !important;
     text-align: center;
-    font-size: 22px !important ;
+    font-size: 2rem ;
     color: $darker-bg-opacity7;
   }
-  header.product-title:nth-of-type(1) {
-    display: none;
-  }
+  
 
   #product-featured-image {
     height: 500px !important;
@@ -580,25 +604,10 @@
       justify-content: center !important;
     }
   }
-  .compare-price {
-    font-size: 14px !important;
-    line-height: 20px !important;
-  }
-  .price.on-sale {
-    font-size: 22px !important;
-    line-height: 24px !important;
-  }
-
-  .wrap-qty {
-    display: none !important;
-  }
+  
   .btn.product_add_to_art_webrika {
     width: 100% !important;
   }
-  .variant_heading {
-    font-size: 16px !important;
-  }
-
   .clear_fix {
     padding-top: 0 !important;
   }
@@ -608,7 +617,7 @@
   .template-product #add-to-cart-form #product-add-to-cart,
   .template-product .shopify-payment-button__button {
     height: 40px !important;
-    line-height: 40px !important;
+    line-height: normal !important;
   }
   .new_product_description.text_gray.mobile {
     margin-top: 20px !important;
@@ -622,44 +631,9 @@
       margin-bottom: 10px;
     }
   }
-  .fs-16.text-upper.text_red.opac_70 {
-    font-size: 12px !important;
-  }
-
-  .tab-pane.in.active.show {
-    font-size: 14px !important;
-  }
-  .mobile-tabs {
-    text-transform: uppercase;
-    border-bottom: 2px solid #666;
-    width: fit-content;
-    font-size: 16px !important;
-    margin-bottom: 20px !important;
-  }
-  
-  .product_socials_wrapper {
-    justify-content: center;
-    display: flex;
-    .share-links {
-      text-align: center;
-      align-items: center;
-      display: block;
-    }
-    .share-title {
-      padding-right: 0 !important;
-      margin-bottom: 5px !important;
-      font-size: 14px !important;
-    }
-  }
 }
 
 @include screen-width ('smallest') {
-  .prices-wr .prices .price {
-    font-size: 35px;
-  }
-  .product-title h1 {
-    font-size: 60px !important;
-  }
   #product-featured-image {
     height: 350px !important;
     width: initial !important;

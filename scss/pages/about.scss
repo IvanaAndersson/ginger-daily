@@ -14,6 +14,7 @@
     overflow: hidden;
 
     .promobox-content {
+      height: 100%;
       .promobox-image-video .image {
         img {
           height: 100%;
@@ -61,10 +62,10 @@
         }
       }
       &.promobox-5 {
-        height: 100%;
-        margin: 0 auto;
-        background: none;
         .promobox-wt-content {
+          height: 100%;
+          margin: 0 auto;
+          background: none;
           width: 70%;
           padding: 2rem 0px;
           @include screen-width("desktop") {

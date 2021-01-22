@@ -35,17 +35,26 @@ input:-webkit-autofill:active {
     margin-top: 0;
   }
 }
-
 .center-vertical {
   @include flex-centered;
   flex-direction: column;
   text-align: center;
 }
-
 .section-heading {
   padding: 20px;
 }
+.image {
+  height: 90vh;
+}
 
+.image-container {
+  position: relative;
+  overflow: hidden;
+  &:before{
+    display: block;
+    content: '';
+  }
+}
 .small-red-icon, //on the catalog page, and on related products
 .medium-red-icon  //on single product pages
 {
@@ -88,7 +97,7 @@ input:-webkit-autofill:active {
   margin-right: 0;
 }
 .promo-price {
-  margin-left: 0.5rem;
+  padding-left: 0.5rem;
   color: $darker-details-color;
 }
 .button-type3 a {
@@ -96,16 +105,14 @@ input:-webkit-autofill:active {
   @include screen-width("tablet") {
     font-size: 18px;
   }
-  @include screen-width("tablet") {
+  @include screen-width("phone") {
     font-size: 16px;
     letter-spacing: 2px;
   }
 }
-.text-line2.text2 {
-  display: flex;
-  justify-content: center;
+.checkout-button_webrika {
+  margin-top: 1.25rem;
 }
-
 // the progress bar is on the cart page and in the cart drawer 
 .progres-cart {
   .progressbar.progressbar {
@@ -132,22 +139,16 @@ input:-webkit-autofill:active {
 
 .cs-font.clever-icon-down.fa-caret-right,
 .cs-font.clever-icon-down.fa-caret-down {
-  font-size: 18px;
-  color: #7b7b7b !important;
-}
-
-.promobox-wt-content {
-  .text-line3.text3 {
-    padding-top: 0 !important;
-  }
+  font-size: 1rem;
+  color: #7b7b7b;
 }
 
 .label-dec {
   font-size: 20px;
   letter-spacing: 3px;
   line-height: 27px;
-  color: #fabca1;
-  border-bottom: 1px solid #fabca1;
+  color: $buttons-bg;
+  border-bottom: 1px solid $buttons-bg;
   text-transform: uppercase;
   width: fit-content;
   margin-left: 10%;
@@ -161,9 +162,6 @@ input:-webkit-autofill:active {
   .col-12.col-md-6.margin-bottom-0.promobox {
     max-width: 100%;
     flex: none;
-  }
-  .text-line1 {
-    margin-bottom: 20px;
   }
   .button-view.button-type3 {
     margin-bottom: 30px;

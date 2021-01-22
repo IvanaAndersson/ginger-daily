@@ -14,17 +14,17 @@ src: url("Futura_Book_font.ttf") format("truetype");
 font-weight: normal;
 font-style: normal;
 }
-// @font-face {
-//   font-family: "Futura";
-//   src: url("futura_medium_bt.ttf") format("truetype");
-//   font-weight: medium;
-//   font-style: normal;
-// }
 @font-face {
 font-family: "Futura";
 src: url("futura_medium_bt.ttf") format("truetype");
 font-weight: bold;
 font-style: normal;
+}
+@font-face {
+  font-family: "Black Jack";
+  src: url("blackjack.otf") format("opentype");
+  font-weight: medium;
+  font-style: normal;
 }
 
 //TYPOGRAPHY
@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 
 //ALL THE COLOR VARIABLES
 $light-bg: #EED6C1;
-$light-bg-opacity3: rgba($color: #eed6c1, $alpha: 0.3);
+$light-bg-opacity3: rgba($color: $light-bg, $alpha: 0.3);
 
 $footer-color: #FEF7EE;
 
@@ -53,13 +53,13 @@ $color: #E17161;
 $sold-out-popup-color: #E8C3B3;
 
 
-$buttons-bg: #FABCA1;
-$labels-color: rgba($color: #FABCA1, $alpha: 0.7);
+$buttons-bg: #FABBA1;
+$labels-color: rgba($color: $buttons-bg, $alpha: 0.7);
 
 
-$darker-details-color: #d4361f;
-$details-text-opacity3: rgba($color: #d4361f, $alpha: 0.3);
-$darker-bg-opacity7: rgba($color: #d4361f, $alpha: 0.7);
+$darker-details-color: #d3361f;
+$details-text-opacity3: rgba($color: $darker-details-color, $alpha: 0.3);
+$darker-bg-opacity7: rgba($color: $darker-details-color, $alpha: 0.7);
 
 //MEDIA QUERIES
 $widths: (

@@ -58,6 +58,33 @@
     }
   }
 }
+.dots_container {
+  display: none;
+}
+
+.images_dots {
+  @include flex-centered;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #7f7f7f;
+  border-radius: 50%;
+  &:after {
+    display: inline-block;
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: #7f7f7f;
+  }
+}
+
+@include screen-width('tablet') {
+  .dots_container{
+    display: flex;
+    justify-content: space-between;
+    width: 55px;
+    margin: 0 auto;
+  }
+}
 .related_products_modal .products-grid .grid-item .product-image {
   max-height: 200px;
   @include screen-width('tablet') {max-height: 350px !important;}

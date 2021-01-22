@@ -227,11 +227,7 @@ span.close-box_red {
     border: none;
     font-weight: 300;
     letter-spacing: 3px;
-    padding: 1.25rem 0;
-    
-    @include screen-width('laptop') {
-      padding: 1rem 0;
-    }
+    padding: 1rem 0;
   }
   .product-collection__options {
     display: none !important;

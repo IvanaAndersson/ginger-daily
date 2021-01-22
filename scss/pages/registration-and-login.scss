@@ -383,7 +383,7 @@
   }
 }
 
-//----------------------------------------
+//---------------------------------------- Ivana styles
 .create-an-account {
   @include flex-column;
   justify-content: center;
@@ -401,33 +401,39 @@
 
   .round-detail {
     background: $icons-color;
-    width: 190px;
-    height: 190px;
+    width: 10rem;
+    height: 10rem;
     position: absolute;
-    top: 10%;
-    left: 50%;
+    top: 7%;
+    left: 55%;
     transform: translateX(-50%);
     border-radius: 50%;
+    z-index: 10;
     @include flex-centered;
     p {
-      font-size: 32px;
+      font-family: "Black Jack", serif;
+      line-height: normal;
+      font-size: 1.75rem;
       color: white;
       margin-bottom: 0;
       text-align: center;
-      padding: 1rem;
+      span {
+        display: inline-block;
+        width: 100%;
+      }
     }
     @include screen-width("tablet") {
-      width: 150px;
-      height: 150px;
-      top: 50vw;
+      width: 8rem;
+      height: 8rem;
+      top: 40vh;
       left: 5%;
-      transform: translate(0%, 30%);
-      p { font-size: 28px; }
+      transform: translate(0%, -7vh);
+      p { font-size: 1.5rem }
     }
     @include screen-width("phone") {
-      width: 130px;
-      height: 130px;
-      p {  font-size: 22px; }
+      width: 6rem;
+      height: 6rem;
+      p {  font-size: 1.25rem; }
     }
   }
 }
@@ -435,150 +441,201 @@
 .login-container {
   display: flex;
   background: lighten($light-bg, 5%);
-  .half-width-col{
+  .grid-img-col {
+    width: 55%;
+    height: 100vh;
+  } 
+  .form-col {
+    width: 45%;
     min-height: 100vh;
-    &:first-of-type { 
-      background-image: url("landing-page-picture@2x.png");
-    }
-    .login-page-content {
-      width: 70%;
-      height: 100%;
-      margin: 0 auto;
-      padding: 3rem 0;
-      @include flex-column;
+  }
+  .grid-image-container,
+  .logo-image-container {
+    position: relative;
+    overflow: hidden;
+  }  
 
-      .logo-image-container {
-        position: relative;
-        overflow: hidden;
-        &::after{
-          display: block;
-          content: '';
-          padding-top: 25%;
-        }
+  //styles for the left column with the photos
+  .grid-img-col { 
+    background-image: none;
+    position: relative;
+    display: flex;
+    
+    .overlay {
+      position: absolute;
+      top: 0; left: 0; right:0; bottom: 0;
+      background-color: #E7AD8E;
+      opacity: 0.3;
+      z-index: 2;
+    }
+  }
+  .three-row-grid {
+    @include flex-column;
+    flex-basis: 45%;
+  }
+  .grid-image-container {
+    &.first-image { flex-basis: 25% ; }
+    &.second-image { flex-basis: 45% ; }
+    &.third-image { flex-basis: 30% ; }
+    &.fourth-image { flex-basis: 55%; }
+
+    &.first-image, &.third-image, &.fourth-image {
+      .background_img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
-      .logo-image {
-        width: 85%; 
+    }
+    &.second-image {
+      .background_img {
+        width: 100%; 
         height: auto;
-        @include position-center;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
-      .heading-right {
-        font-size: 32px;
-        text-align: center;
-        color: #8d8d8d;
+    }
+  }
+
+  //styles for the right column with the registration form
+  .login-page-content {
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 3rem 0;
+    @include flex-column;
+    .logo-image-container::before{
+      display: block;
+      content: '';
+      padding-top: 25%;
+    }
+    .logo-image {
+      width: 100%; 
+      height: auto;
+      @include position-center;
+    }
+    .heading-right {
+      font-family: "Black Jack", serif;
+      font-size: 1.75rem;
+      line-height: normal;
+      text-align: center;
+      color: #8d8d8d;
+    }
+    .icon-text-container {
+      display: flex;
+      align-items: center;
+      img {
+        width: 15%;
+        margin: 0.75rem 2.5rem ;
+      }
+      p {
         line-height: normal;
-      }
-      .icon-text-container {
-        display: flex;
-        align-items: center;
-        img {
-          width: 15%;
-          margin: 0.75rem 2.5rem ;
-        }
-        p {
-          color: $icons-color;
-          font-size: 24px;
-          margin-bottom: 0;
-        }
-      }
-      form {
+        color: $icons-color;
+        font-size: 1.25rem;
         margin-bottom: 0;
       }
-      .input-group {
-        @include flex-column;
-        input {
-          padding: 1rem;
-          margin-bottom: 1.5rem;
-          height: auto;
-          border: none;
-          outline: none;
-        }
-        &-field {
-          margin-top: 1.5rem;
-          color: #8d8d8d;
-        }
-        &-btn {
-          width: 100%;
-        }
-        .btn {
-          width: 100%;
-          line-height: normal;
-          background: $buttons-bg;
-          color: white;
-          font-size: 20px;
-          font-weight: 500;
-
-          &:hover, &:focus {
-            background: $darker-bg-opacity7
-          }
-        }
+    }
+    form {
+      margin-bottom: 0;
+    }
+    .input-group {
+      @include flex-column;
+      input {
+        padding: 1rem;
+        margin-bottom: 1rem;
+        height: auto;
+        border: none;
+        outline: none;
       }
-      .already-member {
+      &-field {
+        margin-top: 1.5rem;
+        color: #8d8d8d;
+      }
+      &-btn {
         width: 100%;
-        text-align: center;
-        margin-top: 0.5rem;
-        a{
-          text-decoration: underline;
-          color: inherit;
-        }
       }
-      .newsletter-agreement {
-        display: flex;
-        align-items: baseline;
-        margin: 0.5rem 0;
+      .btn {
+        width: 100%;
+        line-height: normal;
+        background: $buttons-bg;
+        color: white;
+        font-size: 1.25rem;
+        font-weight: 500;
 
-        input[type="checkbox"]{
-          margin-right: 0.5rem;
-        }
-        label {
-          font-size: 14px;
+        &:hover, &:focus {
+          background: $darker-bg-opacity7
         }
       }
-      @include screen-width("tablet") {
-        width: 80%;
-        padding: 2rem 0;
-        .logo-image-container::after{ padding-top: 22%; }
-        .logo-image { width: 75%; }
-        .heading-right { font-size: 18px;}
-        .icon-text-container {
-          img {
-            width: 10%;
-            margin: 0.25rem 2rem ;
-          }
-          p { font-size: 18px; }
-        }
-
-        .input-group {
-          input {
-            margin-top: 1rem;
-          }
-          .btn {
-            font-size: 16px;
-          }
-        }
+    }
+    .already-member {
+      display: none;
+      width: 100%;
+      text-align: center;
+      margin-top: 0.5rem;
+      a{
+        text-decoration: underline;
+        color: inherit;
       }
-      @include screen-width("phone") {
-        width: 85%;
-        .heading-right { font-size: 16px;}
-        .icon-text-container {
-          p { font-size: 14px; }
+    }
+    .newsletter-agreement {
+      display: flex;
+      align-items: baseline;
+      input[type="checkbox"]{
+        margin-right: 0.5rem;
+      }
+      label {
+        font-size: 14px;
+      }
+    }
+    @include screen-width("tablet") {
+      width: 80%;
+      padding: 2rem 0;
+      .logo-image-container::after{ padding-top: 22%; }
+      .logo-image { width: 75%; }
+      .heading-right {
+        font-size: 1.25rem;
+      }
+      .icon-text-container {
+        margin-bottom: 0.5rem;
+        img {
+          width: 10%;
+          margin: 0.25rem 2rem ;
         }
-        .already-member ,
-        .newsletter-agreement label {
-          font-size: 12px;
+        p{font-size: 1rem;}
+      }
+      .input-group {
+        input {
+          margin-top: 0.5rem;
         }
+        .btn {font-size: 1rem;}
+      }
+    }
+    @include screen-width("phone") {
+      width: 85%;
+      .already-member ,
+      .newsletter-agreement label {
+        font-size: 1rem;
       }
     }
   }
   
   
+  
   @include screen-width("tablet") {
     flex-direction: column;
-    .half-width-col{
+    .grid-img-col, .form-col{
+      width: 100%;
+    }
+    .grid-img-col {
+      height: 40vh;
+    } 
+    .form-col{
       min-height: 50vh;
-
-      &:first-of-type { 
-        background-position: top;
-      }
+    }
+    .grid-image-container {
+      &.first-image { flex-basis: 20% ; }
+      &.second-image { flex-basis: 35% ; }
+      &.third-image { flex-basis: 45% ; }
     }
   }
 }

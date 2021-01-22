@@ -34,8 +34,7 @@
 # CATALOG PAGE
 * Liquid files used:
     * **collection.liquid** is the template file for this page
-    * **home-grid-builder.liquid** for the slider/banner container on top of the page
-    * **buider-slideshow.liquid** for the slides (li elements)
+    * **collection-grid-builder.liquid** for the banner container on top of the page
     * **collection-leaf-webrika.liquid** is the section under the banner
     * **collection-template-webrika** in snippets for the main content including the sidebar
     * **collection-template-webrika** in sections for only the sidebar content
