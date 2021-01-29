@@ -1,5 +1,9 @@
-// STYLES FOR THE SLIDER ON TOP OF THE PAGE
+// 1. STYLES FOR THE SLIDER ON TOP OF THE PAGE
+// 2. STYLES FOR THE REST OF THE PAGE
 
+// ---------------------------------------------------
+
+// STYLES FOR THE SLIDER ON TOP OF THE PAGE
 #shopify-section-1556008263381 { 
   .slides //(ul) 
   {.slideshow__slide // (li) 
@@ -21,32 +25,26 @@
   .slideshow__text-content.middle {
     @include flex-centered;
     background: rgba($color: $light-bg, $alpha: 0.88);
-    padding: 5rem 3rem;
-    max-width: 50%;
-    max-height: 60%;
-    
-    @media screen and (min-width: 1200px) and (min-aspect-ratio: 16/9) {
-      // background: yellowgreen;
-      max-width: 720px;
-      max-height: 720px;
+    padding: 4rem 2rem;
+    @media screen and (min-width:1600px) {
+      padding: 6rem 4rem;
     }
-    @media screen and (max-width: 1199px) and (max-aspect-ratio: 3/5) {
-      // background: peru;
-      max-width: 85%;
-      max-height: 70%;
+    .logo_img {
+      width: 80%;
+      height: auto;
     }
-
-    & div.image-container {
-      &:before {
-        padding-top: 25%;
-      }
+    @include screen-width('tablet'){
+      width: 85%;
+      height: 70%;
+      padding: 3rem;
+    }
+    @include screen-width('phone'){
+      padding: 2rem;
       .logo_img {
-        width: 90%;
-        height: auto;
-        @include position-center;
+        width: 100%;
       }
     }
-  }
+    }
 
   .slide-text.slide-text-1,
   .slide-text.slide-text-2,
@@ -65,8 +63,9 @@
     letter-spacing: 2px;
   }
   .slide-text.slide-text-3 {
-    font-size: 1.2rem;
-    white-space: normal;
+    font-size: 1.1rem;
+    max-width: 30rem;
+    margin: 2rem auto 2.5rem auto;
   }
   .button-slider-wr {
     .sl-button {
@@ -79,12 +78,12 @@
       height: auto;
       line-height: normal;
       padding: 1rem 5rem;
-      margin-top: 3rem;
+      margin-top: 0;
       
       &:hover, &:focus {
         background-color: $darker-bg-opacity7 !important;
       }
-      @include screen-width('phone') { margin-top: 1rem; }
+      @include screen-width('laptop') { margin-top: 1rem; }
     }
     @include screen-width('tablet') { margin-top: 20px;}
   } 
@@ -96,10 +95,11 @@
   }
 }
 
+// 2. STYLES FOR THE REST OF THE PAGE
 .noancho.ltr.template-index {
   .row.align-horizontal-.align-vertical-top {
     font-family: "Futura";
-    max-height: 90vh;
+    max-height: 92vh;
     overflow: hidden;
 
     .promobox {
@@ -111,7 +111,6 @@
       }
       .promobox-content {
         .promobox-wt-content {
-          width: 70%;
           margin: 0 auto;
           .text-line1 {
             font-weight: normal;
@@ -131,7 +130,7 @@
               height: auto;
               line-height: normal;
               padding: 1rem 3.5rem;
-              border: none;
+              border: 1px solid transparent;
 
               &:hover, 
               &:focus {
@@ -140,6 +139,15 @@
             }
           }
           
+          @media screen and (max-width:1440px) {
+            .text-line2{
+              margin-bottom: 0;
+            }
+            .text-line3{
+              padding-top: 1rem;
+              margin-bottom: 1rem;
+            }
+          }
           @include screen-width("phone") {
             width: 80%;
           }
@@ -159,10 +167,18 @@
             display: none;
           }
           .promobox-wt-content {
+            width: 100%;
             top: 47%;
             .text-line1 {
               font-size: 3.5rem;
             }
+            .button-type3 a:hover, 
+            .button-type3 a:focus {
+              border: 1px solid $darker-bg-opacity7;
+              background: white !important;
+              color: $darker-details-color !important;
+            }
+              
             @include screen-width('tablet') {
               top: 50%;
               .text-line1 {
@@ -185,6 +201,9 @@
         }
         &.promobox-3 {
           height: 100%;
+          .promobox-wt-content {
+            width: 70%;
+          }
           .image {
             height: 100%;
             a {

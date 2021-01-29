@@ -17,6 +17,14 @@ input:-webkit-autofill:active {
   animation: _1UiPBn7_kvwWk2eMbG90wa 300ms cubic-bezier(0.1, 0.79, 1, 1);
 }
 
+.noancho.ltr.template-index,
+.noancho.ltr.template-page,
+#shopify-section-aboutus-grid-builder  {
+  .container {
+    @include container;
+  }
+}
+
 .main-content {
   margin-top: 80px;
 
@@ -30,7 +38,8 @@ input:-webkit-autofill:active {
 
 #under-construction-1, 
 #welcome-page,
-#log-in {
+#log-in,
+.template-404 {
   .main-content {
     margin-top: 0;
   }
@@ -42,9 +51,6 @@ input:-webkit-autofill:active {
 }
 .section-heading {
   padding: 20px;
-}
-.image {
-  height: 90vh;
 }
 
 .image-container {
@@ -136,23 +142,22 @@ input:-webkit-autofill:active {
   }
 }
 
-
 .cs-font.clever-icon-down.fa-caret-right,
 .cs-font.clever-icon-down.fa-caret-down {
   font-size: 1rem;
   color: #7b7b7b;
 }
-
+// these labels are used on the contact page
 .label-dec {
-  font-size: 20px;
+  font-size: 1.2rem;
+  line-height: normal;
   letter-spacing: 3px;
-  line-height: 27px;
   color: $buttons-bg;
   border-bottom: 1px solid $buttons-bg;
   text-transform: uppercase;
   width: fit-content;
   margin-left: 10%;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 .lebel-dec1 {
   margin-left: 0;

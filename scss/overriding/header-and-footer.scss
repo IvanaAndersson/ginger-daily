@@ -4,6 +4,7 @@
 // 4. Footer styles
 // 5. Back to top button
 
+// ----------------------------------------------------
 
 // 1. .header-layout-01 on desktop
 .header-topbar.full-width {
@@ -23,6 +24,23 @@
 .header.full-width {
   background-color: $footer-color;
   min-height: 80px;
+  .logo-container .logo a::before{
+      display: block;
+      content: '';
+      padding-top: 25%;
+  }
+  .logo-image {
+    width: auto; 
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media screen and (min-width:1600px) {
+      width: 100%;
+      height: auto;
+    }
+  }
 
   .header-cart-container {
     @include align-center;
@@ -31,7 +49,7 @@
     & > div {
       margin-right: 0.75rem;
       cursor: pointer;
-      flex-basis: 10%;
+      flex-basis: 15%;
     }
     & > div.header-language {
       display: none;
@@ -44,6 +62,19 @@
   
   .svg-img-icon svg{
     width: 100%;
+  }
+
+  .top-cart a {
+    justify-content: center;
+  }
+
+  .cart-count {
+    @media screen and (min-width:1600px) {
+      left: 90%;
+    }
+    @media screen and (min-width:1900px) {
+      left: 75%;
+    }
   }
 
   .site-nav .level-top .text-st {
@@ -73,6 +104,7 @@
       .logo {
         font-size: 3rem;
         line-height: normal;
+        margin: 0;
         a img {
           width: 60%;
           height: auto;
@@ -95,6 +127,100 @@
       width: 2rem;
       svg {
         width: 90%;
+      }
+    }
+    .navbar-icon {
+      display: block;
+      height: 2px;
+      width: 2rem;
+      background-color: $darker-bg-opacity7;
+      position: relative;
+      transition: background-color 0.2s ease-out;
+    
+      &:before,
+      &:after {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: $darker-bg-opacity7;
+        position: absolute;
+        left: 0;
+        transition: all 0.3s ease-out;
+      }
+      &:before {
+        top: 0.7rem;
+      }
+      &:after {
+        top: -0.7rem;
+      }
+    }
+    
+    .navbar-icon.active {
+      background-color: transparent;
+    }
+    
+    .navbar-icon.active:before {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+    .navbar-icon.active:after {
+      transform: rotate(45deg);
+      top: 0;
+    }
+  }
+
+  #offcanvas {
+    display: none;
+  }
+
+  @include screen-width('laptop') {
+
+    #off-canvas-button {
+      padding: 0;
+      float: none;
+      color: $darker-bg-opacity7;
+    }
+    #offcanvas { 
+      background-color: $footer-color;
+      height: auto;
+      top: 5.2rem;
+      padding: 2rem 0;
+      @include screen-width('tablet') {top: 5rem;}
+      @include screen-width('phone') {top: 4.7rem;}
+      nav.offcanvas-mainnav.containers {
+        padding: 0 !important;
+      }
+      .navbar-nav {
+        li {text-align: center; 
+          a {
+            padding: 1rem 0;
+          } }
+        .clever-icon-arrow-right, .clever-icon-down , li a, li a span {
+          color: $darker-bg-opacity7;
+          text-transform: uppercase;
+        }
+        h3 {
+          @include flex-centered;
+          i {
+            line-height: normal;
+            height: auto;
+            padding-right: 3rem;
+          }
+        }
+        ul.level-1 {
+          padding-left: 0;
+          a {
+            @include flex-centered;
+            min-height: 8rem;
+            background: url('./img-on-hover@2x.png') center center no-repeat;
+            background-size: cover;
+            span {
+  
+              color: white;
+            }
+          }
+        }
       }
     }
   }
@@ -176,7 +302,11 @@
       margin-top: auto;
       font-size: 0.75rem;
 
-      .footer_link { margin-left: 30px; }
+      .footer_link { 
+        margin-left: 30px;
+      &:hover{
+        color: $darker-details-color;
+      } }
     }
 
     @include screen-width("tablet") {
@@ -187,7 +317,12 @@
 
 // 6. STYLES FOR THE BACK TO TOP BUTTON
 #back-top a {
+  @include flex-centered;
   border: 2px solid $buttons-bg;
+  width: 40px;
+  height: 40px;
+  line-height: normal;
+  font-size: 0.8rem;
 
   & .clever-icon-up::before {
     color:  $buttons-bg;

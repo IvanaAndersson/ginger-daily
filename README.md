@@ -2,22 +2,23 @@
 * Liquid files used: 
     * **header-layout-01.liquid** is for the desktop menu, 
     * **header.liquid** uses the mobile menu (under 1024px)
-    * **site-nav.liquid** is for the megamenu
+    * **site-nav.liquid** is for the megamenu on desktop
+    * **canvas-menu-webrika.liquid** is for the megamenu on mobile
     * **cart-related-products** for the related products in the cart drawer
     * **cart-item-new** for the separate products in the cart drawer (cart-left)
-* SCSS files used: header-and-footer.scss
+* SCSS files used: **header-and-footer.scss**
 
 ## Popups and cart drawer
 * Liquid files used: 
     * **popups.liquid** the div with class 'popup-cookie' for the cookie notice
     * **header.liquid** for the cart drawer popup, div with id 'dropdown-cart'
     * **message-modal.liquid** for the popup when adding a new item to the cart
-* SCSS files used: popups.scss
+* SCSS files used: **popups.scss**
 
 ## Footer and instagram part
 * Liquid files used: 
     * **footer.liquid** for the actual footer, including the instagram section
-* SCSS files used: header-and-footer.scss
+* SCSS files used: **header-and-footer.scss**
 
 
 # HOME PAGE
@@ -25,10 +26,9 @@
     * **index.liquid** is the template file for this page
     * **home-grid-builder.liquid** for the slider on top of the page
     * **buider-slideshow.liquid** for the slides (li elements)
-    * **builder-promobox.liquid** for the rest of the sections (these might be easiest to change through the customizer)
-* SCSS files used:
-    * **sliders.scss** for the carousel on the top of the page
-    * **home.scss** for the rest of the sections
+    * **builder-promobox.liquid** for the rest of the sections 
+    (HOME PAGE is also easily changed through the customizer)
+* SCSS files used: **home.scss**
 
 
 # CATALOG PAGE
@@ -39,9 +39,7 @@
     * **collection-template-webrika** in snippets for the main content including the sidebar
     * **collection-template-webrika** in sections for only the sidebar content
     * **collection-template1-webrika** in sections for the products, including the counter element
-* SCSS files used:
-    * **sliders.scss** for the carousel on the top of the page
-    * **product.scss** for the rest of the sections (sidebar and product grid)
+* SCSS files used: **product.scss** 
 
 
 # SINGLE PRODUCT PAGE
@@ -63,13 +61,13 @@
     * **page.aboutus.liquid** is the template file for this page
     * **aboutus-grid-builer.liquid** is the builder for the main content
     * **builder-promobox** in snippets for the four boxes on the page (these might be easiest to change through the customizer)
-* SCSS files used: **about.scss**
+* SCSS files used: **about-and-contact-us.scss**
 
 # CONTACT US PAGE 
 * Liquid files used:
     * **page.contact.liquid** is the template file for this page
     * **contact-template.liquid** is the builder for the main content
-* SCSS files used: **contact.scss**
+* SCSS files used: **about-and-contact-us.scss**
 
 # WELCOME, UNDER CONSTRUCTION AND 404 PAGES
 * Liquid files used:
@@ -81,5 +79,4 @@
 # CART PAGE
 * Liquid files used:
     * **cart.liquid** is the template for this page
-    * **
 * SCSS files used: **cart.scss**

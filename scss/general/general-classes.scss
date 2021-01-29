@@ -1,4 +1,15 @@
-//CLASSES FOR LAYOUT
+// 1. CLASSES FOR LAYOUT
+// 2. FLEX CLASSES
+// 3. CLASSES FOR COLORS
+// 4. CLASSES FOR FONTS
+// 5. CLASSES FOR WHITE SPACE
+// CLASSES ON DESKTOP
+// CLASSES ON TABLET
+// CLASSES ON PHONE
+
+// -------------------------------------------------------------------
+
+//1. CLASSES FOR LAYOUT
 .text-center {
   text-align: center;
 }
@@ -44,7 +55,7 @@
   height: 300px;
 }
 
-//---------------- flex classes
+//2. FLEX CLASSES
 .flex {
   display: flex;
 }
@@ -81,6 +92,9 @@
 .fb-25 {
   flex-basis: 25%;
 }
+.fb-30 {
+  flex-basis: 30%;
+}
 .fb-33 {
   flex-basis: 33%;
 }
@@ -90,10 +104,13 @@
 .fb-66{
   flex-basis: 66%;
 }
+.fb-70 {
+  flex-basis: 70%;
+}
 .fb-75 {
   flex-basis: 75%;
 }
-//CLASSES FOR COLOR
+// 3. CLASSES FOR COLORS
 .white-letter {
   color: white !important;
 }
@@ -139,7 +156,7 @@
 .opac_70 {
   opacity: 0.7;
 }
-//COLOR FOR FONT SIZES
+// 4. CLASSES FOR FONTS
 .fs-8 {
   font-size: 8px;
 }
@@ -182,7 +199,37 @@
 .fw-700 {
   font-weight: 700;
 }
-//COLOR FOR WHITE SPACE
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-upper,
+.main-blog.blog-slide p.button,
+.footer-container
+  .footer-center
+  .footer-newsletter
+  .newsletter
+  .input-group-btn
+  > .btn,
+.grid-item .product-inner .product-image .add-to-cartS button span,
+.show-cart-wr .col-right .button-continue .close-box,
+.show-cart-wr .col-right .button-viewcart a,
+.show-cart-wr .col-right span,
+#cart .cart-buttons input#checkout,
+#shipping-calculator .btn,
+#customer_login input.btn-login,
+#create_customer input.btn-login,
+#customer_login .btn-creatacc,
+#create_customer .btn-creatacc,
+#dropdown-cart .view-cart a span,
+#dropdown-cart .mini_cart_header .actions .btn span,
+.infinite-scrolling a,
+.spr-summary-actions a {
+  text-transform: uppercase;
+}
+
+// 5. CLASSES FOR WHITE SPACE
 .mt-8p {
   margin-top: 8px;
 }
@@ -244,37 +291,7 @@
   padding-top: 75px;
 }
 
-
-
-.text-upper,
-.main-blog.blog-slide p.button,
-.footer-container
-  .footer-center
-  .footer-newsletter
-  .newsletter
-  .input-group-btn
-  > .btn,
-.grid-item .product-inner .product-image .add-to-cartS button span,
-.show-cart-wr .col-right .button-continue .close-box,
-.show-cart-wr .col-right .button-viewcart a,
-.show-cart-wr .col-right span,
-#cart .cart-buttons input#checkout,
-#shipping-calculator .btn,
-#customer_login input.btn-login,
-#create_customer input.btn-login,
-#customer_login .btn-creatacc,
-#create_customer .btn-creatacc,
-#dropdown-cart .view-cart a span,
-#dropdown-cart .mini_cart_header .actions .btn span,
-.infinite-scrolling a,
-.spr-summary-actions a {
-  text-transform: uppercase;
-}
-
-.text-underline {
-  text-decoration: underline;
-}
-
+// CLASSES ON DESKTOP
 @include screen-width("desktop") { 
   .fs-t-16{
     font-size: 16px !important;
@@ -283,6 +300,7 @@
     max-width: 90% !important;
   }
 }
+// CLASSES ON TABLET
 @include screen-width("tablet") {
   .display-none-mob {
     display: none;
@@ -352,6 +370,7 @@
     height: 140px;
   }
 }
+// CLASSES ON PHONE
 @include screen-width("phone") {
   .desktop, .hide-on-mobile {
     display: none;

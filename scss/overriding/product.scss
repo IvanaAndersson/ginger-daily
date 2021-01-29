@@ -7,37 +7,43 @@
 // 1. CATALOG PAGE
 .collection_grid_builder { 
   .grid-builder-image .promobox {
+    .image {
+      height: 92vh;
+      @media screen and (min-width:1800px) {
+        height: 94vh;
+      }
+    }
     .promobox-content.promobox-5 {
       height: 100%;
       @include align-center;
 
       .promobox-wt-content {
-        position: relative;
-        @include flex-centered;
-        flex-direction: column;
+        position: static;
+        @include flex-column;
+        justify-content: center;
         background-color: $darker-bg-opacity7;
-        padding: 5rem;
-        width: 50%;
-        height: 80%;
+        width: 45%;
+        height: 70%;
+        padding: 4rem;
         margin: 0 auto;
-        @media screen and (min-width: 1200px) and (min-aspect-ratio: 16/9) {
-          width: 720px;
-          height: 720px;
-        }
-        @media screen and (max-width: 1199px) and (max-aspect-ratio: 3/5) {
-          width: 85%;
-          height: 70%;
-        }
-  
-        & div.image-container {
+        .logo_img {
           width: 100%;
-          &:before {
-            padding-top: 25%;
-          }
+          height: auto;
+        }
+        @media screen and (min-width:1600px) {
+          width: 650px;
+          height: 650px;
           .logo_img {
             width: 90%;
-            height: auto;
-            @include position-center;
+          }
+        }
+        @include screen-width('tablet') {
+          min-width: 75%;
+          height: 60%;
+          padding: 2rem;
+          
+          .logo_img {
+            width: 90%;
           }
         }
       }
@@ -46,7 +52,7 @@
         font-size: 1.5rem;
       }
       .collection-title {
-        font-size: 3.5rem;
+        font-size: 3rem;
         font-family: "spinwerad", "Futura";
         text-transform: lowercase;
       }
@@ -180,7 +186,7 @@
 }
 .collection_content {
   .collection_item {
-    flex-basis: 45%;
+    width: 45%;
     margin-bottom: 2.5rem;
 
     .product-pictures {
@@ -191,7 +197,7 @@
         content: '';
         position: absolute;
         background-color: $buttons-bg;
-
+        z-index: 5;
         @include screen-width('phone') { display: none; }
       }
       &::before {
@@ -238,17 +244,16 @@
       top: 90%;
       left: 90%;
     }
+    .new-location-hover{
+      transition: transform 0.3s ease;
+    }
+    .image-container:before{
+      padding-top: 100%;
+    }
     .lazyOwl.feature-images {
-      min-height: 500px;
-      max-height: 500px;
-      object-fit: cover;
-
-      @include screen-width("desktop") {
-        min-height: 320px;
-      }
-      @include screen-width("tablet") {
-        min-height: initial;
-      }
+      height: 100%;
+      width: auto;
+      @include position-center;
     }
     .sold-out-popup {
       @include flex-centered;
@@ -285,6 +290,9 @@
           text-align: right;
         }
       }
+      .price-spans span {
+        white-space: nowrap;
+      }
     }
     @include screen-width("tablet") {
       flex-basis: 95%;
@@ -305,11 +313,14 @@
       .add-to-cartS {
         display: block;
         width: 100%;
-        z-index: -1;
         overflow: hidden;
+        opacity: 0;
+        position: absolute;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease, opacity 0.4s ease-in;
         button {
           transform: translateY(100%);
-          transition: transform 0.4s background 0.4s;
+          transition: transform 0.4s, background 0.4s;
           z-index: -1;
           width: 100%;
           background: $buttons-bg;
@@ -326,8 +337,19 @@
           }
         }
       }
-      &:hover .add-to-cartS button{
-        transform: translateY(0);
+      &:hover {
+        .new-location-hover {
+          transform: translateY(-105%);
+        }
+        .add-to-cartS {
+          transform: translateY(-100%);
+          opacity: 1;
+          transition: transform 0.3s ease, opacity 0.4s ease-in;
+        }
+        .add-to-cartS button {
+          transform: translateY(0);
+          transition: transform 0.4s, background 0.4s;
+        }
       }
     }
   }
@@ -466,8 +488,8 @@
     a{
       color: #fcd7c7;
       font-size: 1.2rem;
-      &:hover {
-        color: #fcf7f7;
+      &:hover, &:focus {
+        color: $buttons-bg;
         text-decoration: underline;
       }
     }
@@ -592,8 +614,6 @@
     font-size: 2rem ;
     color: $darker-bg-opacity7;
   }
-  
-
   #product-featured-image {
     height: 500px !important;
     width: initial !important;
@@ -604,7 +624,6 @@
       justify-content: center !important;
     }
   }
-  
   .btn.product_add_to_art_webrika {
     width: 100% !important;
   }

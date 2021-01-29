@@ -1,400 +1,8 @@
-.noancho.ltr.template-customers-register {
-  .container.main_container {
-    // max-width: 78vw;
-    // height: 85vh;
-    width: 1511px;
-    height: 925px;
-    // background-image: url("https://cdn.shopify.com/s/files/1/0409/0196/8033/files/Rectangle_327.png?v=1606211527");
-    background-color: #f9f1ea;
-  }
-  .flex-content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-  }
-  .container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  .login-page,
-  .create-an-account {
-    margin: initial !important;
-  }
-  .column-content1 {
-    height: 100%;
-    // background-color: red;
-    flex-basis: 25%;
-    text-align: center;
-  }
-  .column-content2 {
-    height: 100%;
-    // background-color: red;
-    flex-basis: 21%;
-    text-align: center;
-  }
-  .login-page,
-  .create-an-account {
-    width: 54vw !important;
-  }
-  .logo-registration {
-    width: 270px;
-    margin-top: 40px;
-    margin-left: 30px;
-  }
-  .reg-title {
-    color: $darker-bg-opacity7;
-    font-size: 20px;
-    font-family: "Futura";
-    text-transform: uppercase;
-    margin-top: 50px;
-  }
-  .reg-form {
-    display: flex;
-  }
-  form {
-    width: 100%;
-  }
-  .reg-left,
-  .reg-right {
-    width: 50%;
-    height: 100%;
-    justify-content: center;
-    text-align: center;
-  }
-  .forma-rows {
-    width: 80% !important;
-    margin-left: auto;
-    margin-right: auto;
-    height: 65px !important;
-    font-size: 18px !important;
-    color: #8d8d8d !important;
-    border: none;
-  }
-  .buttons-set {
-    text-align: center;
-    margin-top: 70px;
-  }
-  .btn-login.harman_btn5 {
-    width: 13vw;
-    border: none;
-    height: 70px;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: $darker-bg-opacity7;
-    background-color: white;
-  }
-  select:focus {
-    border: none;
-    outline: none;
-  }
-  .reg-text {
-    font-size: 18px;
-    width: 100%;
-    font-family: "Futura";
-    color: #a7a7a7;
-    p {
-      width: 85%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-  .no-border {
-    border: none;
-    outline: none;
-  }
-  .w-18 {
-    width: 23%;
-    height: 65px;
-  }
-  .w-25 {
-    width: 35% !important;
-    height: 65px;
-  }
-  .mr-6 {
-    margin-right: -6px;
-  }
-  .datapicker-dec {
-    font-size: 18px !important;
-    font-family: "Futura";
-    text-transform: uppercase;
-    color: #8d8d8d !important;
-  }
-}
-.noancho.ltr.template-customers-login {   
-  .login-container-tsv {
-    margin-left: 180px;
-  }
-  .logo-img-login {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .heading-login {
-    width: 45%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    color: black;
-    font-size: 32px;
-    letter-spacing: 2px;
-  }
-  .content-login {
-    background-color: #fabca1;
-  }
-  .login-page .content-login {
-    min-height: initial !important;
-  }
-  .forma-rows,
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus {
-    width: 80% !important;
-    margin-left: auto;
-    margin-right: auto;
-    height: 54px !important;
-    -webkit-text-fill-color: #8d8d8d !important;
-    border: none;
-    background-color: white;
-  }
-  input:-webkit-autofill::first-line {
-    font-size: 22px !important;
-  }
-  .btn-login.harman_btn5 {
-    width: 37% !important;
-    background-color: white !important;
-    color: $darker-bg-opacity7;
-    border: none !important;
-    margin-right: auto !important;
-    margin-left: auto !important;
-    height: 54px !important;
-    font-size: 20px !important;
-    letter-spacing: 2px !important;
-  }
-  .create-account {
-    text-align: center;
-    p {
-      color: white;
-      font-size: 18px;
-
-      a {
-        color: white;
-        text-decoration: underline;
-      }
-    }
-  }
-  .login-wr {
-    height: 50%;
-    .content-login {
-      height: 100%;
-      form {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-    }
-  }
-}
-
-@include screen-width("desktop") {
-  .noancho.ltr.template-customers-register {
-    .logo-registration {
-      width: 180px !important;
-    }
-    .column-content1 {
-      flex-basis: 20% !important;
-    }
-    .column-content2 {
-      flex-basis: 15% !important;
-    }
-    .create-an-account {
-      width: 61vw !important;
-    }
-    .reg-title {
-      font-size: 22px !important;
-    }
-    .label-dec {
-      font-size: 18px !important;
-      margin-left: 5% !important;
-    }
-    .forma-rows {
-      width: 90% !important;
-    }
-    .mobile1 {
-      width: 24% !important;
-    }
-    .mobile2 {
-      width: 40% !important;
-    }
-    .mobile3 {
-      width: 26% !important;
-    }
-    .btn-login.harman_btn5 {
-      font-size: 18px !important;
-      width: 35vw !important;
-      height: 60px !important;
-    }
-    .reg-text p {
-      width: 80% !important;
-    }
-  }
-
-  .login-container-tsv {
-    margin-left: 95px !important;
-    width: 90% !important;
-  }
-}
-
-@include screen-width("tablet") {
-  .noancho.ltr.template-customers-register {
-    .column-content1,
-    .column-content2 {
-      display: none !important;
-    }
-    .create-an-account {
-      width: 100vw !important;
-    }
-    .reg-form {
-      display: block !important;
-    }
-    .reg-left,
-    .reg-right {
-      width: 100% !important;
-    }
-    .reg-right {
-      margin-top: 45px !important;
-    }
-    .container.main_container {
-      width: 100% !important;
-      height: initial !important;
-    }
-    .buttons-set {
-      margin-bottom: 30px;
-    }
-  }
-
-  .login-container-tsv {
-    margin-left: 0 !important;
-    width: 95%;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    .login-page {
-      flex-basis: 100% !important;
-    }
-    .div-on-the-right {
-      display: none !important;
-    }
-    .heading-login {
-      width: 65% !important;
-    }
-  }
-
-
-  .login-container-tsv {
-    height: 750px !important;
-    .heading-login {
-      font-size: 28px !important;
-    }
-    .text-center.fs-28.text-decor:first-of-type {
-      margin-top: 30px !important;
-    }
-    .text-center.fs-28.text-decor {
-      font-size: 20px !important;
-    }
-    input:-webkit-autofill::first-line {
-      font-size: 16px !important;
-    }
-    .login-wr {
-      height: 53% !important;
-    }
-    .login-left-col {
-      height: 47% !important;
-    }
-    .text-checkbox {
-      margin-top: -5px;
-    }
-  }
-  .noancho.ltr.template-customers-login .btn-login.harman_btn5 {
-    margin-top: 0 !important;
-    font-size: 16px !important;
-    width: 35% !important;
-  }
-  .noancho.ltr.template-customers-login .create-account p {
-    font-size: 14px;
-  }
-}
-@include screen-width("phone") {
-  .noancho.ltr.template-customers-register .container.main_container {
-    width: 90% !important;
-  }
-}
-@include screen-width("smallest") {
-  .noancho.ltr.template-customers-register {
-    .label-dec {
-      font-size: 14px !important;
-      line-height: 20px !important;
-      margin-bottom: 10px !important;
-    }
-    .reg-righ {
-      margin-top: 30px !important;
-    }
-    .forma-rows {
-      height: 50px !important;
-    }
-    .reg-text p {
-      font-size: 14px !important;
-    }
-    .btn-login.harman_btn5 {
-      width: 50vw !important;
-      font-size: 14px !important;
-      height: 45px !important;
-    }
-    .buttons-set {
-      margin-top: 40px !important;
-    }
-  }
-
-  .login-container-tsv {
-    height: 650px !important;
-    width: 95% !important;
-    .heading-login {
-      font-size: 20px !important;
-      width: 75% !important;
-    }
-    .text-center.fs-28.text-decor:first-of-type {
-      margin-top: 15px !important;
-    }
-    .text-center.fs-28.text-decor {
-      font-size: 18px !important;
-    }
-    .login-left-col {
-      height: 45% !important;
-    }
-    .login-wr {
-      height: 55% !important;
-    }
-  }
-  .noancho.ltr.template-customers-login .btn-login.harman_btn5,
-  .noancho.ltr.template-customers-login .forma-rows,
-  .noancho.ltr.template-customers-login input:-webkit-autofill,
-  .noancho.ltr.template-customers-login input:-webkit-autofill:hover,
-  .noancho.ltr.template-customers-login input:-webkit-autofill:focus {
-    height: 50px !important;
-  }
-}
-
-//---------------------------------------- Ivana styles
+//---------------------------------------- Ivana's styles
 .create-an-account {
   @include flex-column;
   justify-content: center;
 }
-#create_customer input {
-  height: auto;
-}
-#create_customer input[type='checkbox'] {
-  width: auto;
-}
-
 .login-page {
   width: 100vw;
   position: relative;
@@ -428,23 +36,26 @@
       top: 40vh;
       left: 5%;
       transform: translate(0%, -7vh);
-      p { font-size: 1.5rem }
+      p {
+        font-size: 1.5rem;
+      }
     }
     @include screen-width("phone") {
       width: 6rem;
       height: 6rem;
-      p {  font-size: 1.25rem; }
+      p {
+        font-size: 1.25rem;
+      }
     }
   }
 }
-
 .login-container {
   display: flex;
   background: lighten($light-bg, 5%);
   .grid-img-col {
     width: 55%;
     height: 100vh;
-  } 
+  }
   .form-col {
     width: 45%;
     min-height: 100vh;
@@ -453,18 +64,21 @@
   .logo-image-container {
     position: relative;
     overflow: hidden;
-  }  
+  }
 
   //styles for the left column with the photos
-  .grid-img-col { 
+  .grid-img-col {
     background-image: none;
     position: relative;
     display: flex;
-    
+
     .overlay {
       position: absolute;
-      top: 0; left: 0; right:0; bottom: 0;
-      background-color: #E7AD8E;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #e7ad8e;
       opacity: 0.3;
       z-index: 2;
     }
@@ -474,12 +88,22 @@
     flex-basis: 45%;
   }
   .grid-image-container {
-    &.first-image { flex-basis: 25% ; }
-    &.second-image { flex-basis: 45% ; }
-    &.third-image { flex-basis: 30% ; }
-    &.fourth-image { flex-basis: 55%; }
+    &.first-image {
+      flex-basis: 25%;
+    }
+    &.second-image {
+      flex-basis: 45%;
+    }
+    &.third-image {
+      flex-basis: 30%;
+    }
+    &.fourth-image {
+      flex-basis: 55%;
+    }
 
-    &.first-image, &.third-image, &.fourth-image {
+    &.first-image,
+    &.third-image,
+    &.fourth-image {
       .background_img {
         width: 100%;
         height: 100%;
@@ -488,7 +112,7 @@
     }
     &.second-image {
       .background_img {
-        width: 100%; 
+        width: 100%;
         height: auto;
         position: absolute;
         top: 0;
@@ -496,21 +120,20 @@
       }
     }
   }
-
   //styles for the right column with the registration form
   .login-page-content {
     width: 75%;
     height: 100%;
     margin: 0 auto;
-    padding: 3rem 0;
+    padding: 2rem 0 0 0;
     @include flex-column;
-    .logo-image-container::before{
+    .logo-image-container::before {
       display: block;
-      content: '';
+      content: "";
       padding-top: 25%;
     }
     .logo-image {
-      width: 100%; 
+      width: 100%;
       height: auto;
       @include position-center;
     }
@@ -526,7 +149,7 @@
       align-items: center;
       img {
         width: 15%;
-        margin: 0.75rem 2.5rem ;
+        margin: 0.75rem 2.5rem;
       }
       p {
         line-height: normal;
@@ -535,63 +158,78 @@
         margin-bottom: 0;
       }
     }
-    form {
+    #create_customer {
       margin-bottom: 0;
-    }
-    .input-group {
-      @include flex-column;
-      input {
-        padding: 1rem;
-        margin-bottom: 1rem;
-        height: auto;
-        border: none;
-        outline: none;
-      }
-      &-field {
-        margin-top: 1.5rem;
-        color: #8d8d8d;
-      }
-      &-btn {
-        width: 100%;
-      }
-      .btn {
-        width: 100%;
-        line-height: normal;
-        background: $buttons-bg;
-        color: white;
-        font-size: 1.25rem;
-        font-weight: 500;
 
-        &:hover, &:focus {
-          background: $darker-bg-opacity7
+      .input-group {
+        @include flex-column;
+        input {
+          height: auto;
+          padding: 1rem;
+          margin: 1.25rem 0 0 0;
+          outline: none;
+          border: 1px solid;
+          border-color: rgba($color: #8d8d8d, $alpha: 0);
+          color: #8d8d8d;
+          &:focus {
+            border-color: rgba($color: #8d8d8d, $alpha: 1);
+          }
+        }
+        &-btn {
+          width: 100%;
+        }
+        .btn {
+          width: 100%;
+          line-height: normal;
+          background: $buttons-bg;
+          color: white;
+          font-size: 1.25rem;
+          font-weight: 500;
+
+          &:hover,
+          &:focus {
+            background: $darker-bg-opacity7;
+            border-color: $darker-bg-opacity7;
+          }
+
+          &.entered_email {
+            margin-top: 0.5rem;
+          }
         }
       }
-    }
-    .already-member {
-      display: none;
-      width: 100%;
-      text-align: center;
-      margin-top: 0.5rem;
-      a{
-        text-decoration: underline;
-        color: inherit;
+      
+      .newsletter-agreement {
+        display: flex;
+        align-items: baseline;
+        input[type="checkbox"] {
+          margin-right: 0.5rem;
+          width: auto;
+        }
+        label {
+          font-size: 0.8rem;
+        }
       }
-    }
-    .newsletter-agreement {
-      display: flex;
-      align-items: baseline;
-      input[type="checkbox"]{
-        margin-right: 0.5rem;
-      }
-      label {
-        font-size: 14px;
-      }
+
+      // .already-member {
+      //   display: none;
+      //   width: 100%;
+      //   text-align: center;
+      //   margin-top: 0.5rem;
+      //   a {
+      //     text-decoration: underline;
+      //     color: inherit;
+      //   }
+      // }
     }
     @include screen-width("tablet") {
       width: 80%;
       padding: 2rem 0;
-      .logo-image-container::after{ padding-top: 22%; }
-      .logo-image { width: 75%; }
+      .logo-image-container::after {
+        padding-top: 22%;
+      }
+      .logo-image {
+        width: 75%;
+      }
       .heading-right {
         font-size: 1.25rem;
       }
@@ -599,43 +237,50 @@
         margin-bottom: 0.5rem;
         img {
           width: 10%;
-          margin: 0.25rem 2rem ;
+          margin: 0.25rem 2rem;
         }
-        p{font-size: 1rem;}
+        p {
+          font-size: 1rem;
+        }
       }
-      .input-group {
-        input {
-          margin-top: 0.5rem;
+      #create_customer {
+        .input-group {
+          input {
+            margin-top: 0.5rem;
+          }
+          .btn {
+            font-size: 1rem;
+          }
         }
-        .btn {font-size: 1rem;}
       }
     }
     @include screen-width("phone") {
       width: 85%;
-      .already-member ,
-      .newsletter-agreement label {
-        font-size: 1rem;
-      }
     }
   }
-  
-  
-  
+
   @include screen-width("tablet") {
     flex-direction: column;
-    .grid-img-col, .form-col{
+    .grid-img-col,
+    .form-col {
       width: 100%;
     }
     .grid-img-col {
       height: 40vh;
-    } 
-    .form-col{
+    }
+    .form-col {
       min-height: 50vh;
     }
     .grid-image-container {
-      &.first-image { flex-basis: 20% ; }
-      &.second-image { flex-basis: 35% ; }
-      &.third-image { flex-basis: 45% ; }
+      &.first-image {
+        flex-basis: 20%;
+      }
+      &.second-image {
+        flex-basis: 35%;
+      }
+      &.third-image {
+        flex-basis: 45%;
+      }
     }
   }
 }

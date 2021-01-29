@@ -1,0 +1,461 @@
+
+.text-decor {
+  color: white !important;
+  text-transform: uppercase !important;
+}
+.radiobutton {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.radio-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.thecircle {
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  border: 2px solid white;
+  position: relative;
+  cursor: pointer;
+  margin-left: 32%;
+}
+.thedot {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  border-radius: 100%;
+  // background-color: white;
+  top: 2px;
+  left: 2px;
+  &:after {
+    // content: " ";
+    position: absolute;
+    display: none;
+  }
+}
+.thecircle input:checked ~ .thedot {
+  background-color: white;
+  &::after {
+    display: block;
+  }
+}
+.text-checkbox {
+  width: 170px;
+  margin-top: -7px;
+  margin-left: 20px;
+}
+.noancho.ltr.template-customers-register {
+    .container.main_container {
+      // max-width: 78vw;
+      // height: 85vh;
+      width: 1511px;
+      height: 925px;
+      // background-image: url("https://cdn.shopify.com/s/files/1/0409/0196/8033/files/Rectangle_327.png?v=1606211527");
+      background-color: #f9f1ea;
+    }
+    .flex-content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+    }
+    .container {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    .login-page,
+    .create-an-account {
+      margin: initial !important;
+    }
+    .column-content1 {
+      height: 100%;
+      flex-basis: 25%;
+      text-align: center;
+    }
+    .column-content2 {
+      height: 100%;
+      flex-basis: 21%;
+      text-align: center;
+    }
+    .login-page,
+    .create-an-account {
+      width: 54vw !important;
+    }
+    .logo-registration {
+      width: 270px;
+      margin-top: 40px;
+      margin-left: 30px;
+    }
+    .reg-title {
+      color: $darker-bg-opacity7;
+      font-size: 20px;
+      font-family: "Futura";
+      text-transform: uppercase;
+      margin-top: 50px;
+    }
+    .reg-form {
+      display: flex;
+    }
+    form {
+      width: 100%;
+    }
+    .reg-left,
+    .reg-right {
+      width: 50%;
+      height: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+    .forma-rows {
+      width: 80% !important;
+      margin-left: auto;
+      margin-right: auto;
+      height: 65px !important;
+      font-size: 18px !important;
+      color: #8d8d8d !important;
+      border: none;
+    }
+    .buttons-set {
+      text-align: center;
+      margin-top: 70px;
+    }
+    .btn-login.harman_btn5 {
+      width: 13vw;
+      border: none;
+      height: 70px;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: $darker-bg-opacity7;
+      background-color: white;
+    }
+    select:focus {
+      border: none;
+      outline: none;
+    }
+    .reg-text {
+      font-size: 18px;
+      width: 100%;
+      font-family: "Futura";
+      color: #a7a7a7;
+      p {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .no-border {
+      border: none;
+      outline: none;
+    }
+    .w-18 {
+      width: 23%;
+      height: 65px;
+    }
+    .w-25 {
+      width: 35% !important;
+      height: 65px;
+    }
+    .mr-6 {
+      margin-right: -6px;
+    }
+    .datapicker-dec {
+      font-size: 18px !important;
+      font-family: "Futura";
+      text-transform: uppercase;
+      color: #8d8d8d !important;
+    }
+  }
+  .noancho.ltr.template-customers-login {   
+    .login-container-tsv {
+      margin-left: 180px;
+    }
+    .logo-img-login {
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .heading-login {
+      width: 45%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      color: black;
+      font-size: 32px;
+      letter-spacing: 2px;
+    }
+    .content-login {
+      background-color: #fabca1;
+    }
+    .login-page .content-login {
+      min-height: initial !important;
+    }
+    .forma-rows,
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus {
+      width: 80% !important;
+      margin-left: auto;
+      margin-right: auto;
+      height: 54px !important;
+      -webkit-text-fill-color: #8d8d8d !important;
+      border: none;
+      background-color: white;
+    }
+    input:-webkit-autofill::first-line {
+      font-size: 22px !important;
+    }
+    .btn-login.harman_btn5 {
+      width: 37% !important;
+      background-color: white !important;
+      color: $darker-bg-opacity7;
+      border: none !important;
+      margin-right: auto !important;
+      margin-left: auto !important;
+      height: 54px !important;
+      font-size: 20px !important;
+      letter-spacing: 2px !important;
+    }
+    .create-account {
+      text-align: center;
+      p {
+        color: white;
+        font-size: 18px;
+  
+        a {
+          color: white;
+          text-decoration: underline;
+        }
+      }
+    }
+    .login-wr {
+      height: 50%;
+      .content-login {
+        height: 100%;
+        form {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  
+  @include screen-width("desktop") {
+    .noancho.ltr.template-customers-register {
+      .logo-registration {
+        width: 180px !important;
+      }
+      .column-content1 {
+        flex-basis: 20% !important;
+      }
+      .column-content2 {
+        flex-basis: 15% !important;
+      }
+      .create-an-account {
+        width: 61vw !important;
+      }
+      .reg-title {
+        font-size: 22px !important;
+      }
+      .label-dec {
+        font-size: 18px !important;
+        margin-left: 5% !important;
+      }
+      .forma-rows {
+        width: 90% !important;
+      }
+      .mobile1 {
+        width: 24% !important;
+      }
+      .mobile2 {
+        width: 40% !important;
+      }
+      .mobile3 {
+        width: 26% !important;
+      }
+      .btn-login.harman_btn5 {
+        font-size: 18px !important;
+        width: 35vw !important;
+        height: 60px !important;
+      }
+      .reg-text p {
+        width: 80% !important;
+      }
+    }
+  
+    .login-container-tsv {
+      margin-left: 95px !important;
+      width: 90% !important;
+    }
+  }
+  
+  @include screen-width("tablet") {
+    .noancho.ltr.template-customers-register {
+      .column-content1,
+      .column-content2 {
+        display: none !important;
+      }
+      .create-an-account {
+        width: 100vw !important;
+      }
+      .reg-form {
+        display: block !important;
+      }
+      .reg-left,
+      .reg-right {
+        width: 100% !important;
+      }
+      .reg-right {
+        margin-top: 45px !important;
+      }
+      .container.main_container {
+        width: 100% !important;
+        height: initial !important;
+      }
+      .buttons-set {
+        margin-bottom: 30px;
+      }
+    }
+  
+    .login-container-tsv {
+      margin-left: 0 !important;
+      width: 95%;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      .login-page {
+        flex-basis: 100% !important;
+      }
+      .div-on-the-right {
+        display: none !important;
+      }
+      .heading-login {
+        width: 65% !important;
+      }
+    }
+  
+  
+    .login-container-tsv {
+      height: 750px !important;
+      .heading-login {
+        font-size: 28px !important;
+      }
+      .text-center.fs-28.text-decor:first-of-type {
+        margin-top: 30px !important;
+      }
+      .text-center.fs-28.text-decor {
+        font-size: 20px !important;
+      }
+      input:-webkit-autofill::first-line {
+        font-size: 16px !important;
+      }
+      .login-wr {
+        height: 53% !important;
+      }
+      .login-left-col {
+        height: 47% !important;
+      }
+      .text-checkbox {
+        margin-top: -5px;
+      }
+    }
+    .noancho.ltr.template-customers-login .btn-login.harman_btn5 {
+      margin-top: 0 !important;
+      font-size: 16px !important;
+      width: 35% !important;
+    }
+    .noancho.ltr.template-customers-login .create-account p {
+      font-size: 14px;
+    }
+  }
+  @include screen-width("phone") {
+    .noancho.ltr.template-customers-register .container.main_container {
+      width: 90% !important;
+    }
+  }
+  @include screen-width("smallest") {
+    .noancho.ltr.template-customers-register {
+      .label-dec {
+        font-size: 14px !important;
+        line-height: 20px !important;
+        margin-bottom: 10px !important;
+      }
+      .reg-righ {
+        margin-top: 30px !important;
+      }
+      .forma-rows {
+        height: 50px !important;
+      }
+      .reg-text p {
+        font-size: 14px !important;
+      }
+      .btn-login.harman_btn5 {
+        width: 50vw !important;
+        font-size: 14px !important;
+        height: 45px !important;
+      }
+      .buttons-set {
+        margin-top: 40px !important;
+      }
+    }
+  
+    .login-container-tsv {
+      height: 650px !important;
+      width: 95% !important;
+      .heading-login {
+        font-size: 20px !important;
+        width: 75% !important;
+      }
+      .text-center.fs-28.text-decor:first-of-type {
+        margin-top: 15px !important;
+      }
+      .text-center.fs-28.text-decor {
+        font-size: 18px !important;
+      }
+      .login-left-col {
+        height: 45% !important;
+      }
+      .login-wr {
+        height: 55% !important;
+      }
+    }
+    .noancho.ltr.template-customers-login .btn-login.harman_btn5,
+    .noancho.ltr.template-customers-login .forma-rows,
+    .noancho.ltr.template-customers-login input:-webkit-autofill,
+    .noancho.ltr.template-customers-login input:-webkit-autofill:hover,
+    .noancho.ltr.template-customers-login input:-webkit-autofill:focus {
+      height: 50px !important;
+    }
+  }
+  
+
+  
+.order-details {
+  width: 37vw;
+  margin-top: 20px;
+}
+.pr-old {
+  margin-right: 5px;
+  text-decoration: line-through;
+}
+div.order-details {
+  width: 44vw;
+  display: none;
+  border: 1px solid #707070;
+  padding: 10px 26px;
+  position: absolute;
+  top: 1%;
+  background-color: #fff;
+  z-index: 99;
+  left: 50%;
+  transform: translateX(-50%);
+  &.active {
+    display: block;
+  }
+  @include screen-width('tablet') {
+    width: 84vw;
+    top: -15%;      
+  }
+}

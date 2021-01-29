@@ -127,19 +127,18 @@
   }
 
   .promobox {
-    max-height: 95vh;
+    min-height: 100vh;
     overflow: hidden;
-    @include screen-width('desktop') { max-height: 80vh; }
-    @include screen-width('phone') {  max-height: none; }
     .promobox-content.promobox-1 {
       @include flex-centered;
 
       .promobox-image-video .image { display: none; }
       .promobox-wt-content {
         width: 85%;
+        height: 85%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
         position: relative;
         left: 0;
         top: 0;
@@ -150,6 +149,7 @@
 
         @include screen-width('tablet') {
           padding: 3rem 1rem;
+          height: 100%;
         }
       }
     }
@@ -160,19 +160,19 @@
     }
   }
   .text-line1 {
-    font-size: 80px;
+    font-size: 4rem;
     line-height: normal;
     font-weight: 100;
-    width: 80%;
-    margin-bottom: 50px;
+    width: 85%;
+  
 
-    @include screen-width('desktop') { 
-      font-size: 50px;
-    }
+    // @include screen-width('desktop') { 
+    //   font-size: 50px;
+    // }
     @include screen-width('tablet') { 
       margin-top: 0 ;}
-    @include screen-width('phone') { 
-      font-size: 38px;}
+    // @include screen-width('phone') { 
+    //   font-size: 38px;}
   }
   .text-line2 {
     margin-left: 0;
@@ -184,18 +184,17 @@
     .promo-price {
       display: none;
     }
-    p {
+    span {
       text-align: left;
       width: 100%;
-      font-size: 54px;
+      font-size: 2.7rem;
+      line-height: normal;
       mix-blend-mode: screen;
       background: white;
-      line-height: 44px;
       margin-bottom: 0 ;
       text-shadow: 3px 3px 0 $darker-bg-opacity7;
       font-weight: 100;
 
-      @include screen-width('desktop') { font-size: 40px;}
     }
   }
   .text-line3 {
@@ -204,9 +203,6 @@
     line-height:normal;
     width: 80%;
     margin-left: 0;
-
-    // @include screen-width('desktop') { font-size: 20px;}
-    // @include screen-width('phone') { font-size: 16px;}
   }
   .button-view.button-type3 {
     margin-top: 30px;
@@ -220,8 +216,10 @@
       text-align: center;
       font-size: 1.2rem;
 
-      // @include screen-width('desktop') { font-size: 18px;}
-      // @include screen-width('phone') { font-size: 14px;}
+      
+      &:hover {
+        background: $darker-bg-opacity7 !important;
+      }
     }
   }
 }

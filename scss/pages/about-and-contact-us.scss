@@ -1,0 +1,282 @@
+// 1. ABOUT US PAGE STYLES
+// 2. CONTACT US PAGE STYLES
+//STYLES FOR THE CONTACT DETAILS SECTION WITH THE PICTURE AS BACKGROUND
+//STYLES FOR THE FORM ELEMENTS
+
+// -------------------------------------------------
+
+// ABOUT US PAGE STYLES
+#about {
+  //the background of the whole page
+  background-color: $light-bg-opacity3;
+  .align-vertical-top,
+  .ct_block-vertical-top {
+    align-items: stretch;
+  }
+}
+
+#shopify-section-aboutus-grid-builder //the content until the instagram section
+{
+  .promobox {
+    max-height: 90vh;
+    overflow: hidden;
+
+    .promobox-content {
+      height: 100%;
+      .promobox-image-video .image {
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .promobox-wt-content {
+        position: relative;
+        height: 100%;
+        top: 0;
+        -webkit-transform: none !important;
+        .text-line1, .text-line2, .text-line3 {
+          line-height: normal;
+        }
+        .text-line1 {
+          text-align: left;
+          font-weight: normal;
+          a {
+            opacity: 0.7;
+            text-transform: none;
+            font-size: 2.2rem;
+            line-height: normal;
+            @include screen-width("tablet") {
+              text-transform: uppercase;
+              font-size: 2rem;
+            }
+          }
+        }
+        .text-line2 {
+          width: 90%;
+          margin: 0 auto;
+          font-size: 1.75rem;
+          font-weight: 300;
+          a {
+            display: block;
+            margin-bottom: 1.5rem;
+          }
+        }
+        .text-line3 {
+          width: 100%;
+          font-size: 1rem;
+          text-transform: initial;
+          text-align: justify;
+          text-align-last: center;
+        }
+      }
+      &.promobox-5 {
+        .promobox-wt-content {
+          height: 100%;
+          margin: 0 auto;
+          background: none;
+          width: 70%;
+          padding: 2rem 0px;
+          @include screen-width("desktop") {
+            width: 80%;
+          }
+          @include screen-width("tablet") {
+            width: 85%;
+          }
+        }
+      }
+    }
+
+    @include screen-width("tablet") { 
+      max-height: none;
+      &:nth-of-type(1) { order: 1; }
+      &:nth-of-type(2){ order: 2; }
+      &:nth-of-type(3){ order: 4; }
+      &:nth-of-type(4){ order: 3; }
+    }
+  }
+  .placeholder-svg,.promo-price {
+    display: none;
+  }
+  .about-helper {
+    height: 100%;
+    @include flex-column;
+    justify-content: center;
+  }
+}
+
+
+// CONTACT US PAGE STYLES
+.contact-container {
+  display: flex;
+  @include screen-width("tablet") {
+    flex-direction: column-reverse;
+  }
+}
+
+//STYLES FOR BOTH SECTIONS OF THE CONTACTS PAGE
+.half-width-col {
+  width: 50%;
+  min-height: 90vh;
+
+  &:first-of-type {
+    @include flex-centered;
+    background-image: url("https://cdn.shopify.com/s/files/1/0409/0196/8033/files/Artboard_1_53d9fdaf-0476-4f5f-b82b-03a1ecdd2cca.png?v=1606307135");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @include screen-width("desktop") {
+    min-height: 85vh;
+  }
+  @include screen-width("tablet") {
+    min-height: 70vh;
+    width: 100%;
+    &:last-of-type {
+      min-height: auto;
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+//STYLES FOR THE CONTACT DETAILS SECTION WITH THE PICTURE AS BACKGROUND
+.contact-cart {
+  background: white;
+  height: 80%;
+  width: 80%;
+
+  @include screen-width("tablet") { padding: 5rem; }
+  @include screen-width("phone") { padding: 2.5rem; }
+}
+.contact-heading {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $darker-details-color;
+  margin-bottom: 2rem;
+}
+.contact-address {
+  span {
+    font-size: 1.2rem;
+    line-height: normal;
+  }
+  @include screen-width("tablet") {
+    margin-bottom: 0;
+  }
+}
+.fallow-us {
+  font-size: 1.5rem;
+  width: 85%;
+  margin: 30px auto;
+  @include screen-width("desktop") {
+    width: 90%;
+    margin-top: 20px;
+  }
+  @include screen-width("tablet") {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+  @include screen-width("phone") {
+    width: 100%;
+    margin: 2rem auto;
+  }
+}
+.icons-social {
+  display: flex;
+  justify-content: space-around;
+  width: 45%;
+  margin: 0 auto;
+  i {
+    font-size: 2rem;
+    color: $icons-color;
+  }
+
+  @include screen-width("phone") {
+    width: 55%;
+  }
+}
+
+//STYLES FOR THE FORM ELEMENTS
+.contact-heading2 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 2.5rem 0;
+  color: $darker-details-color;
+}
+
+.contactus-page {
+  padding: 0 0;
+  .contact-form {
+    height: 100%;
+    //THE CONTACT FORM WRAPPER IS NESTED SO THAT IT CAN OVERRIDE THE THEME STYLES
+    #contactFormWrapper {
+      @include flex-column;
+      justify-content: center;
+      width: 75%;
+      height: 100%;
+      margin: 0 auto;
+      .flex.justify-between //the div containing both inputs of the form
+      {
+        margin-bottom: 30px;
+
+        @include screen-width("desktop") {
+          flex-direction: column;
+          margin-bottom: 0;
+        }
+        .half-input {
+          flex-basis: 47%;
+        }
+      }
+
+      .name-row,
+      .email-row,
+      .message-text {
+        border: 1px solid #8d8d8d;
+        font-size: 1rem;
+        color: #a7a7a7;
+        height: auto;
+        padding: 1rem;
+
+        &::placeholder {
+          color: #a7a7a7;
+        }
+
+        &:focus {
+          border: 1px solid #333333;
+        }
+      }
+      // button-contact is the div containing the submit button
+      .button-contact {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 2rem;
+        @include screen-width("phone") {
+          margin-bottom: 10px;
+        }
+        // contact-button is the input of type submit
+        .contact-button {
+          padding: 1.5rem 5.5rem;
+          font-size: 1rem;
+          line-height: normal;
+          letter-spacing: 3px;
+          height: auto;
+          margin: 0;
+          background: $darker-bg-opacity7;
+          border: none;
+          outline: none;
+          &:hover,
+          &:focus {
+            color: white;
+            background: $darker-details-color;
+          }
+        }
+      }
+      @include screen-width("tablet") {
+        width: 85%;
+        .button-contact {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
