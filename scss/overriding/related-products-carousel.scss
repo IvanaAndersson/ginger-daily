@@ -42,15 +42,12 @@
       object-fit: contain;
     }
   }
-
   .add-to-cartS {
     width: 100%;
     button {
       background: $darker-bg-opacity7;
-  
       &.btn {
         border: none;
-
         span {
           transform: translate3d(0, 0, 0);
         }
@@ -74,6 +71,7 @@
     width: 5px;
     height: 5px;
     background-color: #7f7f7f;
+    border-radius: 50%;
   }
 }
 

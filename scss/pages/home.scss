@@ -9,7 +9,7 @@
   {.slideshow__slide // (li) 
     {
       .slideshow__image{
-        height: 92vh; 
+        height: 93vh; 
       }
       .slideshow__text-wrap {
         top: 50%;
@@ -34,17 +34,16 @@
       height: auto;
     }
     @include screen-width('tablet'){
-      width: 85%;
-      height: 70%;
-      padding: 3rem;
+      padding: 5rem 3rem;
     }
     @include screen-width('phone'){
-      padding: 2rem;
+      width: 85%;
+      padding: 4rem 2rem;
       .logo_img {
         width: 100%;
       }
     }
-    }
+  }
 
   .slide-text.slide-text-1,
   .slide-text.slide-text-2,

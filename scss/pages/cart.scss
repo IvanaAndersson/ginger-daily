@@ -1,4 +1,3 @@
-
 // ACTUAL CART PAGE
 #votre-panier {
   .container.main_container {
@@ -13,8 +12,12 @@
       width: 38%;
       border: 1px solid $darker-bg-opacity7;
 
-      @include screen-width('tablet') {width: 30%;}
-      @include screen-width('phone') {width: 23%;}
+      @include screen-width("tablet") {
+        width: 30%;
+      }
+      @include screen-width("phone") {
+        width: 23%;
+      }
     }
     h3 {
       margin: 0 1rem;
@@ -24,7 +27,7 @@
     }
   }
   tbody tr td,
-  table th {  
+  table th {
     border: none;
     text-align: right;
     &:first-of-type {
@@ -52,7 +55,7 @@
       td.image.item {
         display: flex;
         align-items: baseline;
-        
+
         a .discount-percentage {
           color: $darker-details-color;
         }
@@ -62,33 +65,37 @@
         input {
           border: none;
         }
-      } 
+      }
       td.price {
         position: relative;
-        .promo-price, .original-price {
+        .promo-price,
+        .original-price {
           color: #000000;
+          white-space: nowrap;
         }
       }
-
       .remove {
         position: absolute;
         top: 0;
+        right: 0;
         padding: 0.5rem 0;
-        @include screen-width('phone') {right: 1%;}
-        
+        @include screen-width("phone") {
+          right: 1%;
+        }
+
         .remove-cart {
           position: relative;
-          &::before ,&::after {
+          &::before,
+          &::after {
             display: inline-block;
-            content: '';
+            content: "";
             position: absolute;
             background: $buttons-bg;
-            
           }
           &::before {
             width: 30px;
             height: 1px;
-            top: 20px;
+            top: 1.2rem;
             left: -28px;
           }
           &::after {
@@ -98,23 +105,23 @@
             left: 10px;
           }
           i {
-          color: #fff;
-          border: 1px solid #fff;
-          background: $buttons-bg;
-          border-radius: 50%;
-          height: 20px;
-          width: 20px;
-          line-height: normal;
+            color: #fff;
+            border: 1px solid #fff;
+            background: $buttons-bg;
+            border-radius: 50%;
+            height: 20px;
+            width: 20px;
+            line-height: normal;
 
-          &::before {
-            font-size: 10px;
-            position: relative;
-            top: 5px;
+            &::before {
+              font-size: 10px;
+              position: relative;
+              top: 5px;
+            }
           }
         }
       }
-      }
-      @include screen-width('tablet') {
+      @include screen-width("tablet") {
         td.image {
           min-width: auto;
           max-width: none;
@@ -127,7 +134,25 @@
           vertical-align: bottom;
         }
       }
-      
+      @include screen-width("phone") { 
+        td.image.item {
+          align-items: center;
+          .product_image {
+            margin-right: 0.5rem;
+          }
+          a {
+            font-size: 1rem;
+            
+            .qty {
+              display: flex;
+              align-items: center;
+            }
+          }
+        }
+        .price {
+          width: 37%;
+        }
+      }
     }
 
     tr.delivery {
@@ -137,10 +162,11 @@
         padding: 0.5rem 0;
       }
     }
-    tr.delivery, tr.sub-total {
+    tr.delivery,
+    tr.sub-total {
       text-transform: uppercase;
     }
-    tr.sub-total td{
+    tr.sub-total td {
       padding: 0.5rem 0 3rem 0;
     }
     .sub-total-price {
@@ -162,8 +188,8 @@
         text-align: left;
       }
     }
-    .continue-shopping, 
-    .clear-cart, 
+    .continue-shopping,
+    .clear-cart,
     #update-cart {
       font-size: 1.1rem;
       line-height: normal;
@@ -171,7 +197,7 @@
       color: #7e7e7e;
     }
 
-    @include screen-width('laptop') {
+    @include screen-width("laptop") {
       flex-direction: column;
       align-items: flex-start;
 
@@ -181,12 +207,11 @@
       }
       .clear-cart {
         text-align: left;
-
       }
-        #update-cart {
-          margin: 0;
-          padding: 0;
-        }
+      #update-cart {
+        margin: 0;
+        padding: 0;
+      }
     }
   }
 

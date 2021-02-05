@@ -1,4 +1,6 @@
 // 1. CATALOG PAGE
+// STYLES FOR THE LEFT SIDE BAR
+// STYLES FOR THE MAIN CONTENT
 // 2. SINGLE PRODUCT PAGE
 
 //--------------------------------
@@ -133,9 +135,8 @@
   .sidebar-tag {
     margin-bottom: 1.5rem;
   }
-
   @include screen-width("desktop") {
-    padding: 0 0.75rem;
+    padding: 1rem;
   }
   @include screen-width("tablet") {
     text-align: center;
@@ -143,7 +144,7 @@
       margin-top: 0;
     }
     .left_sidebar_content {
-      margin: 2rem 0;
+      margin: 1rem 0;
     }
   }
 }
@@ -337,7 +338,7 @@
           }
         }
       }
-      &:hover {
+      &:hover, &:active, &:focus {
         .new-location-hover {
           transform: translateY(-105%);
         }
@@ -468,19 +469,38 @@
       }
     }
   } 
+  .clear_fix {
+    flex-wrap: wrap;
+  }
   #add-to-cart-form {
     input#quantity {
       font-size: 1rem;
       color: #000;
     }
-    
-    #product-add-to-cart.product_add_to_art_webrika {
+    #three-steps-button {
+      flex-grow: 1;
+      margin: 1rem 0;
+      height: 50px;
+      line-height: normal;
+      background-color: #fff;
+      color: $buttons-bg;
+      border: 1px solid $buttons-bg ;
+
+      &:hover, &:focus {
+        background: $darker-bg-opacity7;
+        color: white;
+      }
+    }
+    .product_add_to_art_webrika {
+      &#product-add-to-cart {
+      color: white;
       border: 1px solid $buttons-bg;
       background-color: $buttons-bg;
       &:hover, &:focus {
         background-color: $darker-details-color;
         color: white;
       }
+    }
     }
   }
   .share-links {
@@ -587,6 +607,8 @@
 #myTabContent {
   margin-top: 2rem;
 }
+
+
 @include screen-width('phone') {
   .tab-pane.in.active.show {
     font-size: 1.2rem;
@@ -614,16 +636,15 @@
     font-size: 2rem ;
     color: $darker-bg-opacity7;
   }
-  #product-featured-image {
-    height: 500px !important;
-    width: initial !important;
-  }
   .products-desktops {
-    a {
-      display: flex !important;
-      justify-content: center !important;
+    .video-wr a {
+      text-align: center;
     }
-  }
+    #product-featured-image {
+      width: 85%;
+      margin: 0 auto;
+    }
+  } 
   .btn.product_add_to_art_webrika {
     width: 100% !important;
   }
@@ -634,6 +655,7 @@
   .template-product #add-to-cart-form span.up-qty,
   .template-product #add-to-cart-form span.down-qty,
   .template-product #add-to-cart-form #product-add-to-cart,
+  .product-shop #add-to-cart-form #three-steps-button,
   .template-product .shopify-payment-button__button {
     height: 40px !important;
     line-height: normal !important;
@@ -649,12 +671,5 @@
       display: block !important;
       margin-bottom: 10px;
     }
-  }
-}
-
-@include screen-width ('smallest') {
-  #product-featured-image {
-    height: 350px !important;
-    width: initial !important;
   }
 }

@@ -1,0 +1,267 @@
+.my-account {
+  @include flex-column;
+  min-height: 90vh;
+  padding: 4rem 0;
+  &-content {
+    flex-grow: 1;
+  }
+  &-content-tabs {
+    padding: 3.5rem 0.5rem 0 0.5rem;
+  }
+  .accaunts_tabs {
+    padding: 1rem 0.5rem 0 3.5rem;
+  }
+  h2 {
+    color: $darker-details-color;
+    margin-bottom: 1.5rem;
+  }
+  h6:after,
+  .tab_content h5:after,
+  .address_tab > span:after {
+    display: block;
+    content: "";
+    background-color: #fbd0bd;
+    height: 2px;
+    margin-top: 0.3rem;
+  }
+  h6 {
+    position: relative;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+    &.active {
+      font-weight: 600;
+      color: #fbd0bd;
+    }
+    &:after {
+      width: 100px;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+    }
+    &.active:after {
+      transform: translateX(0);
+    }
+  }
+  .tab_content {
+    width: 80%;
+
+    h5,
+    .address_tab > span {
+      display: inline-block;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      color: $buttons-bg;
+      text-transform: uppercase;
+      &:after {
+        width: 100%;
+      }
+    }
+    h5.address_tab:after {
+      content: none;
+    }
+  }
+  .order_content {
+    border: 0.5px solid #707070;
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+  .order-number, .order-total-price {
+    font-size: 1rem;
+  }
+  .novetty_caret.account_modal {
+    margin-left: 0.3rem;
+    position: relative;
+    i {
+      position: relative;
+      top: 3px;
+      color: #000 !important;
+    }
+  }
+  .teb_4_image {
+    width: 40px;
+    height: 40px;
+  }
+  .tab_4_content {
+    padding: 13px 20px 9px;
+    border: 1px solid #707070;
+    margin-top: 25px;
+    h4 {
+      margin-bottom: 5px;
+    }
+  }
+  .account_modal:hover {
+    cursor: pointer;
+  }
+}
+
+.example_email {
+  position: absolute;
+  left: 40%;
+}
+.tab_content {
+  display: none;
+}
+.tab_content.active {
+  display: block;
+}
+div.btn_logout_mobile {
+  display: none;
+  position: relative;
+}
+.btn_logout {
+  a {
+    display: block;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    background: $darker-details-color;
+    border: 1px solid $darker-details-color;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      color: $darker-details-color;
+      background: #fff;
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    width: 80%;
+  }
+}
+
+@include screen-width('tablet') {
+  .my-account {
+    h2 {
+    text-transform: uppercase;
+    }
+    &-content-tabs > div:first-of-type {
+      display: flex;
+      justify-content: space-between;
+
+    }
+    .accaunts_tabs {
+      padding: 1rem 0.5rem 0 0.5rem;
+    }
+    h6 {
+      text-align: center;
+      &:after {
+        width: 85%;
+        margin: 0.35rem auto;
+        transform: translateX(-130%);
+      }
+    }
+    .tab_content {
+      width: 100%;
+    }
+  }
+  .border-right-m-none {
+    border-right: none;
+  }
+  
+  div.btn_logout {
+    display: none;
+  }
+  div.btn_logout_mobile {
+    display: block;
+    width: 64vw;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+}
+
+//order details popup
+
+.order-details {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: calc(100% - 2px);
+  border: 0.5px solid #707070;
+  border-top: none;
+  padding: 1rem;
+  background-color: #fff;
+  z-index: 99;
+  font-size: 0.8rem;
+  margin: auto;
+  &.active {
+    display: block;
+  }
+  @include screen-width('tablet') {
+    font-size: 1rem;   
+  }
+    
+  .scrollbar {
+    height: 50vh;
+    width: 100%;
+    overflow-y: scroll;
+    &-styled {
+      scrollbar-width: thin;
+      &::-webkit-scrollbar{
+        width: 10px;
+        background-color: #F5F5F5;
+      }
+      &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 3px rgba(200,200,200,0.3);
+        background-color: #F9F9F9;
+      }
+      &::-webkit-scrollbar-thumb{
+        border-radius: 10px;
+        background-color: #eee;
+        border: 1px solid #aaa;
+      }
+    }
+  }
+  .force-overflow {
+    min-height: 450px;
+    padding: 0 1rem;
+  }
+    
+}
+
+.order {
+  // &-info {}
+  &-date , &-delivery {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.ordered-products {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #FBD0BD;
+}
+
+.order-totals {
+  &-subtotal, &-shipping {
+    color: #707070;
+  }
+  &-total{
+    font-size: 1.1rem;
+    color: #000;
+    &-price {
+      font-size: 1.1rem;
+      color: $darker-details-color;
+    }
+  }
+}
+
+.order-product{
+  &_details {
+    color: #000;
+    font-size: 0.9rem;
+    margin: 1.5rem 0;
+  }
+  &_quantity {
+    font-size: 0.75rem;
+  }
+}
+

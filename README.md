@@ -80,3 +80,9 @@
 * Liquid files used:
     * **cart.liquid** is the template for this page
 * SCSS files used: **cart.scss**
+
+# MY ACCOUNT PAGE
+* Liquid files used:
+    * **page.test-account.liquid** is the template for this page
+    * **order-detail.liquid** for the order detail popup
+* SCSS files used: **account.scss**

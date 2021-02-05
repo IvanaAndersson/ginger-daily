@@ -17,8 +17,7 @@ input:-webkit-autofill:active {
   animation: _1UiPBn7_kvwWk2eMbG90wa 300ms cubic-bezier(0.1, 0.79, 1, 1);
 }
 
-.noancho.ltr.template-index,
-.noancho.ltr.template-page,
+.noancho.ltr.template-index, #contact, #log-in, #about,
 #shopify-section-aboutus-grid-builder  {
   .container {
     @include container;
@@ -32,7 +31,7 @@ input:-webkit-autofill:active {
     margin-top: 4.5rem;
   }
   @include screen-width("phone") {
-    margin-top: 4rem;
+    margin-top: 3rem;
   }
 }
 
@@ -93,6 +92,7 @@ input:-webkit-autofill:active {
   } 
   @include screen-width('phone') {
     top: 75%;
+    left: 85%;
   }
 }
 .product {
@@ -103,7 +103,7 @@ input:-webkit-autofill:active {
   margin-right: 0;
 }
 .promo-price {
-  padding-left: 0.5rem;
+  padding:0 0.5rem;
   color: $darker-details-color;
 }
 .button-type3 a {

@@ -430,32 +430,3 @@
     }
   }
   
-
-  
-.order-details {
-  width: 37vw;
-  margin-top: 20px;
-}
-.pr-old {
-  margin-right: 5px;
-  text-decoration: line-through;
-}
-div.order-details {
-  width: 44vw;
-  display: none;
-  border: 1px solid #707070;
-  padding: 10px 26px;
-  position: absolute;
-  top: 1%;
-  background-color: #fff;
-  z-index: 99;
-  left: 50%;
-  transform: translateX(-50%);
-  &.active {
-    display: block;
-  }
-  @include screen-width('tablet') {
-    width: 84vw;
-    top: -15%;      
-  }
-}

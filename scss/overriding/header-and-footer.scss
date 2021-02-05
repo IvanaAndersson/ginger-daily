@@ -21,27 +21,98 @@
     margin-bottom: 0;
   }
 }
+.icon-search {
+  display: flex;
+  position: relative;
+  margin-left: auto;
+  height: 2rem;
+
+  .search__input {
+    color: $buttons-bg;
+    width: 10rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0 + 2.5rem;
+    padding: .25em 1em;
+    outline: 0;
+    z-index: 2;
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(100%);
+      
+    &::placeholder {
+      color: $buttons-bg;
+    }
+  }
+}
+
+.search__submit {
+  cursor: pointer;
+  margin-left: auto;
+  border: 0;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  background-color: transparent;
+  .svg-img-icon svg {
+    width: auto;
+    height: 2rem;
+  }
+}
+
 .header.full-width {
   background-color: $footer-color;
   min-height: 80px;
-  .logo-container .logo a::before{
-      display: block;
-      content: '';
-      padding-top: 25%;
+  .logo-container .logo a::before {
+    display: block;
+    content: "";
+    padding-top: 25%;
   }
   .logo-image {
-    width: auto; 
+    width: auto;
     height: 100%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 
-    @media screen and (min-width:1600px) {
+    @media screen and (min-width: 1600px) {
       width: 100%;
       height: auto;
     }
   }
-
+  .site-nav .level-top .text-st {
+    color: #f9bca1;
+    font-size: 1rem;
+  }
+  #search-top button {
+    width: auto;
+    height: auto;
+    line-height: normal;
+    padding: 0;
+    &:after {
+      content: none;
+    }
+  }
+  .search__input {
+    border: 1px solid $buttons-bg;
+    background: transparent;
+    transition: transform 0.3s ease, opacity 0.1s ease-in-out;
+  }
+  .icon-search:focus-within {
+    .search__input {
+      opacity: 0.7;
+      transform: translateX(0);
+      z-index: initial;
+      cursor: initial;
+      pointer-events: all;
+      transition: transform 0.3s ease, opacity 0.5s ease-in-out;
+    }
+  }
+  #search-top input[type=text].search__input:focus {
+    border: 1px solid $buttons-bg !important;
+  }
   .header-cart-container {
     @include align-center;
     justify-content: flex-end;
@@ -55,31 +126,24 @@
       display: none;
     }
 
-    .top-currency, .header-cart {
+    .top-currency,
+    .header-cart {
       padding: 0;
     }
   }
-  
-  .svg-img-icon svg{
+  .svg-img-icon svg {
     width: 100%;
   }
-
   .top-cart a {
     justify-content: center;
   }
-
   .cart-count {
-    @media screen and (min-width:1600px) {
+    @media screen and (min-width: 1600px) {
       left: 90%;
     }
-    @media screen and (min-width:1900px) {
+    @media screen and (min-width: 1900px) {
       left: 75%;
     }
-  }
-
-  .site-nav .level-top .text-st {
-    color: #F9BCA1;
-    font-size: 1rem;
   }
 }
 
@@ -90,7 +154,8 @@
     height: auto;
     line-height: normal;
     padding: 0.5rem 1rem;
-    &, &.is-ticky {
+    &,
+    &.is-ticky {
       background-color: $footer-color;
     }
     .container {
@@ -110,19 +175,19 @@
           height: auto;
         }
       }
-    } 
+    }
     .cs-font.clever-icon-menu-5 {
       color: $icons-color;
     }
     .icon-search,
     .wishlist-cart,
     .toggle-search {
-      width: auto;
+      // width: auto;
       @include align-center;
     }
     .wishlist-cart {
       justify-content: center;
-    }  
+    }
     .svg-img-icon {
       width: 2rem;
       svg {
@@ -136,7 +201,7 @@
       background-color: $darker-bg-opacity7;
       position: relative;
       transition: background-color 0.2s ease-out;
-    
+
       &:before,
       &:after {
         display: block;
@@ -155,11 +220,9 @@
         top: -0.7rem;
       }
     }
-    
     .navbar-icon.active {
       background-color: transparent;
     }
-    
     .navbar-icon.active:before {
       transform: rotate(-45deg);
       top: 0;
@@ -168,37 +231,90 @@
       transform: rotate(45deg);
       top: 0;
     }
+    .search__input {
+      height: 3rem;
+      border: 0;
+      background: #FFF5EE;
+      transition: transform 0.5s ease, opacity 0.5s ease-in-out;
+    }
+    .close-search-field {
+      position: absolute;
+      right: 0;
+      padding: 2rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .icon-search:focus-within {
+      .search__submit {
+        width: 7rem;
+        transform: translateX(-78vw);
+        background-color: #FFF5EE;
+        transition: transform 0.3s ease;
+      }
+      .search__input {
+        opacity: 1;
+        transform: translateX(10%);
+        width: 79vw;
+        z-index: initial;
+        cursor: initial;
+        pointer-events: all;
+        transition: transform 0.3s ease, opacity 0.3s ease-in-out;
+      }
+
+      & ~ .close-search-field {
+        opacity: 1;
+        pointer-events: all;
+      }
+      & ~ .header-cart {
+        display: none;
+      }
+    }
   }
 
   #offcanvas {
     display: none;
   }
 
-  @include screen-width('laptop') {
-
+  @include screen-width("laptop") {
     #off-canvas-button {
       padding: 0;
       float: none;
       color: $darker-bg-opacity7;
     }
-    #offcanvas { 
+    #offcanvas {
       background-color: $footer-color;
       height: auto;
       top: 5.2rem;
       padding: 2rem 0;
-      @include screen-width('tablet') {top: 5rem;}
-      @include screen-width('phone') {top: 4.7rem;}
+      @include screen-width("tablet") {
+        top: 5rem;
+      }
+      @include screen-width("phone") {
+        top: 4.7rem;
+      }
       nav.offcanvas-mainnav.containers {
         padding: 0 !important;
       }
       .navbar-nav {
-        li {text-align: center; 
+        li {
+          text-align: center;
           a {
             padding: 1rem 0;
-          } }
-        .clever-icon-arrow-right, .clever-icon-down , li a, li a span {
+          }
+        }
+        .clever-icon-arrow-right,
+        .clever-icon-down,
+        li a,
+        li a span {
           color: $darker-bg-opacity7;
           text-transform: uppercase;
+
+          svg {
+            // width: 60%;
+            margin-right: 0.5rem;
+            opacity: 0.7;
+          }
         }
         h3 {
           @include flex-centered;
@@ -210,15 +326,35 @@
         }
         ul.level-1 {
           padding-left: 0;
-          a {
-            @include flex-centered;
-            min-height: 8rem;
-            background: url('./img-on-hover@2x.png') center center no-repeat;
-            background-size: cover;
-            span {
-  
-              color: white;
-            }
+        }
+        .mobile-megamenu-item {
+          @include flex-centered;
+          max-height: 8rem;
+          position: relative;
+          overflow: hidden;
+
+          &:after {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0; bottom: 0; left: 0; right: 0;
+            background:$details-text-opacity3;
+          }
+        }
+        .mobile-megamenu-image {
+          width: 100%;
+        }
+        .mobile-megamenu-name {
+          position: absolute;
+          color: white;
+          z-index: 10;
+        }
+        ul.level-2 {
+          padding-left: 0;
+          li a {
+            font-size: 1.2rem;
+            padding: 0.5rem 0; 
+            text-transform: initial; 
           }
         }
       }
@@ -226,7 +362,7 @@
   }
 }
 
-@include screen-width("phone") { 
+@include screen-width("phone") {
   #header-mobile .logo-avc .logo a img {
     width: 80%;
   }
@@ -270,7 +406,6 @@
       @include screen-width("tablet") {
         width: 80%;
         margin: 0 auto;
-        
       }
     }
 
@@ -283,13 +418,14 @@
       @include screen-width("tablet") {
         margin-bottom: 0;
       }
-    } 
+    }
     .footer-link .content {
       li a {
         font-size: 1rem;
         font-weight: 400;
-      } 
-      li:hover a, li:focus a {
+      }
+      li:hover a,
+      li:focus a {
         color: $darker-bg-opacity7;
       }
       @include screen-width("tablet") {
@@ -302,11 +438,12 @@
       margin-top: auto;
       font-size: 0.75rem;
 
-      .footer_link { 
+      .footer_link {
         margin-left: 30px;
-      &:hover{
-        color: $darker-details-color;
-      } }
+        &:hover {
+          color: $darker-details-color;
+        }
+      }
     }
 
     @include screen-width("tablet") {
@@ -325,11 +462,11 @@
   font-size: 0.8rem;
 
   & .clever-icon-up::before {
-    color:  $buttons-bg;
+    color: $buttons-bg;
   }
 
   &:hover {
-    background:$buttons-bg;
+    background: $buttons-bg;
 
     & .clever-icon-up::before {
       color: white;

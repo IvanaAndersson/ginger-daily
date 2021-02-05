@@ -62,11 +62,11 @@
 .flex-wrap {
   flex-wrap: wrap;
 }
-.center-menu, .flex2 {
+.center-menu {
   display: flex;
   align-items: center;
 }
-.flex-colomnss {
+.flex-columns {
   display: flex;
   flex-direction: column;
 }
@@ -76,6 +76,9 @@
 }
 .justify-between {
   justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
 }
 .justify-center {
   justify-content: center;
@@ -389,5 +392,8 @@
   }
   .mb-20m {
     margin-bottom: 20px;
+  }
+  .mr-5m {
+    margin-right: 5px;
   }
 }
