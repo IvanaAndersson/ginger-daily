@@ -212,16 +212,16 @@
         }
       }
 
-      // .already-member {
-      //   display: none;
-      //   width: 100%;
-      //   text-align: center;
-      //   margin-top: 0.5rem;
-      //   a {
-      //     text-decoration: underline;
-      //     color: inherit;
-      //   }
-      // }
+    }
+    .already-member {
+      width: 100%;
+      text-align: center;
+      margin-top: 1rem;
+      color: #8d8d8d;
+      a {
+        text-decoration: underline;
+        color: inherit;
+      }
     }
     @include screen-width("tablet") {
       width: 80%;

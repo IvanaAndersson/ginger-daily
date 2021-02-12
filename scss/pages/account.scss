@@ -1,4 +1,11 @@
-.my-account {
+// 1. ACCOUNT PAGE
+// - INCLUDES THE THREE TABS AND THEIR CORRESPONDING SECTIONS' CONTENT STYLES
+// - ORDER DETAILS POPUP
+// 2. PARTNERSHIP PAGE
+
+
+
+.my-account, .partnership {
   @include flex-column;
   min-height: 90vh;
   padding: 4rem 0;
@@ -17,7 +24,9 @@
   }
   h6:after,
   .tab_content h5:after,
-  .address_tab > span:after {
+  .address_tab > span:after,
+  .partner-form-field  label:after,
+  .radio-buttons-label span:after {
     display: block;
     content: "";
     background-color: #fbd0bd;
@@ -135,7 +144,6 @@ div.btn_logout_mobile {
     width: 80%;
   }
 }
-
 @include screen-width('tablet') {
   .my-account {
     h2 {
@@ -200,7 +208,7 @@ div.btn_logout_mobile {
   }
     
   .scrollbar {
-    height: 50vh;
+    height: 35vh;
     width: 100%;
     overflow-y: scroll;
     &-styled {
@@ -227,19 +235,15 @@ div.btn_logout_mobile {
   }
     
 }
-
 .order {
-  // &-info {}
   &-date , &-delivery {
     margin-bottom: 0.5rem;
   }
 }
-
 .ordered-products {
   margin-bottom: 1rem;
   border-bottom: 1px solid #FBD0BD;
 }
-
 .order-totals {
   &-subtotal, &-shipping {
     color: #707070;
@@ -253,7 +257,6 @@ div.btn_logout_mobile {
     }
   }
 }
-
 .order-product{
   &_details {
     color: #000;
@@ -265,3 +268,62 @@ div.btn_logout_mobile {
   }
 }
 
+
+// Partnership page
+.partnership_left_content {
+  padding-right: 3.2vw;
+  border-right: 1px solid #fabba1;
+  color: #8d8d8d;
+}
+.partnership-description {
+  font-size: 1rem;
+  &-heading {
+    font-size: 1.5rem;
+    font-family: "Black Jack", cursive;
+  }
+}
+.partner {
+  &-form-field {
+    margin-bottom: 1.5rem;
+    label {
+      color: $buttons-bg;
+      letter-spacing: 3px;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    input {
+      width: 100%;
+      height: auto;
+      line-height: normal;
+      padding: 0.8rem 0.4rem;
+      border: 1px solid #8d8d8d;
+    }
+  }
+}
+.partnership_main_content {
+  padding-left: 3.2vw;
+}
+
+.partnership-business-heading {
+  letter-spacing: 5px;
+  margin-bottom: 1rem;
+}
+
+.partner-form {
+  font-size: 0.9rem;
+  color: #A7a7a7;
+  width:  70%;
+  border: 0.5px solid #8d8d8d;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+}
+
+.radio-buttons-label span {
+  display: inline-block;
+  color: $buttons-bg;
+  letter-spacing: 3px;
+}
+
+.partner-radio-button input[type="radio"] {
+  margin-right: 0.5rem;
+}
